@@ -1,0 +1,1126 @@
+Super type,Type,Containing method,Containing method number of parameters,Is local field?,Field name,Invoked method,Soure code line,Containing class,Occurencies,Is into loop?,Loop nesting info,Is inside recursive method?,Is returned or passed as parameter?,Assignment line numbers,Constructors
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; 4) 12;ON;null; 5) 12;null;null; ",false,false,,
+java.util.Set,java.lang.Object,lambda$mapAdjustment$9,4,true,set,addAll,380,awt.EventBase$ActionStateHolder,1,false,,false,true,,
+java.util.HashMap,java.util.HashMap,reconstructPointers,1,false,pointindex,put(key;value),523,savegame.VanillaDSG,1,true,"1) 1;ON;null; ",false,false,489,()
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,22,true,"1) 7;null;null; ",false,true,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,1,true,"1) 1;ON;null; ",false,false,243,()
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,containsKey,82,doom.CVarManager,1,true,"1) 3;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,31,true,"1) 6;null;null; ",false,true,,
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,1,true,"1) 1;null;null; 2) 9;ON;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,2,true,"1) 3;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.Set,java.util.Set,hasActionsEnabled,3,true,actions,isEmpty,240,awt.EventBase$ActionStateHolder,5,false,,false,false,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,1,true,"1) 1;O1;4; 2) 9;null;null; 3) 11;ON;null; ",false,false,243,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,63,doom.ConfigManager,3,true,"1) 3;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,processAllArgs,2,true,commandList,size,170,doom.CVarManager,1,true,"1) 1;null;null; ",false,true,,
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,1,true,"1) 1;ON;null; 2) 3;null;null; ",false,true,253,()
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,2,true,"1) 2;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,69,doom.ConfigManager,1,true,"1) 2;O1;0; 2) 4;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,16,true,"1) 8;null;null; ",false,true,,
+java.util.HashMap,java.util.HashMap,ShutdownSound,1,false,cachedSounds,values,198,s.ClipSFXModule,1,false,,false,false,37,()
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,1,true,"1) 2;O1;0; 2) 10;null;null; 3) 12;ON;null; ",false,true,,
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,10,true,"1) 9;null;null; ",false,true,,
+java.util.List,java.util.List,processAllArgs,2,true,commandList,size,170,doom.CVarManager,1,true,"1) 1;O1;4; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,1,true,"1) 1;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,1,true,"1) 1;O1;0; 2) 13;ON;null; 3) 13;null;null; ",false,false,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,1,true,"1) 2;O1;0; 2) 10;null;null; 3) 12;ON;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,1,true,"1) 4;O1;0; 2) 14;ON;null; 3) 15;O1;0; ",false,false,65,()
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,1,true,"1) 3;null;null; 2) 3;ON;null; 3) 4;ON;null; ",false,false,,
+java.util.List,java.util.List,processAllArgs,2,true,commandList,size,170,doom.CVarManager,1,true,"1) 4;O1;0; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,with,4,false,cVarMap,get,114,doom.CVarManager,1,true,"1) 4;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,InitSpriteDefs,2,true,list,isEmpty,134,rr.SpriteManager,1,true,"1) 1;ON;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,1,true,"1) 2;O1;0; 2) 12;ON;null; ",false,false,1145,(I)
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,2,true,"1) 5;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; 3) 8;null;null; 4) 10;ON;null; ",false,false,243,()
+java.util.List,java.util.List,volumeChanged,1,false,channels,iterator,723,s.FinnwMusicModule$ScheduledTransmitter,2,false,,false,false,,
+java.util.Hashtable,java.util.Hashtable,InitTextures,1,false,TextureCache,put(key;value),242,rr.SimpleTextureManager,1,true,"1) 1;ON;null; ",false,false,204,(I)
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,3,true,"1) 4;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,InitRSISubsystem,1,false,detailaware,add(value),416,rr.parallel.ParallelRenderer2$TrueColor,1,true,"1) 1;ON;null; ",false,false,,
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,3,true,"1) 1;ON;256; 2) 11;ON;null; 3) 12;O1;0; ",false,false,65,()
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,1,true,"1) 3;O1;0; 2) 15;ON;null; 3) 15;null;null; 4) 16;ON;null; ",false,false,,
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,2,true,"1) 3;null;null; ",false,true,,
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,2,true,"1) 5;null;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,177,doom.ConfigManager,87,false,,false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,31,true,"1) 6;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,3,true,"1) 4;null;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,22,true,"1) 7;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,3,true,"1) 1;ON;256; 2) 9;null;null; 3) 11;ON;null; 4) 12;null;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,22,true,"1) 7;null;null; 2) 9;ON;null; ",false,false,243,()
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,1,true,"1) 1;null;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,10,true,"1) 9;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,137,doom.ConfigManager,1,true,"1) 3;INFINITE;null; 2) 4;ON;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,16,true,"1) 8;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,2,true,"1) 2;null;null; ",false,true,,
+java.util.Hashtable,java.util.Hashtable,getBadColumn,1,false,badColumns,iterator,158,rr.patch_t,1,true,"1) 1;ON;null; ",false,false,136,()
+java.util.EnumMap,java.util.EnumMap,updateLightLev,1,false,litedColorSources,forEach,1052,automap.Map,2,false,,false,false,326,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,134,doom.ConfigManager,1,true,"1) 1;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,LoadDefaults,1,false,configFiles,forEach,223,doom.ConfigManager,1,true,"1) 3;O1;0; ",false,false,,
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,1,true,"1) 2;O1;0; 2) 14;ON;null; 3) 14;null;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,63,doom.ConfigManager,1,true,"1) 1;O1;0; 2) 3;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),91,rr.MultiPatchSynthesizer,1,true,"1) 1;ON;null; 2) 2;ON;null; 3) 4;ON;null; 4) 5;ON;null; ",false,false,78,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),102,rr.MultiPatchSynthesizer,2,true,"1) 2;ON;null; 2) 3;ON;null; ",false,false,78,()
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,1,true,"1) 3;ON;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,1,true,"1) 1;null;null; 2) 1;ON;null; ",false,false,,
+java.util.EnumSet,java.lang.Class,<init>,3,true,hClass,noneOf,266,awt.EventBase$ActionStateHolder,1,true,"1) 3;O1;0; ",false,true,,
+java.util.EnumSet,java.util.EnumSet,Repalette,1,false,GENERATE_LITE_LEVELS_FOR,stream,346,automap.Map,1,true,"1) 2;O1;0; ",false,false,,
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,3,true,"1) 1;ON;256; 2) 9;null;null; 3) 11;ON;null; ",false,true,,
+java.util.List,java.util.ArrayList,GetWadfileIndex,2,false,wadfiles,indexOf,1412,w.WadLoader,1,false,,false,false,65,()
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,170,doom.ConfigManager,1,true,"1) 1;null;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,LoadDefaults,1,false,configFiles,forEach,223,doom.ConfigManager,4,true,"1) 1;ON;256; ",false,false,,
+java.util.Set,java.util.Set,unmapCooperation,4,true,set,removeAll,323,awt.EventBase$ActionStateHolder,4,false,,false,false,,
+java.util.Hashtable,java.util.Hashtable,checkOut,1,false,locked,put(key;value),72,pooling.ObjectPool,1,false,,false,false,23,()
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,1,true,"1) 1;ON;null; ",false,true,,
+java.util.List,java.util.ArrayList,getReceiver,0,true,dInfos,iterator,503,s.FinnwMusicModule,2,false,,false,true,501,(Ljava/util/Collection;)
+java.util.TreeMap,java.util.TreeMap,<init>,2,true,sortedRatios,put(key;value),113,v.tables.BlurryTable,1,true,"1) 1;ON;256; ",false,false,"137,90",(Ljava/util/Comparator;)
+java.util.EnumMap,java.util.EnumMap,with,4,false,cVarMap,get,114,doom.CVarManager,4,true,"1) 1;ON;256; ",false,false,42,(Ljava/lang/Class;)
+java.util.LinkedHashSet,java.util.LinkedHashSet,notifyKeyChange,4,false,keyInterests,stream,200,awt.EventBase$KeyStateHolder,2,false,,false,false,173,()
+java.util.List,java.util.List,InitMaskedWorkers,1,false,detailaware,add(value),453,rr.parallel.ParallelRenderer$TrueColor,1,true,"1) 1;ON;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; 4) 10;ON;null; ",false,false,1145,(I)
+java.util.List,java.util.ArrayList,addShortMessage,5,false,messages,add(value),274,s.MusReader$EventGroup,1,true,"1) 1;O1;0; ",false,false,206,()
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; 4) 8;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,LoadDefaults,1,false,configFiles,forEach,223,doom.ConfigManager,1,true,"1) 1;INFINITE;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,get,87,doom.CVarManager,1,true,"1) 4;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.Stack,java.util.Stack,checkOut,1,false,locked,isEmpty,40,pooling.ObjectQueuePool,2,true,"1) 1;O1;0; ",false,false,22,()
+java.util.List,java.util.List,processAllArgs,2,true,commandList,size,170,doom.CVarManager,1,true,"1) 1;INFINITE;null; ",false,true,,
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,randomGet,123,rr.MultiPatchSynthesizer,2,true,"1) 2;ON;null; 2) 3;ON;null; ",false,false,78,()
+java.util.HashMap,java.util.HashMap,reconstructPointers,1,false,pointindex,put(key;value),532,savegame.VanillaDSG,1,true,"1) 1;ON;0; ",false,false,489,()
+java.util.LinkedHashSet,java.util.LinkedHashSet,addInterest,2,false,keyInterests,add(value),185,awt.EventBase$KeyStateHolder,1,true,"1) 1;null;null; ",false,false,173,()
+java.util.List,java.util.ArrayList,PlaySong,3,false,songs,size,96,s.FinnwMusicModule,1,false,,false,false,59,(I)
+java.util.Map,java.util.Map,mapCooperation,4,false,cooperationMap,iterator,331,awt.EventBase$ActionStateHolder,4,false,,false,false,,
+java.util.List,java.util.ArrayList,addShortMessage,5,false,messages,add(value),420,s.FinnwMusicModule$EventGroup,4,true,"1) 1;O1;0; ",false,false,316,()
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),156,doom.ConfigBase,4,true,"1) 1;ON;256; ",false,true,142,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,3,true,"1) 1;ON;256; 2) 9;null;null; 3) 11;ON;null; ",false,false,243,()
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,3,true,"1) 1;ON;256; 2) 12;ON;null; ",false,false,1145,(I)
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,1,true,"1) 1;ON;0; ",false,false,54,()
+java.util.EnumMap,java.util.EnumMap,override,4,false,cVarMap,compute,144,doom.CVarManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,InitRMISubsystem,7,true,detailaware,add(value),175,rr.parallel.ParallelThings$HiColor,1,true,"1) 1;ON;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,168,doom.ConfigManager,1,true,"1) 1;INFINITE;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,properPlaypal,2,false,NORMAL_TINTS,randomGet,141,v.tables.Playpal,1,true,"1) 4;ON;256; 2) 4;ON;14; ",false,false,,
+java.util.ArrayList,java.util.ArrayList,CheckNumsForName,2,false,list,clear,1186,w.WadLoader,1,false,,false,false,1206,()
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),156,doom.ConfigBase,2,true,"1) 1;O1;0; ",false,true,142,()
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,183,doom.ConfigManager,1,true,"1) 4;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,1,true,"1) 1;ON;256; 2) 8;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,containsKey,82,doom.CVarManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),155,doom.ConfigBase,2,true,"1) 1;O1;0; ",false,true,142,()
+java.util.Map,java.util.Map,cooperations,2,false,cooperationMap,iterator,298,awt.EventBase$ActionStateHolder,1,false,,false,false,,
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,1,true,"1) 1;O1;0; 2) 11;ON;null; 3) 11;null;null; 4) 12;ON;null; ",false,false,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; 3) 8;null;null; 4) 10;ON;null; 5) 11;null;null; ",false,false,243,()
+java.util.Map,java.util.Map,<init>,4,false,screens,iterator,151,v.renderers.BufferedRenderer16$ShortPaletteThread,1,true,"1) 1;ON;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,22,true,"1) 7;null;null; 2) 9;ON;null; ",false,false,54,()
+java.util.Map,java.util.Map,SaveDefaults,1,false,SETTINGS_MAP,forEach,190,doom.ConfigManager,1,true,"1) 1;O1;4; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,177,doom.ConfigManager,1,true,"1) 4;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,1,false,,false,true,,
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,1,true,"1) 1;INFINITE;null; 2) 2;null;null; 3) 8;null;null; 4) 10;ON;null; ",false,false,54,()
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,10,true,"1) 9;null;null; 2) 11;ON;null; ",false,true,,
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,1,true,"1) 4;null;null; 2) 4;ON;null; ",false,false,,
+java.util.List,java.util.List,properPlaypal,2,false,NORMAL_TINTS,randomGet,141,v.tables.Playpal,2,true,"1) 3;ON;256; 2) 3;ON;14; ",false,false,,
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,1,true,"1) 1;ON;null; ",false,false,54,()
+java.util.EnumSet,java.lang.Class,<init>,3,true,hClass,noneOf,266,awt.EventBase$ActionStateHolder,1,true,"1) 1;null;null; ",false,true,,
+java.util.HashMap,java.util.HashMap,getClipForChannel,3,false,cachedSounds,put(key;value),250,s.ClipSFXModule,2,false,,false,false,37,()
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,170,doom.ConfigManager,1,true,"1) 2;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,1,true,"1) 1;null;null; 2) 7;null;null; 3) 9;ON;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),109,rr.MultiPatchSynthesizer,1,true,"1) 6;ON;null; ",false,false,78,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,115,rr.MultiPatchSynthesizer,4,true,"1) 3;ON;null; ",false,false,78,()
+java.util.Hashtable,java.util.Hashtable,getPhoneme,1,false,phonemes,containsKey,89,s.SpeakerSound,1,true,"1) 2;ON;null; ",false,false,85,()
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,1,true,"1) 1;null;null; 2) 3;ON;null; ",false,false,54,()
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,1,true,"1) 1;INFINITE;null; 2) 2;null;null; 3) 12;ON;null; 4) 12;null;null; 5) 13;ON;null; ",false,false,,
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),91,rr.MultiPatchSynthesizer,2,true,"1) 2;ON;null; 2) 3;ON;null; ",false,false,78,()
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,1,true,"1) 1;ON;null; ",false,true,,
+java.util.Hashtable,java.util.Hashtable,InitFlats,1,true,FlatNames,put(key;value),837,rr.SimpleTextureManager,1,true,"1) 1;ON;null; ",false,false,785,()
+java.util.Hashtable,java.util.Hashtable,getBadColumn,1,false,badColumns,put(key;value),155,rr.patch_t,1,false,,false,false,136,()
+java.util.Hashtable,java.util.Hashtable,getPhoneme,1,false,phonemes,iterator,103,s.SpeakerSound,1,true,"1) 2;ON;null; ",false,false,85,()
+java.util.List,java.util.List,InitMaskedWorkers,1,false,detailaware,add(value),208,rr.parallel.ParallelRenderer$Indexed,1,true,"1) 1;ON;null; ",false,false,,
+java.util.List,java.util.List,processAllArgs,2,true,commandList,size,170,doom.CVarManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; ",false,true,,
+java.util.ArrayList,java.util.ArrayList,CloseAllHandles,1,true,d,contains,1218,w.WadLoader,1,true,"1) 2;ON;null; ",false,false,1215,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,144,rr.MultiPatchSynthesizer,2,true,"1) 1;ON;null; 2) 3;ON;null; ",false,false,78,()
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,2,true,"1) 5;null;null; 2) 7;ON;null; ",false,true,,
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,sequentialGet,123,rr.MultiPatchSynthesizer,1,true,"1) 1;ON;null; ",false,false,78,()
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,1,true,"1) 1;null;null; 2) 11;ON;null; 3) 11;null;null; ",false,false,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,3,true,"1) 4;null;null; 2) 6;ON;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,1,false,,false,false,243,()
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,1,true,"1) 4;O1;0; 2) 12;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,31,true,"1) 9;ON;null; ",false,false,1145,(I)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,77,doom.ConfigManager,1,false,,false,false,43,(Ljava/lang/Class;)
+java.util.Hashtable,java.util.Hashtable,checkOut,1,false,unlocked,keys,39,pooling.ObjectPool,1,false,,false,false,24,()
+java.util.EnumMap,java.util.EnumMap,override,4,false,cVarMap,compute,144,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,144,rr.MultiPatchSynthesizer,2,true,"1) 4;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,equals,3,false,configMap,get,162,doom.ConfigManager,1,true,"1) 2;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,2,true,"1) 7;ON;null; ",false,false,,
+java.util.EnumSet,java.util.EnumSet,Repalette,1,false,GENERATE_LITE_LEVELS_FOR,stream,346,automap.Map,1,true,"1) 1;null;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,get,87,doom.CVarManager,89,false,,false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,137,doom.ConfigManager,8,false,,false,false,43,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,1,true,"1) 4;O1;0; 2) 16;ON;null; 3) 16;null;null; ",false,false,,
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),155,doom.ConfigBase,1,true,"1) 1;INFINITE;null; 2) 2;null;null; ",false,true,142,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,108,rr.MultiPatchSynthesizer,4,true,"1) 3;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,69,doom.ConfigManager,2,true,"1) 2;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,Drawer,1,false,fixedColorSources,get,1519,automap.Map,1,false,,false,false,325,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,183,doom.ConfigManager,2,true,"1) 1;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,bool,2,false,cVarMap,containsKey,54,doom.CVarManager,3,true,"1) 2;ON;6; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),155,doom.ConfigBase,1,true,"1) 4;O1;0; ",false,true,142,()
+java.util.EnumMap,java.util.EnumMap,with,4,false,cVarMap,get,114,doom.CVarManager,1,true,"1) 1;O1;4; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,168,doom.ConfigManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,1,true,"1) 1;O1;0; 2) 9;ON;null; 3) 10;O1;0; ",false,false,65,()
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,1,true,"1) 1;O1;0; 2) 10;ON;null; ",false,false,1145,(I)
+java.util.HashMap,java.util.HashMap,getRogueColumn,3,false,roguePatches,put(key;value),1174,rr.SimpleTextureManager,4,false,,false,false,1210,()
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,1,true,"1) 1;INFINITE;null; 2) 2;null;null; 3) 10;ON;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,drawWalls,1,false,litedColorSources,get,1302,automap.Map,2,false,,false,false,326,(Ljava/lang/Class;)
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; 4) 8;null;null; 5) 10;ON;null; ",false,true,,
+java.util.Map,java.util.Map,deepCopyMap,2,true,map,isEmpty,270,awt.EventBase$ActionStateHolder,3,false,,false,true,,
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,2,true,"1) 3;null;null; 2) 5;ON;null; ",false,true,,
+java.util.List,java.util.ArrayList,nextEventGroup,3,false,channels,randomGet,201,s.FinnwMusicModule,1,true,"1) 1;O1;0; ",false,false,58,(I)
+java.util.EnumMap,java.util.EnumMap,equals,3,false,configMap,get,162,doom.ConfigManager,1,true,"1) 1;INFINITE;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,<clinit>,0,false,INDIVIDUAL_CLASS_LOGGERS,put(key;value),60,mochadoom.Loggers,1,false,,false,false,54,()
+java.util.List,java.util.List,processAllArgs,2,true,commandList,size,170,doom.CVarManager,2,true,"1) 1;O1;0; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,183,doom.ConfigManager,4,true,"1) 1;ON;256; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,writeListOfObjects,3,true,s,sequentialGet,349,w.DoomIO,1,true,"1) 1;ON;null; ",false,true,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,1,true,"1) 2;ON;null; ",false,false,243,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,63,doom.ConfigManager,2,false,,false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,randomGet,123,rr.MultiPatchSynthesizer,4,true,"1) 3;ON;null; 2) 4;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,bool,2,false,cVarMap,containsKey,54,doom.CVarManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,randomGet,123,rr.MultiPatchSynthesizer,2,true,"1) 1;ON;null; 2) 3;ON;null; 3) 4;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,1,false,,false,false,42,(Ljava/lang/Class;)
+java.util.Stack,java.util.Stack,drain,1,false,locked,clear,33,pooling.ObjectQueuePool,1,false,,false,false,22,()
+java.util.LinkedHashSet,java.util.LinkedHashSet,addInterest,2,false,keyInterests,add(value),185,awt.EventBase$KeyStateHolder,2,true,"1) 1;O1;0; ",false,false,173,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,55,doom.ConfigManager,2,true,"1) 2;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.Hashtable,java.util.Hashtable,CheckTextureNumForName,2,false,TextureCache,iterator,127,rr.SimpleTextureManager,2,false,,false,false,204,(I)
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,1,true,"1) 1;O1;0; 2) 7;null;null; ",false,true,,
+java.util.List,java.util.List,InitRMISubsystem,7,true,detailaware,add(value),156,rr.parallel.ParallelThings$Indexed,1,true,"1) 1;ON;null; ",false,true,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,1,true,"1) 1;ON;null; ",false,false,243,()
+java.util.EnumMap,java.util.EnumMap,bool,2,false,cVarMap,containsKey,54,doom.CVarManager,1,true,"1) 2;ON;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,InitSpriteDefs,2,true,hash,containsKey,114,rr.SpriteManager,1,true,"1) 1;ON;0; ",false,false,104,(I)
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,1,true,"1) 1;null;null; 2) 11;ON;null; 3) 11;null;null; 4) 12;ON;null; ",false,false,,
+java.util.List,java.util.List,InitRSISubsystem,1,false,detailaware,add(value),315,rr.parallel.ParallelRenderer2$HiColor,1,true,"1) 1;ON;null; ",false,false,,
+java.util.Hashtable,java.util.Hashtable,checkOut,1,false,unlocked,iterator,44,pooling.ObjectPool,1,true,"1) 1;ON;0; ",false,false,24,()
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,1,true,"1) 1;INFINITE;null; 2) 9;ON;null; 3) 10;O1;0; ",false,false,65,()
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,21,true,"1) 10;ON;null; ",false,false,1145,(I)
+java.util.TreeMap,java.util.TreeMap,<init>,2,true,sortedRatios,put(key;value),166,v.tables.BlurryTable,1,true,"1) 1;ON;256; ",false,false,143,(Ljava/util/Comparator;)
+java.util.Map,java.util.Map,enableAction,3,false,enabledActions,iterator,404,awt.EventBase$ActionStateHolder,8,false,,false,false,,
+java.util.List,java.util.List,findByDouble,3,true,list,size,221,utils.BinarySearch,1,false,,false,true,,
+java.util.List,java.util.ArrayList,reconstructPointers,1,false,TL,randomGet,532,savegame.VanillaDSG,1,true,"1) 2;ON;0; ",false,false,381,()
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,177,doom.ConfigManager,1,true,"1) 1;O1;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,1,true,"1) 1;O1;4; 2) 11;ON;null; 3) 13;null;null; ",false,true,253,()
+java.util.List,java.util.ArrayList,reconstructPointers,1,false,TL,randomGet,523,savegame.VanillaDSG,1,true,"1) 1;ON;null; ",false,false,381,()
+java.util.List,java.util.ArrayList,GetNumWadfiles,1,false,wadfiles,size,1417,w.WadLoader,1,false,,false,false,65,()
+java.util.List,java.util.List,InitRMISubsystem,7,true,detailaware,add(value),194,rr.parallel.ParallelThings$TrueColor,1,true,"1) 2;ON;null; ",false,true,,
+java.util.List,java.util.ArrayList,reconstructPointers,1,false,TL,sequentialGet,531,savegame.VanillaDSG,1,true,"1) 2;ON;0; ",false,false,381,()
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,1,true,"1) 1;INFINITE;null; 2) 9;ON;null; 3) 11;null;null; ",false,true,253,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,10,true,"1) 9;null;null; 2) 11;ON;null; ",false,false,243,()
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,1,true,"1) 1;O1;0; 2) 9;ON;null; ",false,false,,
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; 4) 8;null;null; 5) 10;ON;null; ",false,true,,
+java.util.List,java.util.ArrayList,SetViewSize,3,false,detailaware,forEach,150,rr.RendererState,3,false,,false,false,260,()
+java.util.List,java.util.ArrayList,PlaySong,3,false,songs,randomGet,98,s.FinnwMusicModule,1,false,,false,false,59,(I)
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),109,rr.MultiPatchSynthesizer,2,true,"1) 2;ON;null; ",false,false,78,()
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,1,true,"1) 1;O1;4; 2) 9;null;null; ",false,true,,
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),155,doom.ConfigBase,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; ",false,true,142,()
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,1,true,"1) 1;null;null; ",false,true,,
+java.util.List,java.util.ArrayList,putTic,2,false,demorecorder,add(value),104,demo.VanillaDoomDemo,1,false,,false,false,42,()
+java.util.Set,java.util.Set,hasActions,2,true,actions,contains,81,awt.EventBase,1,true,"1) 1;ON;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,69,doom.ConfigManager,2,false,,false,false,43,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,1,true,"1) 5;ON;null; ",false,false,1145,(I)
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,get,87,doom.CVarManager,1,true,"1) 1;INFINITE;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.Hashtable,java.util.Hashtable,InitFlats,1,false,FlatCache,put(key;value),809,rr.SimpleTextureManager,1,true,"1) 1;ON;0; ",false,false,783,()
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,1,true,"1) 1;null;null; 2) 7;null;null; 3) 9;ON;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,present,2,false,cVarMap,get,63,doom.CVarManager,4,true,"1) 1;ON;256; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,findByDouble,4,true,list,size,253,utils.BinarySearch,1,false,,false,true,,
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,1,true,"1) 1;INFINITE;null; 2) 2;null;null; 3) 10;ON;null; 4) 12;null;null; ",false,true,253,()
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,get,87,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,RegisterSong,2,false,songs,size,121,s.FinnwMusicModule,2,false,,false,false,59,(I)
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,1,true,"1) 3;O1;0; 2) 13;ON;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,convertPalettedBlock,2,false,colcache,computeIfAbsent,115,v.renderers.SoftwareParallelVideoRenderer,1,false,,false,false,75,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 7;null;null; 3) 9;ON;null; 4) 10;null;null; ",false,false,243,()
+java.util.List,java.util.List,findByLong,3,true,list,size,157,utils.BinarySearch,1,false,,false,true,,
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,1,true,"1) 1;O1;4; 2) 11;ON;null; ",false,false,1145,(I)
+java.util.EnumSet,java.util.Set,restoreCooperation,4,true,orig,copyOf,347,awt.EventBase$ActionStateHolder,2,false,,false,true,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 7;null;null; 3) 9;ON;null; ",false,false,243,()
+java.util.List,java.util.List,LoadDefaults,1,false,configFiles,forEach,223,doom.ConfigManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; ",false,false,,
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,2,true,"1) 5;null;null; 2) 7;ON;null; ",false,true,,
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,2,true,"1) 1;O1;0; ",false,false,54,()
+java.util.Stack,java.util.Stack,checkIn,2,false,locked,push,54,pooling.ObjectQueuePool,1,false,,false,false,22,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,55,doom.ConfigManager,1,true,"1) 1;O1;0; 2) 3;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,63,doom.ConfigManager,1,true,"1) 1;ON;4; 2) 4;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),156,doom.ConfigBase,1,true,"1) 1;INFINITE;null; ",false,true,142,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,31,true,"1) 6;null;null; 2) 8;ON;null; ",false,false,243,()
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; 3) 8;null;null; 4) 10;ON;null; ",false,true,,
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,1,false,,false,true,,
+java.util.List,java.util.ArrayList,reconstructPointers,1,false,TL,size,520,savegame.VanillaDSG,1,true,"1) 1;ON;null; ",false,false,381,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,137,doom.ConfigManager,1,true,"1) 1;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,present,2,false,cVarMap,get,63,doom.CVarManager,88,false,,false,false,42,(Ljava/lang/Class;)
+java.util.EnumSet,java.util.EnumSet,Repalette,1,false,GENERATE_LITE_LEVELS_FOR,stream,346,automap.Map,1,true,"1) 1;INFINITE;null; ",false,false,,
+java.util.List,java.util.ArrayList,rewirePointers,1,false,TL,forEach,543,savegame.VanillaDSG,3,false,,false,false,381,()
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,1,true,"1) 1;O1;0; 2) 9;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,22,true,"1) 7;null;null; 2) 9;ON;null; 3) 10;null;null; ",false,false,243,()
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,170,doom.ConfigManager,1,true,"1) 1;INFINITE;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,55,doom.ConfigManager,1,true,"1) 2;O1;0; 2) 4;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,findByInt,4,true,list,size,125,utils.BinarySearch,1,false,,false,true,,
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,get,87,doom.CVarManager,1,true,"1) 1;O1;4; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,RegisterSong,2,false,songs,set,119,s.FinnwMusicModule,2,false,,false,false,59,(I)
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,7,false,,false,false,1145,(I)
+java.util.EnumMap,java.util.EnumMap,present,2,false,cVarMap,get,63,doom.CVarManager,2,true,"1) 1;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),156,doom.ConfigBase,1,true,"1) 1;O1;4; ",false,true,142,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),102,rr.MultiPatchSynthesizer,4,true,"1) 3;ON;null; 2) 4;ON;null; ",false,false,78,()
+java.util.List,java.util.List,InitRSISubsystem,1,false,detailaware,add(value),215,rr.parallel.ParallelRenderer2$Indexed,1,true,"1) 1;ON;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,3,true,"1) 1;ON;256; 2) 9;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.Map,java.util.Map,restoreCooperation,4,false,cooperationMap,iterator,348,awt.EventBase$ActionStateHolder,2,false,,false,false,,
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,1,true,"1) 3;O1;0; 2) 15;ON;null; 3) 15;null;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,1,true,"1) 6;ON;null; ",false,false,1145,(I)
+java.util.Map,java.util.Map,remapAction,4,false,actionsMap,iterator,428,awt.EventBase$ActionStateHolder,2,false,,false,false,,
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,177,doom.ConfigManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,31,true,"1) 6;null;null; 2) 8;ON;null; 3) 9;null;null; ",false,false,243,()
+java.util.LinkedHashSet,java.util.LinkedHashSet,addInterest,2,false,keyInterests,add(value),185,awt.EventBase$KeyStateHolder,1,true,"1) 1;O1;4; ",false,false,173,()
+java.util.Map,java.util.Map,writeScreenShot,3,false,screens,iterator,62,v.renderers.SoftwareIndexedVideoRenderer,1,false,,false,false,,
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,168,doom.ConfigManager,1,true,"1) 4;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,69,doom.ConfigManager,1,true,"1) 1;ON;4; 2) 4;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,1,true,"1) 5;ON;null; 2) 6;O1;0; ",false,false,65,()
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),156,doom.ConfigBase,1,true,"1) 1;INFINITE;null; 2) 2;null;null; ",false,true,142,()
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,3,true,"1) 4;null;null; 2) 6;ON;null; ",false,false,54,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,3,true,"1) 4;null;null; 2) 6;ON;null; ",false,false,243,()
+java.util.Map,java.util.Map,SaveDefaults,1,false,SETTINGS_MAP,forEach,190,doom.ConfigManager,1,true,"1) 4;O1;0; ",false,false,,
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,1,true,"1) 4;O1;0; 2) 12;null;null; 3) 14;ON;null; ",false,false,54,()
+java.util.Hashtable,java.util.Hashtable,InitFlats,1,false,FlatCache,clear,784,rr.SimpleTextureManager,1,false,,false,false,783,()
+java.util.EnumMap,java.util.EnumMap,specified,2,false,cVarMap,containsKey,72,doom.CVarManager,1,true,"1) 2;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,2,true,"1) 2;null;null; 2) 4;ON;null; ",false,true,,
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,1,true,"1) 3;ON;null; 2) 4;O1;0; ",false,false,65,()
+java.util.Hashtable,java.util.Hashtable,InitFlats,1,false,FlatCache,put(key;value),841,rr.SimpleTextureManager,1,true,"1) 1;ON;null; ",false,false,783,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,88,doom.ConfigManager,1,true,"1) 3;INFINITE;null; 2) 4;ON;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,1,true,"1) 7;null;null; 2) 7;ON;null; ",false,false,,
+java.util.List,java.util.List,InitRMISubsystem,7,true,detailaware,add(value),194,rr.parallel.ParallelThings$TrueColor,1,true,"1) 1;ON;null; ",false,true,,
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,1,true,"1) 4;ON;null; ",false,false,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,1,true,"1) 1;null;null; 2) 3;ON;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,completeInit,1,false,detailaware,add(value),2749,rr.RendererState,17,false,,false,false,260,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),109,rr.MultiPatchSynthesizer,4,true,"1) 3;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,55,doom.ConfigManager,2,true,"1) 3;O1;0; 2) 5;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.Stack,java.util.Stack,checkOut,1,false,locked,pop,42,pooling.ObjectQueuePool,2,false,,false,false,22,()
+java.util.List,java.util.ArrayList,appendTo,4,false,messages,iterator,347,s.FinnwMusicModule$EventGroup,1,false,,false,false,316,()
+java.util.List,java.util.List,InitMaskedWorkers,1,false,detailaware,add(value),328,rr.parallel.ParallelRenderer2$HiColor,1,true,"1) 1;ON;null; ",false,false,,
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,16,true,"1) 10;ON;null; 2) 11;O1;0; ",false,false,65,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),91,rr.MultiPatchSynthesizer,2,true,"1) 1;ON;null; 2) 2;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,present,2,false,cVarMap,get,63,doom.CVarManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,1,true,"1) 4;O1;0; 2) 14;ON;null; ",false,false,1145,(I)
+java.util.Map,java.util.Map,unmapCooperation,4,false,cooperationMap,iterator,315,awt.EventBase$ActionStateHolder,4,false,,false,false,,
+java.util.Hashtable,java.util.Hashtable,getPhoneme,1,false,phonemes,iterator,103,s.SpeakerSound,1,true,"1) 1;ON;null; ",false,false,85,()
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,1,true,"1) 4;O1;0; 2) 14;ON;null; 3) 16;null;null; ",false,true,253,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,63,doom.ConfigManager,1,true,"1) 1;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,lambda$export$1,2,false,configMap,get,156,doom.ConfigManager,1,false,,false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,1,true,"1) 1;null;null; 2) 9;ON;null; 3) 10;O1;0; ",false,false,65,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,85,doom.ConfigManager,1,true,"1) 2;INFINITE;null; 2) 3;ON;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,1,true,"1) 1;O1;4; 2) 9;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,bool,2,false,cVarMap,containsKey,54,doom.CVarManager,102,false,,false,false,42,(Ljava/lang/Class;)
+java.util.LinkedHashSet,java.util.LinkedHashSet,addInterest,2,false,keyInterests,add(value),185,awt.EventBase$KeyStateHolder,1,true,"1) 1;INFINITE;null; ",false,false,173,()
+java.util.List,java.util.List,processAllArgs,2,true,commandList,size,170,doom.CVarManager,1,true,"1) 2;O1;0; ",false,true,,
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,1,true,"1) 2;O1;0; 2) 12;ON;null; ",false,false,,
+java.util.Set,java.util.Set,<init>,6,false,enabled,addAll,366,awt.EventHandler,3,false,,false,false,,
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,1,true,"1) 4;O1;0; 2) 12;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,1,true,"1) 3;O1;0; 2) 11;null;null; 3) 13;ON;null; ",false,false,243,()
+java.util.Hashtable,java.util.Hashtable,retrievePatchSafe,2,false,FlatPatchCache,containsKey,339,rr.SimpleTextureManager,2,true,"1) 1;ON;null; ",false,false,107,()
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),155,doom.ConfigBase,1,true,"1) 1;INFINITE;null; ",false,true,142,()
+java.util.HashMap,java.util.HashMap,InitSpriteDefs,2,true,hash,iterator,119,rr.SpriteManager,1,true,"1) 1;ON;0; ",false,false,104,(I)
+java.util.Set,java.util.Set,unmapCooperation,4,true,set,clear,321,awt.EventBase$ActionStateHolder,4,false,,false,false,,
+java.util.LinkedHashSet,java.util.LinkedHashSet,removeInterest,2,false,keyInterests,remove(key),189,awt.EventBase$KeyStateHolder,2,false,,false,false,173,()
+java.util.HashMap,java.util.HashMap,lambda$rewirePointers$1,2,false,pointindex,iterator,546,savegame.VanillaDSG,1,false,,false,false,489,()
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,1,true,"1) 2;O1;0; 2) 12;ON;null; 3) 13;O1;0; ",false,false,65,()
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,2,true,"1) 6;ON;null; 2) 7;O1;0; ",false,false,65,()
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,10,true,"1) 13;null;null; 2) 13;ON;null; ",false,false,,
+java.util.List,java.util.List,find,3,true,list,size,29,utils.BinarySearch,1,false,,false,true,,
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,88,doom.ConfigManager,2,true,"1) 3;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.Set,java.util.Set,contains,2,false,holdingSet,contains,181,awt.EventBase$KeyStateHolder,1,false,,false,false,,
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,55,doom.ConfigManager,1,true,"1) 3;INFINITE;null; 2) 4;ON;4; 3) 7;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,1,true,"1) 4;O1;0; 2) 16;ON;null; 3) 16;null;null; 4) 17;ON;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,reconstructPointers,1,false,pointindex,put(key;value),506,savegame.VanillaDSG,1,true,"1) 2;O1;0; ",false,false,489,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),109,rr.MultiPatchSynthesizer,1,true,"1) 1;ON;null; 2) 2;ON;null; 3) 4;ON;null; ",false,false,78,()
+java.util.List,java.util.List,properPlaypal,2,false,NORMAL_TINTS,randomGet,141,v.tables.Playpal,2,true,"1) 2;ON;256; 2) 2;ON;14; ",false,false,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,2,true,"1) 2;null;null; 2) 4;ON;null; ",false,false,243,()
+java.util.Set,java.util.EnumSet,restoreCooperation,4,true,a,retainAll,349,awt.EventBase$ActionStateHolder,2,false,,false,true,,
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,1,true,"1) 5;null;null; 2) 5;ON;null; 3) 6;ON;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,31,true,"1) 6;null;null; 2) 8;ON;null; ",false,false,54,()
+java.util.EnumSet,java.lang.Class,<init>,3,true,hClass,noneOf,266,awt.EventBase$ActionStateHolder,1,true,"1) 1;INFINITE;null; 2) 2;null;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,168,doom.ConfigManager,4,true,"1) 1;ON;256; ",false,false,43,(Ljava/lang/Class;)
+java.util.Map,java.util.HashMap,submit,3,false,tasks,iterator,48,utils.OrderedExecutor,1,false,,false,false,38,()
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,1,true,"1) 1;ON;256; 2) 10;ON;null; ",false,false,1145,(I)
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,1,true,"1) 2;null;null; 2) 2;ON;null; ",false,false,,
+java.util.Set,java.util.Set,unmapAdjustment,4,true,set,isEmpty,361,awt.EventBase$ActionStateHolder,4,false,,false,false,,
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,1,true,"1) 3;O1;0; 2) 11;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,InitSpriteDefs,2,true,list,isEmpty,134,rr.SpriteManager,1,true,"1) 2;ON;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,9,true,"1) 9;null;null; 2) 11;ON;null; ",false,false,54,()
+java.util.List,java.util.List,InitMaskedWorkers,1,false,detailaware,add(value),228,rr.parallel.ParallelRenderer2$Indexed,1,true,"1) 1;ON;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,85,doom.ConfigManager,8,false,,false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,183,doom.ConfigManager,1,true,"1) 3;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,55,doom.ConfigManager,3,true,"1) 3;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,92,doom.ConfigManager,1,true,"1) 1;INFINITE;null; 2) 2;ON;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.Set,java.util.EnumSet,restoreAdjustment,4,true,a,retainAll,394,awt.EventBase$ActionStateHolder,2,false,,false,true,,
+java.util.EnumSet,java.lang.Class,<init>,3,true,hClass,noneOf,266,awt.EventBase$ActionStateHolder,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; ",false,true,,
+java.util.EnumSet,java.util.Set,lambda$new$0,1,true,set,copyOf,257,awt.EventBase$ActionStateHolder,1,false,,false,true,,
+java.util.HashMap,java.util.HashMap,InitSpriteDefs,2,true,hash,containsKey,114,rr.SpriteManager,1,true,"1) 2;ON;0; ",false,false,104,(I)
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,1,true,"1) 5;null;null; 2) 5;ON;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,getClipForChannel,3,false,cachedSounds,iterator,216,s.ClipSFXModule,2,false,,false,false,37,()
+java.util.Map,java.util.Map,cooperations,3,false,cooperationMap,iterator,306,awt.EventBase$ActionStateHolder,3,false,,false,false,,
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,115,rr.MultiPatchSynthesizer,1,true,"1) 1;ON;null; 2) 2;ON;null; 3) 4;ON;null; ",false,false,78,()
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,1,true,"1) 1;O1;4; 2) 13;ON;null; 3) 13;null;null; 4) 14;ON;null; ",false,false,,
+java.util.List,java.util.ArrayList,reconstructPointers,1,false,TL,size,520,savegame.VanillaDSG,1,true,"1) 3;ON;null; ",false,false,381,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),91,rr.MultiPatchSynthesizer,2,true,"1) 4;ON;null; 2) 5;ON;null; ",false,false,78,()
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,1,true,"1) 3;O1;0; 2) 14;ON;null; ",false,false,1145,(I)
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,1,true,"1) 5;ON;null; 2) 7;null;null; ",false,true,253,()
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,1,true,"1) 1;null;null; ",false,true,253,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,1,true,"1) 2;ON;null; 2) 3;null;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,<init>,1,false,channels,add(value),65,s.FinnwMusicModule,1,false,,false,false,58,(I)
+java.util.EnumSet,java.util.EnumSet,Repalette,1,false,GENERATE_LITE_LEVELS_FOR,stream,346,automap.Map,1,true,"1) 1;INFINITE;null; 2) 2;null;null; ",false,false,,
+java.util.List,java.util.ArrayList,addShortMessage,5,false,messages,add(value),420,s.FinnwMusicModule$EventGroup,2,true,"1) 3;O1;0; ",false,false,316,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,3,true,"1) 1;ON;256; 2) 9;null;null; 3) 11;ON;null; ",false,false,243,()
+java.util.Hashtable,java.util.Hashtable,InitFlats,1,false,FlatCache,put(key;value),843,rr.SimpleTextureManager,1,true,"1) 1;ON;null; ",false,false,783,()
+java.util.HashMap,java.util.HashMap,reconstructPointers,1,false,pointindex,put(key;value),532,savegame.VanillaDSG,1,true,"1) 3;ON;0; ",false,false,489,()
+java.util.List,java.util.ArrayList,pickClosest,3,true,picks,add(value),31,awt.DisplayModePicker,1,true,"1) 2;ON;null; ",false,true,23,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,88,doom.ConfigManager,1,true,"1) 2;INFINITE;null; 2) 3;ON;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,addShortMessage,5,false,messages,add(value),274,s.MusReader$EventGroup,1,true,"1) 2;null;null; 2) 3;O1;0; ",false,false,206,()
+java.util.EnumSet,java.util.EnumSet,Repalette,1,false,GENERATE_LITE_LEVELS_FOR,stream,346,automap.Map,1,true,"1) 1;O1;4; ",false,false,,
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,2,true,"1) 8;null;null; 2) 8;ON;null; 3) 9;ON;null; ",false,false,,
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,2,true,"1) 2;null;null; 2) 4;ON;null; ",false,true,,
+java.util.List,java.util.ArrayList,reconstructPointers,1,false,TL,sequentialGet,522,savegame.VanillaDSG,1,true,"1) 2;ON;null; ",false,false,381,()
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,1,true,"1) 1;O1;0; 2) 7;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.Hashtable,java.util.Hashtable,checkIn,2,false,unlocked,put(key;value),81,pooling.ObjectPool,1,false,,false,false,24,()
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),156,doom.ConfigBase,1,true,"1) 3;O1;0; ",false,true,142,()
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),156,doom.ConfigBase,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; ",false,true,142,()
+java.util.Map,java.util.Map,SaveDefaults,1,false,SETTINGS_MAP,forEach,190,doom.ConfigManager,2,true,"1) 3;O1;0; ",false,false,,
+java.util.LinkedHashSet,java.util.LinkedHashSet,addInterest,2,false,keyInterests,add(value),185,awt.EventBase$KeyStateHolder,4,true,"1) 1;ON;256; ",false,false,173,()
+java.util.Hashtable,java.util.Hashtable,InitFlats,1,true,FlatNames,put(key;value),845,rr.SimpleTextureManager,1,true,"1) 1;ON;null; ",false,false,785,()
+java.util.Map,java.util.Map,restoreAdjustment,4,false,adjustmentMap,iterator,393,awt.EventBase$ActionStateHolder,2,false,,false,false,,
+java.util.List,java.util.ArrayList,emptyToNull,1,false,messages,isEmpty,359,s.FinnwMusicModule$EventGroup,6,false,,false,false,316,()
+java.util.TreeMap,java.util.TreeMap,<init>,2,true,sortedRatios,floorEntry,173,v.tables.BlurryTable,1,true,"1) 1;ON;255; ",false,false,143,(Ljava/util/Comparator;)
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,get,87,doom.CVarManager,4,true,"1) 1;ON;256; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,1,true,"1) 2;ON;null; ",false,false,,
+java.util.Map,java.util.Map,run,4,false,actionsMap,iterator,291,awt.EventBase$ActionStateHolder,4,false,,false,false,,
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,168,doom.ConfigManager,1,true,"1) 1;O1;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,31,true,"1) 8;ON;null; ",false,false,1145,(I)
+java.util.LinkedHashSet,java.util.LinkedHashSet,addInterest,2,false,keyInterests,add(value),185,awt.EventBase$KeyStateHolder,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; ",false,false,173,()
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,get,87,doom.CVarManager,2,true,"1) 1;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,drawWalls,1,false,litedColorSources,get,1303,automap.Map,2,false,,false,false,326,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,177,doom.ConfigManager,1,true,"1) 2;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,bool,2,false,cVarMap,containsKey,54,doom.CVarManager,1,true,"1) 2;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.Map,java.util.Map,mapAction,4,false,actionsMap,iterator,422,awt.EventBase$ActionStateHolder,4,false,,false,false,,
+java.util.List,java.util.ArrayList,addShortMessage,5,false,messages,add(value),274,s.MusReader$EventGroup,1,true,"1) 1;null;null; 2) 2;O1;0; ",false,false,206,()
+java.util.Hashtable,java.util.Hashtable,retrievePatchSafe,2,false,FlatPatchCache,put(key;value),350,rr.SimpleTextureManager,2,true,"1) 1;ON;null; ",false,false,107,()
+java.util.Set,java.util.Set,hasActionsEnabled,3,true,actions,contains,245,awt.EventBase$ActionStateHolder,1,true,"1) 1;ON;null; ",false,false,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; 4) 8;null;null; 5) 10;ON;null; 6) 11;null;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,2,true,"1) 5;null;null; 2) 7;ON;null; 3) 8;null;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,reconstructPointers,1,false,TL,sequentialGet,531,savegame.VanillaDSG,1,true,"1) 1;ON;0; ",false,false,381,()
+java.util.ArrayList,java.util.ArrayList,CheckNumsForName,2,false,list,size,1196,w.WadLoader,1,false,,false,false,1206,()
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,16,true,"1) 8;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,1,true,"1) 1;INFINITE;null; 2) 9;ON;null; ",false,false,1145,(I)
+java.util.EnumMap,java.util.EnumMap,specified,2,false,cVarMap,containsKey,72,doom.CVarManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumSet,java.util.Set,restoreAdjustment,4,true,orig,copyOf,392,awt.EventBase$ActionStateHolder,2,false,,false,true,,
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,21,true,"1) 11;null;null; 2) 11;ON;null; ",false,false,,
+java.util.Map,java.util.Map,<init>,4,false,screens,iterator,158,v.renderers.BufferedRenderer32$IntPaletteThread,1,false,,false,false,,
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; 3) 8;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,3,true,"1) 1;ON;256; 2) 9;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,1,true,"1) 4;null;null; 2) 4;ON;null; 3) 5;ON;null; ",false,false,,
+java.util.TreeMap,java.util.TreeMap,<init>,2,true,sortedRatios,put(key;value),113,v.tables.BlurryTable,1,true,"1) 2;ON;256; ",false,false,"137,90",(Ljava/util/Comparator;)
+java.util.EnumMap,java.util.EnumMap,drawPlayers,1,false,fixedColorSources,get,1437,automap.Map,2,false,,false,false,325,(Ljava/lang/Class;)
+java.util.Hashtable,java.util.Hashtable,retrievePatchSafe,2,false,FlatPatchCache,put(key;value),350,rr.SimpleTextureManager,6,false,,false,false,107,()
+java.util.List,java.util.List,InitMaskedWorkers,1,false,detailaware,add(value),307,rr.parallel.ParallelRenderer$HiColor,1,true,"1) 1;ON;null; ",false,false,,
+java.util.EnumSet,java.lang.Class,<init>,3,true,hClass,noneOf,266,awt.EventBase$ActionStateHolder,2,true,"1) 1;O1;0; ",false,true,,
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,1,true,"1) 1;INFINITE;null; 2) 11;ON;null; 3) 11;null;null; 4) 12;ON;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,3,true,"1) 1;ON;256; 2) 13;ON;null; 3) 13;null;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,16,true,"1) 12;null;null; 2) 12;ON;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,1,true,"1) 1;O1;0; 2) 11;ON;null; 3) 11;null;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,1,true,"1) 3;ON;null; ",false,false,1145,(I)
+java.util.Map,java.util.Map,<clinit>,0,false,PARENT_LOGGERS_MAP,iterator,53,mochadoom.Loggers,1,false,,false,false,,
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,1,true,"1) 1;O1;0; 2) 11;ON;null; 3) 12;O1;0; ",false,false,65,()
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,1,true,"1) 1;INFINITE;null; 2) 2;null;null; 3) 12;ON;null; 4) 12;null;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,2,true,"1) 2;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.LinkedHashSet,java.util.LinkedHashSet,addInterest,2,false,keyInterests,add(value),185,awt.EventBase$KeyStateHolder,1,true,"1) 4;O1;0; ",false,false,173,()
+java.util.HashMap,java.util.HashMap,convertPalettedBlock,2,false,colcache,computeIfAbsent,124,v.renderers.SoftwareParallelVideoRenderer,1,false,,false,false,75,()
+java.util.Map,java.util.Map,adjustments,2,false,adjustmentMap,iterator,302,awt.EventBase$ActionStateHolder,3,false,,false,false,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,1,true,"1) 1;null;null; 2) 3;ON;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,1,false,,false,false,65,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),102,rr.MultiPatchSynthesizer,2,true,"1) 1;ON;null; 2) 2;ON;null; ",false,false,78,()
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,1,true,"1) 4;ON;null; ",false,false,1145,(I)
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,10,true,"1) 9;null;null; 2) 11;ON;null; ",false,true,,
+java.util.HashMap,java.util.HashMap,<clinit>,0,false,INDIVIDUAL_CLASS_LOGGERS,put(key;value),61,mochadoom.Loggers,1,false,,false,false,54,()
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,168,doom.ConfigManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.TreeMap,java.util.TreeMap,<init>,2,true,sortedRatios,floorEntry,120,v.tables.BlurryTable,1,true,"1) 2;ON;31; ",false,false,"137,90",(Ljava/util/Comparator;)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,92,doom.ConfigManager,2,true,"1) 3;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,69,doom.ConfigManager,1,true,"1) 1;O1;0; 2) 3;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,containsKey,82,doom.CVarManager,1,true,"1) 2;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,144,rr.MultiPatchSynthesizer,1,false,,false,false,78,()
+java.util.Hashtable,java.util.Hashtable,retrievePatchSafe,2,false,FlatPatchCache,containsKey,339,rr.SimpleTextureManager,6,false,,false,false,107,()
+java.util.List,java.util.ArrayList,addShortMessage,5,false,messages,add(value),274,s.MusReader$EventGroup,16,false,,false,false,206,()
+java.util.List,java.util.ArrayList,nextEventGroup,3,false,channels,randomGet,201,s.FinnwMusicModule,2,true,"1) 3;O1;0; ",false,false,58,(I)
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,2,true,"1) 5;null;null; 2) 7;ON;null; ",false,false,54,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,1,true,"1) 1;ON;null; 2) 2;null;null; ",false,false,243,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,55,doom.ConfigManager,1,true,"1) 1;INFINITE;null; 2) 2;ON;4; 3) 5;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,1,true,"1) 1;O1;0; 2) 9;null;null; 3) 11;ON;null; ",false,false,54,()
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,1,true,"1) 1;O1;4; 2) 9;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.Map,java.util.Map,hasActionsEnabled,3,false,enabledActions,iterator,239,awt.EventBase$ActionStateHolder,5,false,,false,false,,
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,137,doom.ConfigManager,1,true,"1) 1;INFINITE;null; 2) 2;ON;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,1,true,"1) 1;O1;0; 2) 11;ON;null; 3) 13;null;null; ",false,true,253,()
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,1,true,"1) 6;null;null; 2) 6;ON;null; ",false,false,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,1,true,"1) 1;null;null; 2) 7;null;null; 3) 9;ON;null; ",false,false,243,()
+java.util.Map,java.util.Map,adjustments,3,false,adjustmentMap,iterator,310,awt.EventBase$ActionStateHolder,1,false,,false,false,,
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,1,true,"1) 1;O1;0; 2) 9;null;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,equals,3,false,configMap,get,162,doom.ConfigManager,1,true,"1) 3;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,equals,3,false,configMap,get,162,doom.ConfigManager,4,true,"1) 1;ON;256; ",false,false,43,(Ljava/lang/Class;)
+java.util.Map,java.util.Map,<init>,4,false,screens,iterator,158,v.renderers.BufferedRenderer32$IntPaletteThread,1,true,"1) 1;ON;null; ",false,false,,
+java.util.Map,java.util.HashMap,updateConfig,1,false,SETTINGS_MAP,compute,213,m.Settings,3,false,,false,false,131,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),91,rr.MultiPatchSynthesizer,4,true,"1) 3;ON;null; 2) 4;ON;null; ",false,false,78,()
+java.util.List,java.util.List,LoadDefaults,1,false,configFiles,forEach,223,doom.ConfigManager,1,true,"1) 1;null;null; ",false,false,,
+java.util.EnumSet,java.util.EnumSet,lambda$mapAdjustment$9,4,false,emptyEnumSet,copyOf,378,awt.EventBase$ActionStateHolder,1,false,,false,true,,
+java.util.ArrayList,java.util.ArrayList,CheckNumsForName,2,false,list,sequentialGet,1199,w.WadLoader,1,true,"1) 1;ON;null; ",false,false,1206,()
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,31,true,"1) 10;null;null; 2) 10;ON;null; ",false,false,,
+java.util.ArrayList,java.util.ArrayList,CloseAllHandles,1,true,d,contains,1218,w.WadLoader,1,true,"1) 1;ON;null; ",false,false,1215,()
+java.util.List,java.util.ArrayList,getInstance,0,true,dInfos,iterator,43,s.VolumeScalingReceiver,2,false,,false,true,41,(Ljava/util/Collection;)
+java.util.EnumMap,java.util.EnumMap,override,4,false,cVarMap,compute,144,doom.CVarManager,1,true,"1) 3;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,1,true,"1) 3;ON;null; ",false,false,1145,(I)
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,1,true,"1) 5;ON;null; ",false,false,1145,(I)
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,177,doom.ConfigManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,drawThings,3,false,litedColorSources,get,1468,automap.Map,2,false,,false,false,326,(Ljava/lang/Class;)
+java.util.EnumSet,automap.Map$Color,<clinit>,0,false,TELECOLORS,of,276,automap.Map,1,false,,false,true,,
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,1,true,"1) 1;O1;4; 2) 9;null;null; 3) 11;ON;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,2,false,,false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,findByMatch,2,true,list,size,751,utils.BinarySearch,1,false,,false,true,,
+java.util.EnumMap,java.util.EnumMap,drawPlayers,1,false,fixedColorSources,get,1459,automap.Map,1,true,"1) 1;ON;4; ",false,false,325,(Ljava/lang/Class;)
+java.util.EnumSet,g.Signals$ScanCode,<init>,4,true,interestFirstKey,of,161,awt.EventBase$KeyStateInterest,1,true,"1) 1;INFINITE;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,63,doom.ConfigManager,1,true,"1) 2;O1;0; 2) 4;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,override,4,false,cVarMap,compute,144,doom.CVarManager,4,true,"1) 1;ON;256; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,1,true,"1) 2;ON;null; ",false,false,1145,(I)
+java.util.Set,java.util.Set,unmapAdjustment,4,true,set,removeAll,368,awt.EventBase$ActionStateHolder,4,false,,false,false,,
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,1,true,"1) 1;null;null; 2) 9;ON;null; ",false,false,1145,(I)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,134,doom.ConfigManager,1,true,"1) 1;ON;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,emptyToNull,1,false,messages,isEmpty,227,s.MusReader$EventGroup,1,true,"1) 2;null;null; ",false,false,206,()
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,1,true,"1) 1;INFINITE;null; 2) 10;ON;null; ",false,false,1145,(I)
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,2,true,"1) 6;ON;null; 2) 8;null;null; ",false,true,253,()
+java.util.EnumMap,java.util.EnumMap,override,4,false,cVarMap,compute,144,doom.CVarManager,1,true,"1) 1;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.Set,java.util.Set,hasActionsEnabled,3,true,actions,contains,245,awt.EventBase$ActionStateHolder,4,true,"1) 2;ON;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,2,true,"1) 7;ON;null; ",false,false,1145,(I)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,1,true,"1) 1;O1;0; 2) 7;null;null; 3) 9;ON;null; 4) 10;null;null; ",false,false,243,()
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,1,true,"1) 1;null;null; 2) 7;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.Collection,java.util.Collection,ShutdownSound,1,true,clips,iterator,199,s.ClipSFXModule,1,false,,false,false,,
+java.util.EnumSet,g.Signals$ScanCode,<init>,4,true,interestFirstKey,of,161,awt.EventBase$KeyStateInterest,1,true,"1) 2;O1;0; ",false,true,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,1,true,"1) 1;ON;256; 2) 8;null;null; 3) 10;ON;null; ",false,false,243,()
+java.util.List,java.util.List,stop,1,false,channels,iterator,714,s.FinnwMusicModule$ScheduledTransmitter,3,false,,false,false,,
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),102,rr.MultiPatchSynthesizer,1,true,"1) 1;ON;null; 2) 2;ON;null; 3) 4;ON;null; 4) 5;ON;null; ",false,false,78,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),91,rr.MultiPatchSynthesizer,1,true,"1) 1;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,134,doom.ConfigManager,1,true,"1) 1;INFINITE;null; 2) 2;ON;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.Map,java.util.Map,lambda$LogEvent$8,5,true,adjusts,entrySet,122,mochadoom.Loggers,1,false,,false,true,,
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,1,true,"1) 1;O1;0; 2) 12;ON;null; ",false,false,1145,(I)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,92,doom.ConfigManager,1,true,"1) 3;INFINITE;null; 2) 4;ON;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,reconstructPointers,1,false,TL,iterator,501,savegame.VanillaDSG,3,false,,false,false,381,()
+java.util.EnumSet,g.Signals$ScanCode,<init>,4,true,interestFirstKey,of,161,awt.EventBase$KeyStateInterest,1,true,"1) 1;INFINITE;null; 2) 2;null;null; ",false,true,,
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),155,doom.ConfigBase,84,false,,false,true,142,()
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,containsKey,82,doom.CVarManager,1,true,"1) 1;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,2,true,"1) 7;ON;null; 2) 9;null;null; ",false,true,253,()
+java.util.List,java.util.ArrayList,reconstructPointers,1,false,TL,sequentialGet,522,savegame.VanillaDSG,1,true,"1) 3;ON;null; ",false,false,381,()
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,1,true,"1) 1;ON;null; ",false,false,1145,(I)
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,16,true,"1) 8;null;null; 2) 10;ON;null; ",false,true,,
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,1,true,"1) 1;ON;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,10,true,"1) 13;null;null; 2) 13;ON;null; 3) 14;ON;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,lambda$mapScreensToBuffers$1,4,true,map,put,35,v.renderers.DoomScreen,1,false,,false,true,,
+java.util.EnumSet,java.lang.Class,<init>,3,true,hClass,noneOf,266,awt.EventBase$ActionStateHolder,86,false,,false,true,,
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,1,true,"1) 1;O1;0; 2) 7;null;null; 3) 9;ON;null; ",false,true,,
+java.util.List,java.util.List,InitRSISubsystem,1,false,detailaware,add(value),207,rr.parallel.ParallelRenderer2$Indexed,1,true,"1) 1;ON;null; ",false,false,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,1,true,"1) 1;O1;0; 2) 7;null;null; 3) 9;ON;null; ",false,false,243,()
+java.util.Map,java.util.Map,<init>,4,false,screens,iterator,151,v.renderers.BufferedRenderer16$ShortPaletteThread,1,false,,false,false,,
+java.util.Map,java.util.Map,<clinit>,0,false,PARENT_LOGGERS_MAP,iterator,59,mochadoom.Loggers,1,false,,false,false,,
+java.util.Map,java.util.Map,SaveDefaults,1,false,SETTINGS_MAP,forEach,190,doom.ConfigManager,91,false,,false,false,,
+java.util.List,java.util.ArrayList,UnArchiveThinkers,1,false,TL,add(value),462,savegame.VanillaDSG,1,true,"1) 2;O1;0; ",false,false,381,()
+java.util.List,java.util.ArrayList,pickClosest,3,true,picks,add(value),31,awt.DisplayModePicker,1,true,"1) 1;ON;null; ",false,true,23,()
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,1,true,"1) 1;O1;0; 2) 7;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,1,true,"1) 1;O1;0; 2) 9;ON;null; 3) 11;null;null; ",false,true,253,()
+java.util.Stack,java.util.Stack,checkIn,2,false,locked,push,54,pooling.ObjectQueuePool,2,true,"1) 1;O1;0; 2) 1;O1;0; ",false,false,22,()
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,1,false,,false,true,,
+java.util.EnumSet,g.Signals$ScanCode,<init>,4,true,interestFirstKey,of,161,awt.EventBase$KeyStateInterest,85,false,,false,true,,
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,170,doom.ConfigManager,87,false,,false,false,43,(Ljava/lang/Class;)
+java.util.Map,java.util.Map,SaveDefaults,1,false,SETTINGS_MAP,forEach,190,doom.ConfigManager,3,true,"1) 1;O1;0; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,168,doom.ConfigManager,2,true,"1) 1;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,85,doom.ConfigManager,1,true,"1) 2;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.Hashtable,java.util.Hashtable,getBadColumn,1,false,badColumns,iterator,158,rr.patch_t,1,false,,false,false,136,()
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,1,true,"1) 2;ON;null; 2) 3;O1;0; ",false,false,65,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,69,doom.ConfigManager,1,true,"1) 1;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,1,true,"1) 2;O1;0; 2) 10;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,2,true,"1) 3;null;null; 2) 5;ON;null; ",false,true,,
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),155,doom.ConfigBase,1,true,"1) 1;O1;4; ",false,true,142,()
+java.util.Hashtable,java.util.Hashtable,checkOut,1,false,unlocked,remove(key),56,pooling.ObjectPool,1,false,,false,false,24,()
+java.util.Map,java.util.Map,writeScreenShot,3,false,screens,iterator,92,v.renderers.SoftwareParallelVideoRenderer,1,false,,false,false,,
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 7;null;null; 3) 9;ON;null; ",false,true,,
+java.util.List,java.util.ArrayList,appendTo,4,false,messages,iterator,341,s.FinnwMusicModule$EventGroup,1,false,,false,false,316,()
+java.util.Hashtable,java.util.Hashtable,InitFlats,1,false,FlatCache,keys,865,rr.SimpleTextureManager,1,false,,false,false,783,()
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,1,true,"1) 1;ON;256; 2) 8;null;null; 3) 10;ON;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,177,doom.ConfigManager,4,true,"1) 1;ON;256; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,override,4,false,cVarMap,compute,144,doom.CVarManager,1,true,"1) 1;INFINITE;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,get,87,doom.CVarManager,1,true,"1) 3;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,present,2,false,cVarMap,get,63,doom.CVarManager,1,true,"1) 3;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,1,true,"1) 7;null;null; 2) 7;ON;null; 3) 8;ON;null; ",false,false,,
+java.util.Hashtable,java.util.Hashtable,retrievePatchSafe,2,false,FlatPatchCache,containsKey,339,rr.SimpleTextureManager,1,true,"1) 1;ON;null; 2) 2;ON;null; ",false,false,107,()
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,1,true,"1) 6;null;null; 2) 6;ON;null; 3) 7;ON;null; ",false,false,,
+java.util.Set,java.util.Set,unmapAdjustment,4,true,set,clear,366,awt.EventBase$ActionStateHolder,4,false,,false,false,,
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,134,doom.ConfigManager,2,true,"1) 3;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,drawPlayers,1,false,fixedColorSources,get,1457,automap.Map,1,true,"1) 2;ON;4; ",false,false,325,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,containsKey,82,doom.CVarManager,4,true,"1) 1;ON;256; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,2,true,"1) 6;ON;null; ",false,false,1145,(I)
+java.util.Map,java.util.Map,restoreAdjustment,4,false,adjustmentMap,iterator,397,awt.EventBase$ActionStateHolder,2,false,,false,false,,
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,63,doom.ConfigManager,1,true,"1) 2;INFINITE;null; 2) 3;ON;4; 3) 6;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,108,rr.MultiPatchSynthesizer,1,true,"1) 1;ON;null; 2) 2;ON;null; 3) 4;ON;null; ",false,false,78,()
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,16,true,"1) 10;ON;null; ",false,false,1145,(I)
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; 3) 8;null;null; 4) 10;ON;null; ",false,true,,
+java.util.Map,java.util.Map,unmapAction,3,false,actionsMap,iterator,416,awt.EventBase$ActionStateHolder,3,false,,false,false,,
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,randomGet,123,rr.MultiPatchSynthesizer,2,true,"1) 1;ON;null; 2) 2;ON;null; ",false,false,78,()
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,10,true,"1) 11;ON;null; ",false,false,1145,(I)
+java.util.EnumSet,java.lang.Class,<init>,3,true,hClass,noneOf,266,awt.EventBase$ActionStateHolder,1,true,"1) 1;O1;4; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,1,true,"1) 1;null;null; 2) 7;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumSet,java.util.EnumSet,Repalette,1,false,GENERATE_LITE_LEVELS_FOR,stream,346,automap.Map,1,true,"1) 4;O1;0; ",false,false,,
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,1,true,"1) 1;O1;0; 2) 9;null;null; 3) 11;ON;null; ",false,true,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,1,true,"1) 1;ON;256; 2) 8;null;null; 3) 10;ON;null; 4) 11;null;null; ",false,false,243,()
+java.util.Map,java.util.Map,SaveDefaults,1,false,SETTINGS_MAP,forEach,190,doom.ConfigManager,1,true,"1) 1;INFINITE;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,101,doom.ConfigManager,1,false,,false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,69,doom.ConfigManager,2,true,"1) 3;O1;0; 2) 5;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,processAllArgs,2,true,commandList,size,170,doom.CVarManager,89,false,,false,true,,
+java.util.EnumMap,java.util.EnumMap,with,4,false,cVarMap,get,114,doom.CVarManager,2,true,"1) 1;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.ArrayList,java.util.ArrayList,CheckNumsForName,2,false,list,add(value),1192,w.WadLoader,1,true,"1) 1;ON;0; ",false,false,1206,()
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,2,true,"1) 2;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,properPlaypal,2,false,NORMAL_TINTS,randomGet,141,v.tables.Playpal,3,true,"1) 6;ON;256; 2) 6;ON;14; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,168,doom.ConfigManager,1,true,"1) 1;null;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,1,true,"1) 2;ON;null; ",false,false,243,()
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,2,true,"1) 5;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,31,true,"1) 6;null;null; 2) 8;ON;null; ",false,true,,
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,1,true,"1) 1;O1;0; ",false,false,65,()
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,1,true,"1) 1;INFINITE;null; 2) 2;null;null; 3) 10;ON;null; ",false,false,1145,(I)
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,1,true,"1) 1;INFINITE;null; 2) 11;ON;null; 3) 11;null;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,InitSpriteDefs,2,true,hash,iterator,131,rr.SpriteManager,1,true,"1) 2;ON;null; ",false,false,104,(I)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,92,doom.ConfigManager,1,true,"1) 1;ON;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,115,rr.MultiPatchSynthesizer,2,true,"1) 5;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,183,doom.ConfigManager,1,true,"1) 1;INFINITE;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; 4) 8;null;null; 5) 10;ON;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,nextEventGroup,3,false,channels,randomGet,201,s.FinnwMusicModule,1,true,"1) 2;O1;0; ",false,false,58,(I)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,1,true,"1) 1;O1;0; 2) 9;null;null; 3) 11;ON;null; 4) 12;null;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,1,true,"1) 1;O1;0; 2) 9;null;null; 3) 11;ON;null; ",false,false,243,()
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,1,true,"1) 5;ON;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 7;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,UnlockLumpNum,2,false,zone,remove(key),1380,w.WadLoader,1,false,,false,false,64,()
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,22,true,"1) 7;null;null; 2) 9;ON;null; ",false,true,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,2,true,"1) 5;null;null; 2) 7;ON;null; ",false,false,243,()
+java.util.EnumMap,java.util.EnumMap,override,4,false,cVarMap,compute,144,doom.CVarManager,1,true,"1) 1;O1;4; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,108,rr.MultiPatchSynthesizer,2,true,"1) 5;ON;null; ",false,false,78,()
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,3,true,"1) 1;ON;256; 2) 11;ON;null; ",false,false,1145,(I)
+java.util.List,java.util.List,InitRSISubsystem,1,false,detailaware,add(value),307,rr.parallel.ParallelRenderer2$HiColor,1,true,"1) 1;ON;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,containsKey,82,doom.CVarManager,89,false,,false,false,42,(Ljava/lang/Class;)
+java.util.Map,java.util.HashMap,rebase,2,false,SETTINGS_MAP,iterator,196,m.Settings,2,false,,false,false,131,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,16,true,"1) 8;null;null; 2) 10;ON;null; 3) 11;null;null; ",false,false,243,()
+java.util.Hashtable,java.util.Hashtable,retrievePatchSafe,2,false,FlatPatchCache,iterator,340,rr.SimpleTextureManager,1,true,"1) 1;ON;null; 2) 2;ON;null; ",false,false,107,()
+java.util.EnumMap,java.util.EnumMap,present,2,false,cVarMap,get,63,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,reconstructPointers,1,false,TL,sequentialGet,531,savegame.VanillaDSG,1,true,"1) 3;ON;0; ",false,false,381,()
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,1,true,"1) 1;O1;0; 2) 13;ON;null; 3) 13;null;null; 4) 14;ON;null; ",false,false,,
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; 3) 8;null;null; ",false,true,,
+java.util.TreeMap,java.util.TreeMap,<init>,2,true,sortedRatios,put(key;value),166,v.tables.BlurryTable,1,true,"1) 2;ON;256; ",false,false,143,(Ljava/util/Comparator;)
+java.util.ArrayList,java.util.ArrayList,InitSound,1,false,cachedSounds,add(value),85,s.DavidSFXModule,1,true,"1) 1;ON;null; ",false,false,37,()
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,3,true,"1) 4;null;null; 2) 6;ON;null; ",false,true,,
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,1,true,"1) 1;null;null; 2) 7;null;null; 3) 9;ON;null; ",false,false,54,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,112,doom.ConfigManager,1,false,,false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,next,1,false,directions,randomGet,69,v.graphics.Direction,1,false,,false,false,,
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,1,true,"1) 2;O1;0; 2) 10;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,2,true,"1) 2;null;null; 2) 4;ON;null; ",false,false,243,()
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,183,doom.ConfigManager,1,true,"1) 1;null;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,1,true,"1) 1;null;null; 2) 3;ON;null; ",false,true,,
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),156,doom.ConfigBase,1,true,"1) 1;null;null; ",false,true,142,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),91,rr.MultiPatchSynthesizer,2,true,"1) 5;ON;null; 2) 6;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,specified,2,false,cVarMap,containsKey,72,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,drawWalls,1,false,litedColorSources,get,1304,automap.Map,2,false,,false,false,326,(Ljava/lang/Class;)
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,1,true,"1) 4;O1;0; 2) 14;ON;null; ",false,false,,
+java.util.LinkedHashSet,java.util.LinkedHashSet,addInterest,2,false,keyInterests,add(value),185,awt.EventBase$KeyStateHolder,1,true,"1) 2;O1;0; ",false,false,173,()
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,31,true,"1) 8;ON;null; 2) 9;O1;0; ",false,false,65,()
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,16,true,"1) 10;ON;null; 2) 12;null;null; ",false,true,253,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,1,true,"1) 4;O1;0; 2) 12;null;null; 3) 14;ON;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,1,true,"1) 1;ON;256; 2) 8;null;null; 3) 10;ON;null; ",false,false,243,()
+java.util.EnumMap,java.util.EnumMap,bool,2,false,cVarMap,containsKey,54,doom.CVarManager,2,true,"1) 1;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,22,true,"1) 7;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,2,true,"1) 2;O1;0; ",false,false,54,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,randomGet,123,rr.MultiPatchSynthesizer,2,true,"1) 5;ON;null; 2) 6;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,69,doom.ConfigManager,1,true,"1) 2;INFINITE;null; 2) 3;ON;4; 3) 6;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.Hashtable,java.util.Hashtable,retrievePatchSafe,2,false,FlatPatchCache,iterator,340,rr.SimpleTextureManager,6,false,,false,false,107,()
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,10,true,"1) 9;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,2,true,"1) 5;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,1,true,"1) 1;ON;null; ",false,false,,
+java.util.List,java.util.List,find,4,true,list,size,61,utils.BinarySearch,1,false,,false,true,,
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,1,true,"1) 1;INFINITE;null; 2) 2;null;null; 3) 11;ON;null; ",false,false,1145,(I)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,137,doom.ConfigManager,1,true,"1) 2;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.LinkedHashSet,java.util.LinkedHashSet,notifyKeyChange,4,false,keyInterests,remove(key),210,awt.EventBase$KeyStateHolder,1,true,"1) 1;ON;null; ",false,false,173,()
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,1,true,"1) 1;O1;0; 2) 7;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; 4) 11;ON;null; ",false,false,1145,(I)
+java.util.List,java.util.List,InitParallelStuff,1,false,detailaware,add(value),240,rr.parallel.ParallelRenderer,1,true,"1) 1;ON;null; ",false,false,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,2,true,"1) 3;null;null; 2) 5;ON;null; 3) 6;null;null; ",false,false,243,()
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; 4) 8;null;null; 5) 10;ON;null; ",false,false,54,()
+java.util.EnumSet,java.lang.Class,<init>,3,true,hClass,noneOf,266,awt.EventBase$ActionStateHolder,1,true,"1) 4;O1;0; ",false,true,,
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),102,rr.MultiPatchSynthesizer,2,true,"1) 1;ON;null; 2) 3;ON;null; 3) 4;ON;null; ",false,false,78,()
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),155,doom.ConfigBase,1,true,"1) 1;null;null; ",false,true,142,()
+java.util.EnumMap,java.util.EnumMap,bool,2,false,cVarMap,containsKey,54,doom.CVarManager,1,true,"1) 4;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumSet,m.Settings,lambda$updateConfig$0,3,true,this,of,215,m.Settings,1,false,,false,true,,
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,170,doom.ConfigManager,4,true,"1) 1;ON;256; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumSet,java.util.Set,lambda$deepCopyMap$4,2,true,l,copyOf,277,awt.EventBase$ActionStateHolder,1,false,,false,true,,
+java.util.List,java.util.ArrayList,<init>,1,false,channels,add(value),62,s.FinnwMusicModule,1,true,"1) 1;ON;16; ",false,false,58,(I)
+java.util.EnumMap,java.util.EnumMap,drawWalls,1,false,litedColorSources,get,1299,automap.Map,2,false,,false,false,326,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,137,doom.ConfigManager,1,true,"1) 2;INFINITE;null; 2) 3;ON;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,1,true,"1) 4;O1;0; 2) 12;null;null; 3) 14;ON;null; ",false,true,,
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),109,rr.MultiPatchSynthesizer,2,true,"1) 1;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 7;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.TreeMap,java.util.TreeMap,<init>,2,true,sortedRatios,floorEntry,120,v.tables.BlurryTable,1,true,"1) 1;ON;31; ",false,false,"137,90",(Ljava/util/Comparator;)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,85,doom.ConfigManager,1,true,"1) 1;ON;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,Drawer,1,false,fixedColorSources,get,1525,automap.Map,1,false,,false,false,325,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,drawWalls,1,false,litedColorSources,get,1339,automap.Map,1,true,"1) 2;ON;null; ",false,false,326,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,134,doom.ConfigManager,1,true,"1) 2;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,reconstructPointers,1,false,pointindex,put(key;value),523,savegame.VanillaDSG,1,true,"1) 3;ON;null; ",false,false,489,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,88,doom.ConfigManager,1,true,"1) 1;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.Set,java.util.Set,matchInterest,2,false,holdingSet,containsAll,193,awt.EventBase$KeyStateHolder,1,false,,false,false,,
+java.util.List,java.util.ArrayList,appendTo,3,false,messages,iterator,218,s.MusReader$EventGroup,1,true,"1) 1;null;null; ",false,false,206,()
+java.util.Map,java.util.Map,getScreen,2,false,screens,iterator,167,v.renderers.SoftwareGraphicsSystem,2,false,,false,false,,
+java.util.List,java.util.List,LoadDefaults,1,false,configFiles,forEach,223,doom.ConfigManager,1,true,"1) 4;O1;0; ",false,false,,
+java.util.HashMap,java.util.HashMap,Track,3,false,zone,put(key;value),1374,w.WadLoader,12,false,,false,false,64,()
+java.util.HashMap,java.util.HashMap,get,2,false,traitMap,iterator,257,utils.TraitFactory$FactoryContext,2,false,,false,false,,
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,21,true,"1) 9;ON;null; 2) 11;null;null; ",false,true,253,()
+java.util.Map,java.util.Map,<clinit>,0,false,PARENT_LOGGERS_MAP,iterator,60,mochadoom.Loggers,1,false,,false,false,,
+java.util.HashMap,java.util.HashMap,reconstructPointers,1,false,pointindex,put(key;value),506,savegame.VanillaDSG,1,true,"1) 3;O1;0; ",false,false,489,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,1,true,"1) 1;null;null; 2) 7;null;null; 3) 9;ON;null; 4) 10;null;null; ",false,false,243,()
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,1,true,"1) 1;ON;256; 2) 12;ON;null; 3) 12;null;null; 4) 13;ON;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,168,doom.ConfigManager,1,true,"1) 3;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,21,true,"1) 9;ON;null; ",false,false,1145,(I)
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,1,true,"1) 1;O1;4; 2) 9;null;null; 3) 11;ON;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,1,true,"1) 1;O1;4; 2) 9;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,1,true,"1) 1;null;null; 2) 10;ON;null; ",false,false,1145,(I)
+java.util.List,java.util.ArrayList,write,2,false,demorecorder,iterator,222,demo.VanillaDoomDemo,1,false,,false,false,42,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,115,rr.MultiPatchSynthesizer,1,false,,false,false,78,()
+java.util.HashMap,java.util.HashMap,getRogueColumn,3,false,roguePatches,containsKey,1173,rr.SimpleTextureManager,4,false,,false,false,1210,()
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,1,true,"1) 1;O1;4; 2) 11;ON;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,55,doom.ConfigManager,1,true,"1) 1;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,69,doom.ConfigManager,1,true,"1) 3;INFINITE;null; 2) 4;ON;4; 3) 7;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,lambda$populate$6,3,true,m,put,284,awt.EventBase$ActionStateHolder,1,false,,false,true,,
+java.util.Hashtable,java.util.Hashtable,InitFlats,1,true,FlatNames,remove(key),835,rr.SimpleTextureManager,1,true,"1) 1;ON;null; ",false,false,785,()
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,1,true,"1) 1;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,override,4,false,cVarMap,compute,144,doom.CVarManager,1,true,"1) 4;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,16,true,"1) 12;null;null; 2) 12;ON;null; 3) 13;ON;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,2,true,"1) 3;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,88,doom.ConfigManager,1,true,"1) 1;ON;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,reconstructPointers,1,false,TL,sequentialGet,522,savegame.VanillaDSG,1,true,"1) 1;ON;null; ",false,false,381,()
+java.util.EnumSet,g.Signals$ScanCode,<init>,4,true,interestFirstKey,of,161,awt.EventBase$KeyStateInterest,1,true,"1) 4;O1;0; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,lambda$Repalette$1,2,false,litedColorSources,put,349,automap.Map,1,false,,false,false,326,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,present,2,false,cVarMap,get,63,doom.CVarManager,1,true,"1) 2;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,10,true,"1) 11;ON;null; ",false,false,,
+java.util.List,java.util.ArrayList,reconstructPointers,1,false,TL,randomGet,523,savegame.VanillaDSG,1,true,"1) 3;ON;null; ",false,false,381,()
+java.util.List,java.util.ArrayList,UnRegisterSong,2,false,songs,size,171,s.FinnwMusicModule,1,false,,false,false,59,(I)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,104,doom.ConfigManager,1,false,,false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,2,true,"1) 7;ON;null; 2) 8;O1;0; ",false,false,65,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,92,doom.ConfigManager,1,true,"1) 1;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,3,true,"1) 4;null;null; 2) 6;ON;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,lambda$Repalette$2,2,false,fixedColorSources,put,359,automap.Map,1,false,,false,false,325,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getInstance,0,true,dInfos,randomGet,55,s.VolumeScalingReceiver,2,false,,false,true,41,(Ljava/util/Collection;)
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),109,rr.MultiPatchSynthesizer,2,true,"1) 4;ON;null; ",false,false,78,()
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,1,true,"1) 3;O1;0; 2) 13;ON;null; 3) 14;O1;0; ",false,false,65,()
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,1,true,"1) 2;O1;0; 2) 10;null;null; 3) 12;ON;null; ",false,false,54,()
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,containsKey,82,doom.CVarManager,1,true,"1) 4;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,addShortMessage,5,false,messages,add(value),420,s.FinnwMusicModule$EventGroup,33,false,,false,false,316,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,92,doom.ConfigManager,8,false,,false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,1,true,"1) 1;INFINITE;null; 2) 9;ON;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,lambda$LoadDefaults$4,2,false,configMap,put,219,doom.ConfigManager,1,false,,false,false,43,(Ljava/lang/Class;)
+java.util.Hashtable,java.util.Hashtable,InitFlats,1,true,FlatNames,put(key;value),811,rr.SimpleTextureManager,1,true,"1) 1;ON;0; ",false,false,785,()
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,16,true,"1) 11;ON;null; ",false,false,1145,(I)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,63,doom.ConfigManager,2,true,"1) 2;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,1,true,"1) 3;O1;0; 2) 11;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,InitRMISubsystem,7,true,detailaware,add(value),156,rr.parallel.ParallelThings$Indexed,1,true,"1) 2;ON;null; ",false,true,,
+java.util.Hashtable,java.util.Hashtable,getPhoneme,1,false,phonemes,put(key;value),100,s.SpeakerSound,1,true,"1) 1;ON;null; ",false,false,85,()
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,1,true,"1) 2;null;null; 2) 2;ON;null; 3) 3;ON;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,1,true,"1) 4;ON;null; ",false,false,1145,(I)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,2,true,"1) 3;null;null; 2) 5;ON;null; ",false,false,243,()
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; 4) 8;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; 4) 8;null;null; 5) 10;ON;null; ",false,false,243,()
+java.util.EnumMap,java.util.EnumMap,specified,2,false,cVarMap,containsKey,72,doom.CVarManager,2,true,"1) 1;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 7;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumSet,java.lang.Class,<init>,3,true,hClass,noneOf,266,awt.EventBase$ActionStateHolder,4,true,"1) 1;ON;256; ",false,true,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,1,true,"1) 1;null;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,reconstructPointers,1,false,TL,randomGet,523,savegame.VanillaDSG,1,true,"1) 2;ON;null; ",false,false,381,()
+java.util.List,java.util.ArrayList,getInstance,0,true,dInfos,isEmpty,53,s.VolumeScalingReceiver,2,false,,false,true,41,(Ljava/util/Collection;)
+java.util.List,java.util.ArrayList,RegisterSong,2,false,songs,indexOf,117,s.FinnwMusicModule,2,false,,false,false,59,(I)
+java.util.EnumMap,java.util.EnumMap,equals,3,false,configMap,get,162,doom.ConfigManager,2,true,"1) 1;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,1,true,"1) 1;O1;4; 2) 11;ON;null; 3) 12;O1;0; ",false,false,65,()
+java.util.Stack,java.util.Stack,checkOut,1,false,locked,pop,42,pooling.ObjectQueuePool,2,true,"1) 1;O1;0; ",false,false,22,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,69,doom.ConfigManager,1,true,"1) 1;INFINITE;null; 2) 2;ON;4; 3) 5;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,lambda$export$0,3,false,configMap,get,149,doom.ConfigManager,1,false,,false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,16,true,"1) 10;ON;null; ",false,false,,
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),109,rr.MultiPatchSynthesizer,2,true,"1) 5;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,specified,2,false,cVarMap,containsKey,72,doom.CVarManager,1,true,"1) 3;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,2,true,"1) 2;null;null; 2) 4;ON;null; ",false,false,54,()
+java.util.EnumMap,java.util.EnumMap,bool,2,false,cVarMap,containsKey,54,doom.CVarManager,1,true,"1) 1;INFINITE;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.Hashtable,java.util.Hashtable,getPhoneme,1,false,phonemes,containsKey,89,s.SpeakerSound,1,false,,false,false,85,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),91,rr.MultiPatchSynthesizer,1,true,"1) 6;ON;null; 2) 7;ON;null; ",false,false,78,()
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,1,true,"1) 3;O1;0; 2) 11;null;null; 3) 13;ON;null; ",false,false,54,()
+java.util.EnumMap,java.util.EnumMap,bool,2,false,cVarMap,containsKey,54,doom.CVarManager,1,true,"1) 3;ON;6; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,InitMaskedWorkers,1,false,detailaware,add(value),429,rr.parallel.ParallelRenderer2$TrueColor,1,true,"1) 1;ON;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,override,4,false,cVarMap,compute,144,doom.CVarManager,2,true,"1) 1;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,with,4,false,cVarMap,get,114,doom.CVarManager,1,true,"1) 1;INFINITE;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,1,true,"1) 4;O1;0; 2) 15;ON;null; ",false,false,1145,(I)
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,2,true,"1) 9;null;null; 2) 9;ON;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,1,true,"1) 1;O1;0; 2) 11;ON;null; ",false,false,1145,(I)
+java.util.List,java.util.List,InitRSISubsystem,1,false,detailaware,add(value),408,rr.parallel.ParallelRenderer2$TrueColor,1,true,"1) 1;ON;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,1,true,"1) 2;ON;null; ",false,false,1145,(I)
+java.util.EnumMap,java.util.EnumMap,drawWalls,1,false,litedColorSources,get,1301,automap.Map,2,false,,false,false,326,(Ljava/lang/Class;)
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,3,true,"1) 1;ON;256; 2) 9;null;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,containsKey,82,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,21,true,"1) 11;null;null; 2) 11;ON;null; 3) 12;ON;null; ",false,false,,
+java.util.EnumSet,java.util.EnumSet,Repalette,1,false,GENERATE_LITE_LEVELS_FOR,stream,346,automap.Map,4,true,"1) 1;ON;256; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; 4) 8;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,1,true,"1) 1;ON;256; 2) 8;null;null; ",false,true,,
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,22,true,"1) 7;null;null; 2) 9;ON;null; ",false,true,,
+java.util.List,java.util.List,listGetter,1,true,list,listIterator,843,utils.BinarySearch,19,false,,false,true,,
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,16,true,"1) 8;null;null; 2) 10;ON;null; ",false,true,,
+java.util.EnumSet,java.util.EnumSet,Repalette,1,false,GENERATE_LITE_LEVELS_FOR,stream,346,automap.Map,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,with,4,false,cVarMap,get,114,doom.CVarManager,1,true,"1) 3;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,bool,2,false,cVarMap,containsKey,54,doom.CVarManager,1,true,"1) 1;ON;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.Set,java.util.Set,notifyKeyChange,4,false,holdingSet,add(value),198,awt.EventBase$KeyStateHolder,2,false,,false,false,,
+java.util.Map,java.util.Map,unmapAdjustment,4,false,adjustmentMap,iterator,360,awt.EventBase$ActionStateHolder,4,false,,false,false,,
+java.util.ArrayList,java.util.ArrayList,createDataLineForChannel,3,false,cachedSounds,randomGet,164,s.DavidSFXModule,2,false,,false,false,37,()
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,1,true,"1) 1;O1;0; 2) 9;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,31,true,"1) 6;null;null; 2) 8;ON;null; ",false,false,243,()
+java.util.EnumMap,java.util.EnumMap,equals,3,false,configMap,get,162,doom.ConfigManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),155,doom.ConfigBase,1,true,"1) 2;O1;0; ",false,true,142,()
+java.util.List,java.util.List,LoadDefaults,1,false,configFiles,forEach,223,doom.ConfigManager,1,true,"1) 2;O1;0; ",false,false,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 7;null;null; 3) 9;ON;null; ",false,false,243,()
+java.util.EnumMap,java.util.EnumMap,bool,2,false,cVarMap,containsKey,54,doom.CVarManager,1,true,"1) 1;O1;4; ",false,false,42,(Ljava/lang/Class;)
+java.util.Hashtable,java.util.Hashtable,getPhoneme,1,false,phonemes,put(key;value),100,s.SpeakerSound,1,true,"1) 2;ON;null; ",false,false,85,()
+java.util.Set,java.util.Set,notifyKeyChange,4,false,holdingSet,remove(key),221,awt.EventBase$KeyStateHolder,2,false,,false,false,,
+java.util.ArrayList,java.util.ArrayList,CloseAllHandles,1,true,d,iterator,1223,w.WadLoader,2,false,,false,false,1215,()
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,16,true,"1) 8;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,1,true,"1) 2;null;null; ",false,true,253,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,2,true,"1) 2;null;null; 2) 4;ON;null; 3) 5;null;null; ",false,false,243,()
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,1,true,"1) 3;O1;0; 2) 11;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,177,doom.ConfigManager,1,true,"1) 1;INFINITE;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,1,true,"1) 1;ON;null; 2) 2;O1;0; ",false,false,65,()
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,1,true,"1) 2;O1;0; 2) 10;null;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,1,true,"1) 2;O1;0; 2) 10;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,108,rr.MultiPatchSynthesizer,2,true,"1) 1;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,with,4,false,cVarMap,get,114,doom.CVarManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,183,doom.ConfigManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.Hashtable,java.util.Hashtable,checkOut,1,false,locked,put(key;value),57,pooling.ObjectPool,1,false,,false,false,23,()
+java.util.List,java.util.ArrayList,UnRegisterSong,2,false,songs,set,172,s.FinnwMusicModule,1,false,,false,false,59,(I)
+java.util.HashMap,java.util.HashMap,reconstructPointers,1,false,pointindex,put(key;value),532,savegame.VanillaDSG,1,true,"1) 2;ON;0; ",false,false,489,()
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,1,true,"1) 1;null;null; 2) 7;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,deepCopyMap,2,true,copy,replaceAll,277,awt.EventBase$ActionStateHolder,3,false,,false,true,275,(Ljava/util/Map;)
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,1,true,"1) 1;ON;null; ",false,false,1145,(I)
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,115,rr.MultiPatchSynthesizer,2,true,"1) 1;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,85,doom.ConfigManager,1,true,"1) 3;INFINITE;null; 2) 4;ON;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,bool,2,false,cVarMap,containsKey,54,doom.CVarManager,1,true,"1) 1;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.Set,java.util.Set,lambda$new$0,1,true,set,isEmpty,257,awt.EventBase$ActionStateHolder,1,false,,false,true,,
+java.util.EnumSet,java.lang.Class,<init>,3,true,hClass,noneOf,266,awt.EventBase$ActionStateHolder,1,true,"1) 2;O1;0; ",false,true,,
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,2,true,"1) 7;ON;null; ",false,false,1145,(I)
+java.util.EnumSet,java.util.EnumSet,Repalette,1,false,GENERATE_LITE_LEVELS_FOR,stream,346,automap.Map,2,true,"1) 1;O1;0; ",false,false,,
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,1,true,"1) 1;O1;4; 2) 13;ON;null; 3) 13;null;null; ",false,false,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,16,true,"1) 8;null;null; 2) 10;ON;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,144,rr.MultiPatchSynthesizer,1,true,"1) 6;ON;null; ",false,false,78,()
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,31,true,"1) 10;null;null; 2) 10;ON;null; 3) 11;ON;null; ",false,false,,
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,10,true,"1) 11;ON;null; 2) 12;O1;0; ",false,false,65,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,134,doom.ConfigManager,1,true,"1) 3;INFINITE;null; 2) 4;ON;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,183,doom.ConfigManager,1,true,"1) 2;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.Set,java.util.Set,unmapCooperation,4,true,set,isEmpty,316,awt.EventBase$ActionStateHolder,4,false,,false,false,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,1,true,"1) 2;O1;0; 2) 10;null;null; 3) 12;ON;null; 4) 13;null;null; ",false,false,243,()
+java.util.EnumSet,g.Signals$ScanCode,<init>,4,true,interestFirstKey,of,161,awt.EventBase$KeyStateInterest,1,true,"1) 1;O1;4; ",false,true,,
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),155,doom.ConfigBase,1,true,"1) 3;O1;0; ",false,true,142,()
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; 4) 8;null;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,69,doom.ConfigManager,3,true,"1) 3;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,1,true,"1) 3;O1;0; 2) 13;ON;null; 3) 15;null;null; ",false,true,253,()
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,15,true,"1) 8;null;null; 2) 10;ON;null; ",false,false,54,()
+java.util.EnumMap,java.util.EnumMap,specified,2,false,cVarMap,containsKey,72,doom.CVarManager,1,true,"1) 1;INFINITE;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),156,doom.ConfigBase,84,false,,false,true,142,()
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 7;null;null; ",false,true,,
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,1,false,,false,false,,
+java.util.EnumSet,java.util.EnumSet,Repalette,1,false,GENERATE_LITE_LEVELS_FOR,stream,346,automap.Map,85,false,,false,false,,
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; 4) 10;ON;null; 5) 12;null;null; ",false,true,253,()
+java.util.Hashtable,java.util.Hashtable,InitFlats,1,true,FlatNames,containsKey,833,rr.SimpleTextureManager,1,true,"1) 1;ON;null; ",false,false,785,()
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,1,false,,false,false,,
+java.util.List,java.util.ArrayList,appendTo,3,false,messages,iterator,218,s.MusReader$EventGroup,1,true,"1) 2;null;null; ",false,false,206,()
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,1,true,"1) 1;ON;256; 2) 10;ON;null; 3) 12;null;null; ",false,true,253,()
+java.util.List,java.util.ArrayList,reconstructPointers,1,false,TL,size,520,savegame.VanillaDSG,1,true,"1) 2;ON;null; ",false,false,381,()
+java.util.Hashtable,java.util.Hashtable,checkOut,1,false,unlocked,remove(key),64,pooling.ObjectPool,1,true,"1) 1;ON;0; ",false,false,24,()
+java.util.EnumMap,java.util.EnumMap,present,2,false,cVarMap,get,63,doom.CVarManager,1,true,"1) 1;INFINITE;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.Map,java.util.Map,newBuffer,2,false,screens,iterator,257,v.renderers.SoftwareGraphicsSystem,1,true,"1) 1;ON;null; ",false,false,,
+java.util.EnumSet,java.util.EnumSet,lambda$updateConfig$0,3,true,list,add,217,m.Settings,1,false,,false,true,,
+java.util.HashMap,java.util.HashMap,InitSpriteDefs,2,true,hash,put(key;value),115,rr.SpriteManager,1,true,"1) 1;ON;0; ",false,false,104,(I)
+java.util.Set,java.util.Set,restoreCooperation,4,true,b,addAll,350,awt.EventBase$ActionStateHolder,2,false,,false,false,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,1,true,"1) 1;O1;4; 2) 9;null;null; 3) 11;ON;null; 4) 12;null;null; ",false,false,243,()
+java.util.List,java.util.List,properPlaypal,2,false,NORMAL_TINTS,randomGet,141,v.tables.Playpal,1,true,"1) 1;ON;256; 2) 1;ON;14; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,1,false,,false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,InitSpriteDefs,2,true,hash,iterator,119,rr.SpriteManager,1,true,"1) 2;ON;0; ",false,false,104,(I)
+java.util.List,java.util.List,writeListOfObjects,3,true,s,size,348,w.DoomIO,1,true,"1) 1;ON;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,22,true,"1) 7;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,10,true,"1) 12;ON;null; ",false,false,1145,(I)
+java.util.EnumSet,java.util.EnumSet,lambda$mapCooperation$8,4,false,emptyEnumSet,copyOf,333,awt.EventBase$ActionStateHolder,1,false,,false,true,,
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,3,true,"1) 4;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,2,true,"1) 3;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,with,4,false,cVarMap,get,114,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,reconstructPointers,1,false,TL,randomGet,532,savegame.VanillaDSG,1,true,"1) 3;ON;0; ",false,false,381,()
+java.util.Hashtable,java.util.Hashtable,retrievePatchSafe,2,false,FlatPatchCache,iterator,340,rr.SimpleTextureManager,2,true,"1) 1;ON;null; ",false,false,107,()
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,170,doom.ConfigManager,1,true,"1) 3;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.Set,java.util.Set,restoreAdjustment,4,true,b,addAll,395,awt.EventBase$ActionStateHolder,2,false,,false,false,,
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,88,doom.ConfigManager,8,false,,false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,92,doom.ConfigManager,1,true,"1) 2;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,1,true,"1) 1;null;null; ",false,false,54,()
+java.util.Map,java.util.Map,mapAdjustment,4,false,adjustmentMap,iterator,376,awt.EventBase$ActionStateHolder,4,false,,false,false,,
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,1,true,"1) 2;ON;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,bool,2,false,cVarMap,containsKey,54,doom.CVarManager,4,true,"1) 1;ON;256; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,1,true,"1) 1;null;null; 2) 1;ON;null; 3) 2;ON;null; ",false,false,,
+java.util.EnumSet,g.Signals$ScanCode,<init>,4,true,interestFirstKey,of,161,awt.EventBase$KeyStateInterest,4,true,"1) 1;ON;256; ",false,true,,
+java.util.List,java.util.ArrayList,nextEventGroup,3,false,channels,randomGet,201,s.FinnwMusicModule,1,true,"1) 4;O1;0; ",false,false,58,(I)
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,1,true,"1) 1;INFINITE;null; 2) 2;null;null; 3) 10;ON;null; 4) 11;O1;0; ",false,false,65,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,1,true,"1) 1;O1;0; 2) 9;null;null; 3) 11;ON;null; ",false,false,243,()
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,3,true,"1) 1;ON;256; 2) 9;null;null; 3) 11;ON;null; ",false,false,54,()
+java.util.Map,java.util.HashMap,submit,3,false,tasks,put(key;value),51,utils.OrderedExecutor,1,false,,false,false,38,()
+java.util.EnumMap,java.util.EnumMap,specified,2,false,cVarMap,containsKey,72,doom.CVarManager,86,false,,false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,108,rr.MultiPatchSynthesizer,2,true,"1) 4;ON;null; ",false,false,78,()
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,10,true,"1) 11;ON;null; 2) 13;null;null; ",false,true,253,()
+java.util.EnumMap,java.util.EnumMap,with,4,false,cVarMap,get,114,doom.CVarManager,1,true,"1) 2;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,InitSpriteDefs,2,true,hash,iterator,131,rr.SpriteManager,1,true,"1) 1;ON;null; ",false,false,104,(I)
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 7;null;null; 3) 9;ON;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,specified,2,false,cVarMap,containsKey,72,doom.CVarManager,1,true,"1) 1;O1;4; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,115,rr.MultiPatchSynthesizer,2,true,"1) 4;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,63,doom.ConfigManager,2,true,"1) 3;O1;0; 2) 5;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,1,true,"1) 1;O1;4; 2) 9;null;null; 3) 11;ON;null; ",false,false,243,()
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,1,true,"1) 2;O1;0; 2) 14;ON;null; 3) 14;null;null; 4) 15;ON;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,55,doom.ConfigManager,2,false,,false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,equals,3,false,configMap,get,162,doom.ConfigManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,with,4,false,cVarMap,get,114,doom.CVarManager,1,true,"1) 1;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,emptyToNull,1,false,messages,isEmpty,227,s.MusReader$EventGroup,2,false,,false,false,206,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,88,doom.ConfigManager,1,true,"1) 1;INFINITE;null; 2) 2;ON;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,containsKey,82,doom.CVarManager,2,true,"1) 1;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,LoadDefaults,1,false,configFiles,forEach,223,doom.ConfigManager,2,true,"1) 1;O1;0; ",false,false,,
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,2,true,"1) 6;ON;null; ",false,false,,
+java.util.List,java.util.ArrayList,sendTo,2,false,messages,iterator,397,s.FinnwMusicModule$EventGroup,9,false,,false,false,316,()
+java.util.List,java.util.List,processAllArgs,2,true,commandList,size,170,doom.CVarManager,4,true,"1) 1;ON;256; ",false,true,,
+java.util.HashMap,java.util.HashMap,lambda$rewirePointers$1,2,false,pointindex,iterator,545,savegame.VanillaDSG,1,false,,false,false,489,()
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,1,true,"1) 4;ON;null; 2) 6;null;null; ",false,true,253,()
+java.util.List,java.util.ArrayList,reconstructPointers,1,false,TL,randomGet,532,savegame.VanillaDSG,1,true,"1) 1;ON;0; ",false,false,381,()
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,1,true,"1) 2;ON;null; ",false,false,54,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,126,doom.ConfigManager,1,false,,false,false,43,(Ljava/lang/Class;)
+java.util.Hashtable,java.util.Hashtable,getBadColumn,1,false,badColumns,iterator,140,rr.patch_t,1,false,,false,false,136,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),109,rr.MultiPatchSynthesizer,2,true,"1) 1;ON;null; 2) 3;ON;null; ",false,false,78,()
+java.util.List,java.util.List,properPlaypal,2,false,NORMAL_TINTS,randomGet,141,v.tables.Playpal,2,true,"1) 5;ON;256; 2) 5;ON;14; ",false,false,,
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,108,rr.MultiPatchSynthesizer,1,false,,false,false,78,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,randomGet,123,rr.MultiPatchSynthesizer,2,true,"1) 4;ON;null; 2) 5;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,3,true,"1) 1;ON;256; 2) 9;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.Stack,java.util.Stack,checkOut,1,false,locked,isEmpty,40,pooling.ObjectQueuePool,2,false,,false,false,22,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,108,rr.MultiPatchSynthesizer,2,true,"1) 2;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,203,doom.CVarManager,1,true,"1) 1;ON;256; 2) 8;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.Map,java.util.Map,<clinit>,0,false,PARENT_LOGGERS_MAP,iterator,61,mochadoom.Loggers,1,false,,false,false,,
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,containsKey,82,doom.CVarManager,1,true,"1) 1;INFINITE;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,equals,3,false,configMap,get,162,doom.ConfigManager,1,true,"1) 1;O1;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.Map,java.util.Map,lambda$new$1,1,true,map,isEmpty,261,awt.EventBase$ActionStateHolder,1,false,,false,true,,
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,1,true,"1) 1;null;null; ",false,true,,
+java.util.List,java.util.List,LoadDefaults,1,false,configFiles,forEach,223,doom.ConfigManager,85,false,,false,false,,
+java.util.List,java.util.ArrayList,UnArchiveThinkers,1,false,TL,add(value),462,savegame.VanillaDSG,1,true,"1) 1;O1;0; ",false,false,381,()
+java.util.HashMap,java.util.HashMap,reconstructPointers,1,false,pointindex,put(key;value),523,savegame.VanillaDSG,1,true,"1) 2;ON;null; ",false,false,489,()
+java.util.HashMap,java.util.HashMap,<clinit>,0,false,INDIVIDUAL_CLASS_LOGGERS,put(key;value),59,mochadoom.Loggers,1,false,,false,false,54,()
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),156,doom.ConfigBase,1,true,"1) 4;O1;0; ",false,true,142,()
+java.util.Hashtable,java.util.Hashtable,getPhoneme,1,false,phonemes,containsKey,89,s.SpeakerSound,1,true,"1) 1;ON;null; ",false,false,85,()
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,1,true,"1) 4;O1;0; 2) 12;null;null; ",false,true,,
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,2,true,"1) 3;null;null; 2) 5;ON;null; ",false,false,54,()
+java.util.EnumMap,java.util.EnumMap,equals,3,false,configMap,get,162,doom.ConfigManager,1,true,"1) 4;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,randomGet,123,rr.MultiPatchSynthesizer,1,true,"1) 1;ON;null; 2) 2;ON;null; 3) 4;ON;null; 4) 5;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,specified,2,false,cVarMap,containsKey,72,doom.CVarManager,1,true,"1) 4;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.Map,java.util.Map,SaveDefaults,1,false,SETTINGS_MAP,forEach,190,doom.ConfigManager,2,true,"1) 2;O1;0; ",false,false,,
+java.util.Set,java.util.Set,lambda$observe$2,3,true,affected,forEach,199,awt.EventObserver,1,false,,false,true,,
+java.util.List,java.util.List,InitMaskedWorkers,1,false,detailaware,add(value),208,rr.parallel.ParallelRenderer$Indexed,1,true,"1) 2;ON;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,170,doom.ConfigManager,1,true,"1) 1;O1;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.LinkedHashSet,java.util.LinkedHashSet,addInterest,2,false,keyInterests,add(value),185,awt.EventBase$KeyStateHolder,86,false,,false,false,173,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,92,doom.ConfigManager,1,true,"1) 2;INFINITE;null; 2) 3;ON;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; 4) 10;ON;null; 5) 11;O1;0; ",false,false,65,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,144,rr.MultiPatchSynthesizer,1,true,"1) 1;ON;null; 2) 2;ON;null; 3) 4;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,equals,3,false,configMap,get,162,doom.ConfigManager,1,true,"1) 1;ON;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,2,true,"1) 8;ON;null; ",false,false,1145,(I)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,63,doom.ConfigManager,1,true,"1) 1;INFINITE;null; 2) 2;ON;4; 3) 5;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,115,rr.MultiPatchSynthesizer,2,true,"1) 2;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,override,4,false,cVarMap,compute,144,doom.CVarManager,1,true,"1) 2;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,present,2,false,cVarMap,get,63,doom.CVarManager,1,true,"1) 1;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,170,doom.ConfigManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,177,doom.ConfigManager,2,true,"1) 1;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.Hashtable,java.util.Hashtable,checkIn,2,false,locked,remove(key),80,pooling.ObjectPool,1,false,,false,false,23,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,144,rr.MultiPatchSynthesizer,2,true,"1) 5;ON;null; ",false,false,78,()
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,31,true,"1) 8;ON;null; ",false,false,,
+java.util.LinkedHashSet,java.util.LinkedHashSet,addInterest,2,false,keyInterests,add(value),185,awt.EventBase$KeyStateHolder,1,true,"1) 1;INFINITE;null; 2) 2;null;null; ",false,false,173,()
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,1,true,"1) 1;INFINITE;null; 2) 7;null;null; 3) 9;ON;null; ",false,false,54,()
+java.util.Hashtable,java.util.Hashtable,getPhoneme,1,false,phonemes,put(key;value),100,s.SpeakerSound,1,false,,false,false,85,()
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,39,false,,false,false,54,()
+java.util.Map,java.util.Map,newBuffer,2,false,screens,iterator,257,v.renderers.SoftwareGraphicsSystem,1,false,,false,false,,
+java.util.EnumSet,g.Signals$ScanCode,<init>,4,true,interestFirstKey,of,161,awt.EventBase$KeyStateInterest,1,true,"1) 1;null;null; ",false,true,,
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,31,true,"1) 6;null;null; 2) 8;ON;null; ",false,true,,
+java.util.Set,java.util.Set,hasActions,2,true,actions,isEmpty,76,awt.EventBase,1,false,,false,false,,
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,1,true,"1) 2;O1;0; 2) 13;ON;null; ",false,false,1145,(I)
+java.util.List,java.util.List,findByLong,4,true,list,size,189,utils.BinarySearch,1,false,,false,true,,
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; 3) 8;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,2,true,"1) 5;null;null; 2) 7;ON;null; ",false,false,243,()
+java.util.HashMap,java.util.HashMap,InitSpriteDefs,2,true,hash,put(key;value),115,rr.SpriteManager,1,true,"1) 2;ON;0; ",false,false,104,(I)
+java.util.EnumMap,java.util.EnumMap,present,2,false,cVarMap,get,63,doom.CVarManager,1,true,"1) 1;O1;4; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,1,true,"1) 1;O1;0; 2) 9;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,1,true,"1) 1;O1;0; 2) 7;null;null; 3) 9;ON;null; ",false,false,243,()
+java.util.Hashtable,java.util.Hashtable,InitFlats,1,false,FlatCache,iterator,868,rr.SimpleTextureManager,1,true,"1) 1;ON;0; ",false,false,783,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,123,doom.ConfigManager,1,false,,false,false,43,(Ljava/lang/Class;)
+java.util.Hashtable,java.util.Hashtable,InitFlats,1,false,FlatCache,remove(key),839,rr.SimpleTextureManager,1,true,"1) 1;ON;null; ",false,false,783,()
+java.util.List,java.util.List,InitSpriteDefs,2,true,list,forEach,154,rr.SpriteManager,1,true,"1) 1;ON;null; ",false,false,,
+java.util.Map,java.util.Map,run,4,false,enabledActions,iterator,290,awt.EventBase$ActionStateHolder,4,false,,false,false,,
+java.util.EnumMap,java.util.EnumMap,drawWalls,1,false,litedColorSources,get,1300,automap.Map,2,false,,false,false,326,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,1,true,"1) 1;null;null; 2) 3;ON;null; 3) 4;null;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,21,true,"1) 9;ON;null; 2) 10;O1;0; ",false,false,65,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),102,rr.MultiPatchSynthesizer,1,true,"1) 1;ON;null; ",false,false,78,()
+java.util.Map,java.util.Map,SaveDefaults,1,false,SETTINGS_MAP,forEach,190,doom.ConfigManager,1,true,"1) 1;null;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,170,doom.ConfigManager,1,true,"1) 4;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,get,87,doom.CVarManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumSet,g.Signals$ScanCode,<init>,4,true,interestFirstKey,of,161,awt.EventBase$KeyStateInterest,2,true,"1) 1;O1;0; ",false,true,,
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),102,rr.MultiPatchSynthesizer,1,true,"1) 6;ON;null; 2) 7;ON;null; ",false,false,78,()
+java.util.List,java.util.ArrayList,getReceiver,0,true,dInfos,randomGet,515,s.FinnwMusicModule,2,false,,false,true,501,(Ljava/util/Collection;)
+java.util.Hashtable,java.util.Hashtable,retrievePatchSafe,2,false,FlatPatchCache,put(key;value),350,rr.SimpleTextureManager,1,true,"1) 1;ON;null; 2) 2;ON;null; ",false,false,107,()
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,3,true,"1) 1;ON;256; 2) 13;ON;null; 3) 13;null;null; 4) 14;ON;null; ",false,false,,
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,1,true,"1) 3;O1;0; 2) 11;null;null; 3) 13;ON;null; ",false,true,,
+java.util.LinkedHashSet,java.util.LinkedHashSet,notifyKeyChange,4,false,keyInterests,remove(key),210,awt.EventBase$KeyStateHolder,1,true,"1) 2;ON;null; ",false,false,173,()
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,1,true,"1) 1;O1;4; 2) 12;ON;null; ",false,false,1145,(I)
+java.util.Hashtable,java.util.Hashtable,getBadColumn,1,false,badColumns,iterator,140,rr.patch_t,1,true,"1) 1;ON;null; ",false,false,136,()
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,3,true,"1) 1;ON;256; 2) 11;ON;null; 3) 13;null;null; ",false,true,253,()
+java.util.List,java.util.ArrayList,addSysExMessage,3,false,messages,add(value),429,s.FinnwMusicModule$EventGroup,3,false,,false,false,316,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; 3) 8;null;null; 4) 10;ON;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,prepare,2,false,channels,iterator,523,s.FinnwMusicModule,2,false,,false,false,58,(I)
+java.util.Map,java.util.Map,lambda$LogEvent$6,6,true,adjusts,entrySet,112,mochadoom.Loggers,1,false,,false,true,,
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,1,true,"1) 3;O1;0; 2) 13;ON;null; ",false,false,1145,(I)
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,183,doom.ConfigManager,87,false,,false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,31,true,"1) 6;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,1,true,"1) 2;O1;0; 2) 12;ON;null; 3) 14;null;null; ",false,true,253,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,85,doom.ConfigManager,1,true,"1) 1;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,1,true,"1) 1;null;null; 2) 9;ON;null; 3) 11;null;null; ",false,true,253,()
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,3,true,"1) 4;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getReceiver,0,true,dInfos,isEmpty,513,s.FinnwMusicModule,2,false,,false,true,501,(Ljava/util/Collection;)
+java.util.ArrayList,java.util.ArrayList,addsfx,5,false,cachedSounds,randomGet,376,s.DavidSFXModule,1,false,,false,false,37,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,1,true,"1) 4;O1;0; 2) 12;null;null; 3) 14;ON;null; 4) 15;null;null; ",false,false,243,()
+java.util.Map,java.util.Map,SaveDefaults,1,false,SETTINGS_MAP,forEach,190,doom.ConfigManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,1,true,"1) 3;null;null; 2) 3;ON;null; ",false,false,,
+java.util.Set,java.util.Set,lambda$observe$2,3,true,affected,forEach,204,awt.EventObserver,1,false,,false,true,,
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),102,rr.MultiPatchSynthesizer,2,true,"1) 4;ON;null; 2) 5;ON;null; ",false,false,78,()
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,3,true,"1) 1;ON;256; 2) 9;null;null; 3) 11;ON;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,get,87,doom.CVarManager,1,true,"1) 1;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.Map,java.util.Map,restoreAction,3,false,actionsMap,iterator,439,awt.EventBase$ActionStateHolder,2,false,,false,false,,
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,1,true,"1) 1;O1;0; 2) 7;null;null; 3) 9;ON;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,134,doom.ConfigManager,1,true,"1) 2;INFINITE;null; 2) 3;ON;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.Map,java.util.Map,restoreAction,3,false,actionsMap,iterator,437,awt.EventBase$ActionStateHolder,2,false,,false,false,,
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,1,true,"1) 1;ON;256; 2) 10;ON;null; ",false,false,,
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,1,true,"1) 1;O1;4; 2) 9;null;null; 3) 11;ON;null; ",false,false,54,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,63,doom.ConfigManager,1,true,"1) 3;INFINITE;null; 2) 4;ON;4; 3) 7;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,processAllArgs,2,true,commandList,size,170,doom.CVarManager,1,true,"1) 3;O1;0; ",false,true,,
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,1,true,"1) 4;O1;0; 2) 12;null;null; 3) 14;ON;null; ",false,true,,
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,1,true,"1) 1;O1;0; 2) 11;ON;null; ",false,false,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,1,true,"1) 3;O1;0; 2) 11;null;null; 3) 13;ON;null; 4) 14;null;null; ",false,false,243,()
+java.util.LinkedHashSet,java.util.LinkedHashSet,addInterest,2,false,keyInterests,add(value),185,awt.EventBase$KeyStateHolder,1,true,"1) 3;O1;0; ",false,false,173,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,randomGet,123,rr.MultiPatchSynthesizer,1,true,"1) 6;ON;null; 2) 7;ON;null; ",false,false,78,()
+java.util.List,java.util.List,findByInt,3,true,list,size,93,utils.BinarySearch,1,false,,false,true,,
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,144,rr.MultiPatchSynthesizer,2,true,"1) 2;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,bool,2,false,cVarMap,containsKey,54,doom.CVarManager,1,true,"1) 1;ON;6; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,LoadDefaults,1,false,configFiles,forEach,223,doom.ConfigManager,1,true,"1) 1;O1;4; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,134,doom.ConfigManager,8,false,,false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,1,true,"1) 1;null;null; 2) 7;null;null; 3) 9;ON;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,containsKey,82,doom.CVarManager,1,true,"1) 1;O1;4; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,10,true,"1) 9;null;null; 2) 11;ON;null; ",false,false,243,()
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,1,true,"1) 1;null;null; 2) 3;ON;null; ",false,true,,
+java.util.EnumSet,java.util.EnumSet,lambda$SaveDefaults$3,3,true,settings,stream,198,doom.ConfigManager,1,false,,false,true,,
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,115,rr.MultiPatchSynthesizer,2,true,"1) 1;ON;null; 2) 3;ON;null; ",false,false,78,()
+java.util.List,java.util.ArrayList,appendTo,3,false,messages,iterator,218,s.MusReader$EventGroup,1,false,,false,false,206,()
+java.util.Hashtable,java.util.Hashtable,getBadColumn,1,false,badColumns,put(key;value),155,rr.patch_t,1,true,"1) 1;ON;null; ",false,false,136,()
+java.util.EnumMap,java.util.EnumMap,drawPlayers,1,false,fixedColorSources,get,1457,automap.Map,1,true,"1) 1;ON;4; ",false,false,325,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,pickClosest,3,true,picks,randomGet,40,awt.DisplayModePicker,2,false,,false,true,23,()
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,170,doom.ConfigManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,22,true,"1) 7;null;null; 2) 9;ON;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,144,rr.MultiPatchSynthesizer,4,true,"1) 3;ON;null; ",false,false,78,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),91,rr.MultiPatchSynthesizer,2,true,"1) 1;ON;null; 2) 3;ON;null; 3) 4;ON;null; ",false,false,78,()
+java.util.HashMap,java.util.HashMap,reconstructPointers,1,false,pointindex,put(key;value),506,savegame.VanillaDSG,1,true,"1) 1;O1;0; ",false,false,489,()
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,1,true,"1) 1;O1;0; 2) 9;null;null; 3) 11;ON;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,with,4,false,cVarMap,get,114,doom.CVarManager,93,false,,false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.List,processAllArgs,2,true,commandList,size,170,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; ",false,true,,
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,1,true,"1) 3;ON;null; 2) 5;null;null; ",false,true,253,()
+java.util.List,java.util.List,InitSpriteDefs,2,true,list,forEach,154,rr.SpriteManager,1,true,"1) 2;ON;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,168,doom.ConfigManager,1,true,"1) 2;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,1,true,"1) 3;O1;0; 2) 11;null;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,drawWalls,1,false,litedColorSources,get,1339,automap.Map,1,true,"1) 1;ON;null; ",false,false,326,(Ljava/lang/Class;)
+java.util.EnumSet,java.util.EnumSet,Repalette,1,false,GENERATE_LITE_LEVELS_FOR,stream,346,automap.Map,1,true,"1) 3;O1;0; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,specified,2,false,cVarMap,containsKey,72,doom.CVarManager,4,true,"1) 1;ON;256; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,10,true,"1) 9;null;null; 2) 11;ON;null; 3) 12;null;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,emptyToNull,1,false,messages,isEmpty,227,s.MusReader$EventGroup,1,true,"1) 1;null;null; ",false,false,206,()
+java.util.Map,java.util.Map,restoreCooperation,4,false,cooperationMap,iterator,352,awt.EventBase$ActionStateHolder,2,false,,false,false,,
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,85,doom.ConfigManager,2,true,"1) 3;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,drawPlayers,1,false,fixedColorSources,get,1441,automap.Map,2,false,,false,false,325,(Ljava/lang/Class;)
+java.util.List,java.util.List,processCVar,3,true,commandList,randomGet,181,doom.CVarManager,1,true,"1) 1;null;null; 2) 7;null;null; ",false,true,,
+java.util.HashMap,java.util.HashMap,CheckNumForName,2,false,doomhash,iterator,1168,w.WadLoader,1,true,"1) 1;O1;0; 2) 9;ON;null; ",false,false,1145,(I)
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,1,true,"1) 3;O1;0; 2) 11;null;null; 3) 13;ON;null; ",false,true,,
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,3,true,"1) 1;ON;256; 2) 11;ON;null; ",false,false,,
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,1,true,"1) 2;ON;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,get,4,false,cVarMap,get,87,doom.CVarManager,1,true,"1) 2;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,88,doom.ConfigManager,1,true,"1) 2;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,170,doom.ConfigManager,2,true,"1) 1;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,present,2,false,cVarMap,get,63,doom.CVarManager,1,true,"1) 4;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.Set,java.util.Set,removeAllKeys,1,false,holdingSet,clear,177,awt.EventBase$KeyStateHolder,4,false,,false,false,,
+java.util.EnumSet,g.Signals$ScanCode,<init>,4,true,interestFirstKey,of,161,awt.EventBase$KeyStateInterest,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; ",false,true,,
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,85,doom.ConfigManager,1,true,"1) 1;INFINITE;null; 2) 2;ON;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,1,true,"1) 3;O1;0; ",false,false,54,()
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,31,true,"1) 6;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,specified,2,false,cVarMap,containsKey,72,doom.CVarManager,1,true,"1) 1;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,16,true,"1) 8;null;null; 2) 10;ON;null; ",false,false,243,()
+java.util.EnumMap,java.util.EnumMap,equals,3,false,configMap,get,162,doom.ConfigManager,93,false,,false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,InitRMISubsystem,7,true,detailaware,add(value),175,rr.parallel.ParallelThings$HiColor,1,true,"1) 2;ON;null; ",false,true,,
+java.util.HashMap,java.util.HashMap,getLogger,1,false,INDIVIDUAL_CLASS_LOGGERS,getOrDefault,66,mochadoom.Loggers,1,true,"1) 1;ON;256; 2) 8;null;null; 3) 10;ON;null; ",false,false,54,()
+java.util.EnumMap,java.util.EnumMap,equals,3,false,configMap,get,162,doom.ConfigManager,1,true,"1) 1;null;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,addShortMessage,5,false,messages,add(value),420,s.FinnwMusicModule$EventGroup,4,true,"1) 2;O1;0; ",false,false,316,()
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,2,true,"1) 9;null;null; 2) 9;ON;null; 3) 10;ON;null; ",false,false,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,2,true,"1) 3;null;null; 2) 5;ON;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,RegisterSong,2,false,songs,add(value),122,s.FinnwMusicModule,2,false,,false,false,59,(I)
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,2,true,"1) 8;null;null; 2) 8;ON;null; ",false,false,,
+java.util.List,java.util.List,InitMaskedWorkers,1,false,detailaware,add(value),208,rr.parallel.ParallelRenderer$Indexed,1,true,"1) 4;ON;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,137,doom.ConfigManager,2,true,"1) 3;O1;0; ",false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,override,4,false,cVarMap,compute,144,doom.CVarManager,86,false,,false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,1,true,"1) 4;O1;0; 2) 12;null;null; 3) 14;ON;null; ",false,false,243,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,55,doom.ConfigManager,1,true,"1) 2;INFINITE;null; 2) 3;ON;4; 3) 6;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.ArrayList,java.util.ArrayList,CloseAllHandles,1,true,d,add(value),1218,w.WadLoader,1,true,"1) 2;ON;null; ",false,false,1215,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,137,doom.ConfigManager,1,true,"1) 1;ON;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,21,true,"1) 9;ON;null; ",false,false,,
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,115,doom.ConfigManager,1,false,,false,false,43,(Ljava/lang/Class;)
+java.util.HashMap,java.util.HashMap,getRogueColumn,3,false,roguePatches,iterator,1177,rr.SimpleTextureManager,4,false,,false,false,1210,()
+java.util.Hashtable,java.util.Hashtable,FlatNumForName,2,false,FlatCache,iterator,1032,rr.SimpleTextureManager,2,false,,false,false,783,()
+java.util.HashMap,java.util.HashMap,InitLumpHash,1,false,doomhash,put(key;value),1155,w.WadLoader,1,true,"1) 1;ON;256; 2) 11;ON;null; ",false,false,1145,(I)
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,size,248,doom.CVarManager,1,false,,false,false,243,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),109,rr.MultiPatchSynthesizer,1,false,,false,false,78,()
+java.util.EnumSet,java.lang.Class,<init>,3,true,hClass,noneOf,266,awt.EventBase$ActionStateHolder,1,true,"1) 1;INFINITE;null; ",false,true,,
+java.util.TreeMap,java.util.TreeMap,<init>,2,true,sortedRatios,floorEntry,173,v.tables.BlurryTable,1,true,"1) 2;ON;255; ",false,false,143,(Ljava/util/Comparator;)
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),250,utils.TraitFactory$FactoryContext,1,true,"1) 1;ON;256; 2) 12;ON;null; 3) 12;null;null; ",false,false,,
+java.util.Map,java.util.Map,disableAction,3,false,enabledActions,iterator,410,awt.EventBase$ActionStateHolder,9,false,,false,false,,
+java.util.List,java.util.List,InitMaskedWorkers,1,false,detailaware,add(value),208,rr.parallel.ParallelRenderer$Indexed,1,true,"1) 3;ON;null; ",false,false,,
+java.util.EnumSet,g.Signals$ScanCode,<init>,4,true,interestFirstKey,of,161,awt.EventBase$KeyStateInterest,1,true,"1) 3;O1;0; ",false,true,,
+java.util.List,java.util.List,processValue,4,true,commandList,size,233,doom.CVarManager,1,true,"1) 2;O1;0; 2) 10;null;null; 3) 12;ON;null; ",false,true,,
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,1,true,"1) 2;ON;null; 2) 4;null;null; ",false,true,253,()
+java.util.List,java.util.List,processValue,4,true,commandList,randomGet,234,doom.CVarManager,1,true,"1) 1;ON;256; 2) 8;null;null; 3) 10;ON;null; ",false,true,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,1,true,"1) 3;O1;0; 2) 11;null;null; 3) 13;ON;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,pickClosest,3,true,picks,size,35,awt.DisplayModePicker,2,false,,false,true,23,()
+java.util.ArrayList,java.util.ArrayList,CloseAllHandles,1,true,d,add(value),1218,w.WadLoader,1,true,"1) 1;ON;null; ",false,false,1215,()
+java.util.EnumMap,java.util.EnumMap,update,3,false,configMap,put,55,doom.ConfigManager,1,true,"1) 1;ON;4; 2) 4;ON;9; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,1,true,"1) 4;ON;null; 2) 5;O1;0; ",false,false,65,()
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),155,doom.ConfigBase,4,true,"1) 1;ON;256; ",false,true,142,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,108,rr.MultiPatchSynthesizer,2,true,"1) 1;ON;null; 2) 3;ON;null; ",false,false,78,()
+java.util.Hashtable,java.util.Hashtable,checkOut,1,false,unlocked,remove(key),49,pooling.ObjectPool,1,true,"1) 1;ON;0; ",false,false,24,()
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,10,true,"1) 9;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,108,rr.MultiPatchSynthesizer,1,true,"1) 6;ON;null; ",false,false,78,()
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; 3) 8;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,168,doom.ConfigManager,87,false,,false,false,43,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,1,true,"1) 1;ON;256; 2) 8;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,drawPlayers,1,false,fixedColorSources,get,1459,automap.Map,1,true,"1) 2;ON;4; ",false,false,325,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,add(value),102,rr.MultiPatchSynthesizer,2,true,"1) 5;ON;null; 2) 6;ON;null; ",false,false,78,()
+java.util.Map,java.util.Map,SaveDefaults,1,false,SETTINGS_MAP,forEach,190,doom.ConfigManager,4,true,"1) 1;ON;256; ",false,false,,
+java.util.HashMap,java.util.HashMap,put,3,false,traitMap,put(key;value),243,utils.TraitFactory$FactoryContext,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; 4) 12;ON;null; 5) 12;null;null; 6) 13;ON;null; ",false,false,,
+java.util.Set,java.lang.Object,lambda$mapCooperation$8,4,true,set,addAll,335,awt.EventBase$ActionStateHolder,1,false,,false,true,,
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,177,doom.ConfigManager,1,true,"1) 1;null;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.ArrayList,java.util.ArrayList,getAllEntries,1,true,zes,add(value),258,w.InputStreamSugar,31,true,"1) 8;ON;null; 2) 10;null;null; ",false,true,253,()
+java.util.EnumMap,java.util.EnumMap,processCVarSubArgs,4,false,cVarMap,put,228,doom.CVarManager,1,true,"1) 4;O1;0; 2) 12;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,bool,2,false,cVarMap,containsKey,54,doom.CVarManager,1,true,"1) 3;O1;0; ",false,false,42,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getFiles,0,true,ret,add(value),156,doom.ConfigBase,1,true,"1) 2;O1;0; ",false,true,142,()
+java.util.List,java.util.List,addZipFile,3,true,zes,iterator,464,w.WadLoader,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; 4) 10;ON;null; ",false,false,,
+java.util.Hashtable,java.util.Hashtable,checkOut,1,false,unlocked,size,37,pooling.ObjectPool,1,false,,false,false,24,()
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,115,rr.MultiPatchSynthesizer,1,true,"1) 6;ON;null; ",false,false,78,()
+java.util.Hashtable,java.util.Hashtable,getPhoneme,1,false,phonemes,iterator,103,s.SpeakerSound,1,false,,false,false,85,()
+java.util.EnumMap,java.util.EnumMap,processCVar,3,false,cVarMap,put,198,doom.CVarManager,1,true,"1) 1;null;null; ",false,false,42,(Ljava/lang/Class;)
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,183,doom.ConfigManager,1,true,"1) 1;O1;4; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,getColumnStream,3,true,ranges,size,144,rr.MultiPatchSynthesizer,2,true,"1) 1;ON;null; ",false,false,78,()
+java.util.List,java.util.List,LoadDefaults,1,false,configFiles,forEach,223,doom.ConfigManager,1,true,"1) 1;ON;null; 2) 1;O1;0; 3) 2;null;null; ",false,false,,
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,toArray,248,doom.CVarManager,1,true,"1) 2;O1;0; 2) 10;null;null; 3) 12;ON;null; ",false,false,243,()
+java.util.List,java.util.ArrayList,processVarArg,4,true,list,add(value),245,doom.CVarManager,3,true,"1) 4;null;null; 2) 6;ON;null; 3) 7;null;null; ",false,false,243,()
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,183,doom.ConfigManager,1,true,"1) 1;INFINITE;null; 2) 2;null;null; ",false,false,43,(Ljava/lang/Class;)
+java.util.List,java.util.ArrayList,AddFile,4,false,wadfiles,add(value),259,w.WadLoader,1,true,"1) 1;ON;256; 2) 10;ON;null; 3) 11;O1;0; ",false,false,65,()
+java.util.EnumMap,java.util.EnumMap,getValue,3,false,configMap,get,177,doom.ConfigManager,1,true,"1) 3;O1;0; ",false,false,43,(Ljava/lang/Class;)

@@ -1,0 +1,26 @@
+Field name,Is local?,Source code line,Containing class,A method that uses it,Original collection,Ordered recommendations,"Choosen recommendation (used by the CECOTool transfomer, change it accordingly)"
+demorecorder,false,42,demo.VanillaDoomDemo,putTic,java.util.ArrayList,treeList(ApacheCommonsCollections)<nodeCachingLinkedList(ApacheCommonsCollections),1
+list,true,243,doom.CVarManager,processVarArg,java.util.ArrayList,treeList(ApacheCommonsCollections)<nodeCachingLinkedList(ApacheCommonsCollections),1
+SETTINGS_MAP,false,131,m.Settings,rebase,java.util.HashMap,hashedMap(ApacheCommonsCollections),1
+INDIVIDUAL_CLASS_LOGGERS,false,54,mochadoom.Loggers,<clinit>,java.util.HashMap,hashedMap(ApacheCommonsCollections),1
+locked,false,23,pooling.ObjectPool,checkOut,java.util.Hashtable,concurrentHashMap<synchronizedUnifiedMap(EclipseCollections),1
+ranges,true,78,rr.MultiPatchSynthesizer,getColumnStream,java.util.ArrayList,treeList(ApacheCommonsCollections)<nodeCachingLinkedList(ApacheCommonsCollections),1
+detailaware,false,260,rr.RendererState,completeInit,java.util.ArrayList,treeList(ApacheCommonsCollections)<nodeCachingLinkedList(ApacheCommonsCollections),1
+FlatNames,true,785,rr.SimpleTextureManager,InitFlats,java.util.Hashtable,concurrentHashMap,1
+roguePatches,false,1210,rr.SimpleTextureManager,getRogueColumn,java.util.HashMap,hashedMap(ApacheCommonsCollections),1
+TextureCache,false,204,rr.SimpleTextureManager,InitTextures,java.util.Hashtable,synchronizedUnifiedMap(EclipseCollections),1
+hash,true,104,rr.SpriteManager,InitSpriteDefs,java.util.HashMap,hashedMap(ApacheCommonsCollections),1
+cachedSounds,false,37,s.ClipSFXModule,getClipForChannel,java.util.HashMap,hashedMap(ApacheCommonsCollections),1
+cachedSounds,false,37,s.DavidSFXModule,InitSound,java.util.ArrayList,treeList(ApacheCommonsCollections)<nodeCachingLinkedList(ApacheCommonsCollections),1
+channels,false,58,s.FinnwMusicModule,nextEventGroup,java.util.ArrayList,nodeCachingLinkedList(ApacheCommonsCollections),1
+songs,false,59,s.FinnwMusicModule,PlaySong,java.util.ArrayList,nodeCachingLinkedList(ApacheCommonsCollections),1
+messages,false,316,s.FinnwMusicModule$EventGroup,addShortMessage,java.util.ArrayList,treeList(ApacheCommonsCollections)<nodeCachingLinkedList(ApacheCommonsCollections),1
+messages,false,206,s.MusReader$EventGroup,addShortMessage,java.util.ArrayList,treeList(ApacheCommonsCollections)<nodeCachingLinkedList(ApacheCommonsCollections),1
+pointindex,false,489,savegame.VanillaDSG,reconstructPointers,java.util.HashMap,hashedMap(ApacheCommonsCollections),1
+TL,false,381,savegame.VanillaDSG,reconstructPointers,java.util.ArrayList,treeList(ApacheCommonsCollections)<nodeCachingLinkedList(ApacheCommonsCollections),1
+tasks,false,38,utils.OrderedExecutor,submit,java.util.HashMap,hashedMap(ApacheCommonsCollections),1
+wadfiles,false,65,w.WadLoader,AddFile,java.util.ArrayList,treeList(ApacheCommonsCollections)<nodeCachingLinkedList(ApacheCommonsCollections),1
+list,false,1206,w.WadLoader,CheckNumsForName,java.util.ArrayList,treeList(ApacheCommonsCollections)<nodeCachingLinkedList(ApacheCommonsCollections),1
+d,true,1215,w.WadLoader,CloseAllHandles,java.util.ArrayList,treeList(ApacheCommonsCollections)<nodeCachingLinkedList(ApacheCommonsCollections),1
+doomhash,false,1145,w.WadLoader,CheckNumForName,java.util.HashMap,hashedMap(ApacheCommonsCollections),1
+zone,false,64,w.WadLoader,UnlockLumpNum,java.util.HashMap,hashedMap(ApacheCommonsCollections),1
