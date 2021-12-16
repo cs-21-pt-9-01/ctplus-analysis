@@ -34,17 +34,17 @@ import utils.ResourceIO;
  * 1. Define CVars in CommandVariable Enum
  * 2. In program entry main function, create any ICommandLineManager and pass an instance to create CVarManager
  * 3. Use methods bool, present, get and with to check or get CVars
- * 
+ *
  * @author Good Sign
  */
 public class CVarManager {
-    
+
     private final EnumMap<CommandVariable, Object[]> cVarMap = new EnumMap<>(CommandVariable.class);
 
     public CVarManager(final List<String> commandList) {
         System.out.println(processAllArgs(commandList) + " command-line variables");
     }
-    
+
     /**
      * Checks that CVar of switch-type is passed as Command Line Argument
      * @param cv
@@ -53,7 +53,7 @@ public class CVarManager {
     public boolean bool(final CommandVariable cv) {
         return cv.getType() == CommandVariable.Type.SWITCH && cVarMap.containsKey(cv);
     }
-    
+
     /**
      * Checks that CVar of any type is passed as Command Line Argument with proper value(s)
      * @param cv
@@ -62,7 +62,7 @@ public class CVarManager {
     public boolean present(final CommandVariable cv) {
         return cVarMap.get(cv) != null;
     }
-    
+
     /**
      * Checks that CVar of any type is passed as Command Line Argument
      * @param cv
@@ -71,38 +71,36 @@ public class CVarManager {
     public boolean specified(final CommandVariable cv) {
         return cVarMap.containsKey(cv);
     }
-    
+
     /**
      * Gets an Optional with or without a value of CVar argument at position
      * @param cv
      * @return Optional
      */
-    public <T> Optional<T> get(final CommandVariable cv, final Class<T> itemType, final int position) {        
+    public <T> Optional<T> get(final CommandVariable cv, final Class<T> itemType, final int position) {
         if (cv.arguments[position] == itemType) {
             if (!cVarMap.containsKey(cv)) {
                 return Optional.empty();
             }
-            
             @SuppressWarnings("unchecked")
             final T ret = (T) cVarMap.get(cv)[position];
             return Optional.ofNullable(ret);
         }
-        
         throw new IllegalArgumentException("CVar argument at position " + position + " is not of class " + itemType.getName());
     }
-    
+
     /**
      * Tries to apply a CVar argument at position to the consuming function
      * The magic is that you declare a lambda function or reference some method
      * and the type of object will be automatically picked from what you hinted
-     * 
+     *
      * i.e. (String s) -> System.out.println(s) will try to get string,
      * (Object o) -> map.put(key, o) or o -> list.add(o.hashCode()) will try to get objects
      * and you dont have to specify class
-     * 
+     *
      * The drawback is the ClassCastException will be thrown if the value is neither
      * what you expected, nor a subclass of it
-     * 
+     *
      * @param cv
      * @param position
      * @param action
@@ -115,7 +113,6 @@ public class CVarManager {
             if (mapped == null) {
                 return false;
             }
-            
             @SuppressWarnings("unchecked")
             final T item = (T) mapped[position];
             action.accept(item);
@@ -124,7 +121,7 @@ public class CVarManager {
             return false;
         }
     }
-    
+
     /**
      * Tries to replace the CVar argument if already present or add it along with CVar
      * @param cv
@@ -136,23 +133,19 @@ public class CVarManager {
         if (position < 0 || position >= cv.arguments.length) {
             return false;
         }
-        
         if (!cv.arguments[position].isInstance(value)) {
             return false;
         }
-        
         cVarMap.compute(cv, (key, array) -> {
             if (array == null) {
                 array = new Object[cv.arguments.length];
             }
-            
             array[position] = value;
             return array;
         });
-        
         return true;
     }
-    
+
     private void readResponseFile(final String filename) {
         final ResponseReader r = new ResponseReader();
         if (new ResourceIO(filename).readLines(r)) {
@@ -165,49 +158,42 @@ public class CVarManager {
 
     private int processAllArgs(final List<String> commandList) {
         int cVarCount = 0, position = 0;
-        
-        for (
-            final int limit = commandList.size();
-            limit > position;
-            position = processCVar(commandList, position),
-            ++position,
-            ++cVarCount
-        ) {}
-        
+        for (final int limit = commandList.size(); limit > position; position = processCVar(commandList, position), ++position, ++cVarCount) {
+        }
         return cVarCount;
     }
 
     private int processCVar(final List<String> commandList, int position) {
         final String arg = commandList.get(position);
-        
         if (!isCommandArgument(arg)) {
             return position;
         }
-        
         final char cVarPrefix = arg.charAt(0);
         final String cVarName = arg.substring(1);
-        
         if (cVarPrefix == '@') {
             readResponseFile(cVarName);
             return position;
-        } else try {
-            final CommandVariable cVar = CommandVariable.valueOf(cVarName.toUpperCase());
-            if (cVar.prefix == cVarPrefix) {
-                switch(cVar.getType()) {
-                    case PARAMETER:
-                        cVarMap.put(cVar, null);
-                    case VARARG:
-                        return processCVarSubArgs(commandList, position, cVar);
-                    case SWITCH:
-                    default:
-                        cVarMap.put(cVar, null);
-                        return position;
+        } else
+            try {
+                final CommandVariable cVar = CommandVariable.valueOf(cVarName.toUpperCase());
+                if (cVar.prefix == cVarPrefix) {
+                    switch(cVar.getType()) {
+                        case PARAMETER:
+                            cVarMap.put(cVar, null);
+                        case VARARG:
+                            return processCVarSubArgs(commandList, position, cVar);
+                        case SWITCH:
+                        default:
+                            cVarMap.put(cVar, null);
+                            return position;
+                    }
                 }
+            }// ignore
+             catch (IllegalArgumentException ex) {
             }
-        } catch (IllegalArgumentException ex) {} // ignore
         return position;
     }
-    
+
     private int processCVarSubArgs(final List<String> commandList, int position, final CommandVariable cVar) {
         final Object[] cVarMappings = new Object[cVar.arguments.length];
         for (int j = 0; j < cVar.arguments.length; ++j) {
@@ -240,7 +226,7 @@ public class CVarManager {
     }
 
     private Object[] processVarArg(final Class<?> elementClass, final List<String> commandList, int position) {
-        final List<Object> list = new ArrayList<>();
+        final List<Object> list = new org.apache.commons.collections4.list.TreeList<>();
         for (Object value; (value = processValue(elementClass, commandList, position)) != null; ++position) {
             list.add(value);
         }
@@ -261,14 +247,7 @@ public class CVarManager {
         }
         try {
             return format.getDeclaredConstructor(String.class).newInstance(arg);
-        } catch (
-            NoSuchMethodException
-            | SecurityException
-            | InstantiationException
-            | IllegalAccessException
-            | IllegalArgumentException
-            | InvocationTargetException ex
-        ) {
+        } catch (NoSuchMethodException | SecurityException | InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException ex) {
             Loggers.getLogger(CommandVariable.class.getName()).log(Level.SEVERE, null, ex);
             return null;
         }
@@ -277,18 +256,17 @@ public class CVarManager {
     private boolean isCommandArgument(final String arg) {
         if (arg.length() < CommandVariable.MIN_CVAR_LENGTH)
             return false;
-        
-        switch (arg.charAt(0)) {
+        switch(arg.charAt(0)) {
             case '-':
             case '+':
             case '@':
                 return true;
         }
-        
         return false;
     }
-    
+
     private class ResponseReader implements Consumer<String> {
+
         int cVarCount = 0;
 
         @Override

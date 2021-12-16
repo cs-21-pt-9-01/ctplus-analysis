@@ -82,20 +82,32 @@ import w.IWadLoader;
 public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimitResettable {
 
     protected static final boolean DEBUG = false;
+
     protected static final boolean DEBUG2 = false;
 
     // ///////////////////// STATUS ////////////////////////
     protected DoomMain<T, V> DOOM;
+
     protected ISegDrawer MySegs;
+
     protected IDoomMenu Menu;
+
     protected BSP MyBSP;
+
     protected PlaneDrawer<T, V> MyPlanes;
+
     protected IMaskedDrawer<T, V> MyThings;
+
     public IVisSpriteManagement<V> VIS;
+
     protected TextureManager<T> TexMan;
+
     public ViewVars view;
+
     public LightsAndColors<V> colormaps;
+
     public SegVars seg_vars;
+
     public Visplanes vp_vars;
 
     // Rendering subsystems that are detailshift-aware
@@ -127,7 +139,9 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
      * Who can set this? A: The Menu.
      */
     protected boolean setsizeneeded;
+
     protected int setblocks;
+
     protected int setdetail;
 
     // private BSPVars bspvars;
@@ -146,7 +160,6 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
         setsizeneeded = true;
         setblocks = blocks;
         setdetail = detail;
-
         detailaware.forEach((d) -> {
             d.setDetail(setdetail);
         });
@@ -163,58 +176,43 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
         view.angle = player.mo.angle & BITS32;
         // With 32 colormaps, a bump of 1 or 2 is normal.
         // With more than 32, it should be obviously higher.
-
         int bumplight = Math.max(colormaps.lightBits() - 5, 0);
         // Be a bit more generous, otherwise the effect is not
         // as evident with truecolor maps.
         bumplight += (bumplight > 0) ? 1 : 0;
-
         colormaps.extralight = player.extralight << bumplight;
-
         view.z = player.viewz;
         view.lookdir = player.lookdir;
         int tempCentery;
-
         // MAES: hacks based on Heretic. Weapon movement needs to be compensated
         if (setblocks == 11) {
             tempCentery = (view.height / 2) + (int) (view.lookdir * DOOM.vs.getScreenMul() * setblocks) / 11;
         } else {
             tempCentery = (view.height / 2) + (int) (view.lookdir * DOOM.vs.getScreenMul() * setblocks) / 10;
         }
-
         if (view.centery != tempCentery) {
             view.centery = tempCentery;
             view.centeryfrac = view.centery << FRACBITS;
-            int yslope[] = vp_vars.yslope;
+            int[] yslope = vp_vars.yslope;
             for (int i = 0; i < view.height; i++) {
-                yslope[i] = FixedDiv(
-                    (view.width << view.detailshift) / 2 * FRACUNIT,
-                    Math.abs(((i - view.centery) << FRACBITS) + FRACUNIT / 2)
-                );
+                yslope[i] = FixedDiv((view.width << view.detailshift) / 2 * FRACUNIT, Math.abs(((i - view.centery) << FRACBITS) + FRACUNIT / 2));
             }
-
             skydcvars.centery = maskedcvars.centery = dcvars.centery = view.centery;
         }
-
         view.sin = Tables.finesine(view.angle);
         view.cos = Tables.finecosine(view.angle);
-
         sscount = 0;
-
         if (player.fixedcolormap != Palettes.COLORMAP_FIXED) {
             colormaps.fixedcolormap = colormaps.getFixedColormap(player);
             // Offset by fixedcolomap
             // pfixedcolormap =player.fixedcolormap*256;
-
             colormaps.walllights = colormaps.scalelightfixed;
-
             for (int i = 0; i < colormaps.maxLightScale(); i++) {
                 colormaps.scalelightfixed[i] = colormaps.fixedcolormap;
             }
         } else {
             colormaps.fixedcolormap = null;
         }
-
         framecount++;
         validcount++;
     }
@@ -223,31 +221,24 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
      * R_SetupFrame for a particular actor.
      */
     public void SetupFrame(mobj_t actor) {
-
         // viewplayer = player;
         view.x = actor.x;
         view.y = actor.y;
         // viewangle = addAngles(player.mo.angle , viewangleoffset);
         view.angle = actor.angle & BITS32;
         // extralight = actor.extralight;
-
         view.z = actor.z + actor.height;
-
         view.sin = finesine(view.angle);
         view.cos = finecosine(view.angle);
-
         sscount = 0;
-
         framecount++;
         validcount++;
     }
 
     public RendererState(DoomMain<T, V> DOOM) {
         this.DOOM = DOOM;
-
         // These don't change between implementations, yet.
         this.MyBSP = new BSP();
-
         this.view = new ViewVars(DOOM.vs);
         this.seg_vars = new SegVars();
         this.dcvars = new ColVars<>();
@@ -256,17 +247,14 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
         this.skydcvars = new ColVars<>();
         this.colfunclow = new ColFuncs<>();
         this.colfunchi = new ColFuncs<>();
-
-        this.detailaware = new ArrayList<>();
+        this.detailaware = new org.apache.commons.collections4.list.TreeList<>();
         this.colormaps = new LightsAndColors<>(DOOM);
         // It's better to construct this here
         @SuppressWarnings("unchecked")
         final TextureManager<T> tm = (TextureManager<T>) new SimpleTextureManager(DOOM);
         this.TexMan = tm;
-
         // Visplane variables
         this.vp_vars = new Visplanes(DOOM.vs, view, TexMan);
-
         // Set rendering functions only after screen sizes
         // and stuff have been set.
         this.MyPlanes = new Planes(DOOM, this);
@@ -299,20 +287,15 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
          * ending y coord?
          */
         private void ClipSolidWallSegment(int first, int last) {
-
             int next;
             int start;
             // int maxlast=Integer.MIN_VALUE;
-
-            start = 0; // within solidsegs
-
-            // Find the first cliprange that touches the range.
-            // Actually, the first one not completely hiding it (its last must
+            // within solidsegs
+            start = 0;
             // be lower than first.
             while (solidsegs[start].last < first - 1) {
                 start++;
             }
-
             // If the post begins above the lastly found cliprange...
             if (first < solidsegs[start].first) {
                 // ..and ends above it, too (no overlapping)
@@ -321,12 +304,10 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                     // so insert a new clippost. Calling this function
                     // tells the renderer that there is an obstruction.
                     MySegs.StoreWallRange(first, last);
-
                     // Newend should have a value of 2 if we are at the
                     // beginning of a new frame.
                     next = newend;
                     newend++;
-
                     if (next >= solidsegs.length) {
                         ResizeSolidSegs();
                     }
@@ -340,19 +321,15 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                          * some point, the value of the start solidseg is
                          * duplicated.
                          */
-
                         solidsegs[next].copy(solidsegs[next - 1]);
-
                         next--;
                     }
-
                     // At this point, next points at start.
                     // Therefore, start
                     solidsegs[next].first = first;
                     solidsegs[next].last = last;
                     return;
                 }
-
                 // There is a fragment above *start. This can occur if it a
                 // post does start before another, but its lower edge overlaps
                 // (partial, upper occlusion)
@@ -360,71 +337,57 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                 // Now adjust the clip size.
                 solidsegs[start].first = first;
             }
-
-            // We can reach this only if a post starts AFTER another
             // Bottom contained in start? Obviously it won't be visible.
             if (last <= solidsegs[start].last) {
                 return;
             }
-
             next = start;
             while (last >= solidsegs[(next + 1)].first - 1) {
                 // There is a fragment between two posts.
-                MySegs.StoreWallRange(solidsegs[next].last + 1,
-                    solidsegs[next + 1].first - 1);
+                MySegs.StoreWallRange(solidsegs[next].last + 1, solidsegs[next + 1].first - 1);
                 next++;
-
                 if (last <= solidsegs[next].last) {
                     // Bottom is contained in next.
                     // Adjust the clip size.
                     solidsegs[start].last = solidsegs[next].last;
                     // goto crunch;
-
-                    { // crunch code
+                    {
+                        // crunch code
                         if (next == start) {
                             // Post just extended past the bottom of one post.
                             return;
                         }
-
                         while (next++ != newend) {
-                            // Remove a post.
                             // MAES: this is a struct copy.
                             if (next >= solidsegs.length) {
                                 ResizeSolidSegs();
                             }
                             solidsegs[++start].copy(solidsegs[next]);
                         }
-
                         newend = start + 1;
                         return;
                     }
                 }
             }
-
             // There is a fragment after *next.
             MySegs.StoreWallRange(solidsegs[next].last + 1, last);
             // Adjust the clip size.
             solidsegs[start].last = last;
-
             // Remove start+1 to next from the clip list,
             // because start now covers their area.
-            { // crunch code
+            {
+                // crunch code
                 if (next == start) {
                     // Post just extended past the bottom of one post.
                     return;
                 }
-
                 while (next++ != newend) {
-                    // Remove a post.
-                    // MAES: this is a struct copy.
-                    // MAES: this can overflow, breaking e.g. MAP30 of Final
                     // Doom.
                     if (next >= solidsegs.length) {
                         ResizeSolidSegs();
                     }
                     solidsegs[++start].copy(solidsegs[next]);
                 }
-
                 newend = start + 1;
             }
         }
@@ -433,54 +396,42 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             solidsegs = C2JUtils.resize(solidsegs, solidsegs.length * 2);
         }
 
-        //
+        // 
         // R_ClipPassWallSegment
         // Clips the given range of columns,
         // but does not includes it in the clip list.
         // Does handle windows,
         // e.g. LineDefs with upper and lower texture.
-        //
+        // 
         private void ClipPassWallSegment(int first, int last) {
-
             // Find the first range that touches the range
             // (adjacent pixels are touching).
             int start = 0;
-
             while (solidsegs[start].last < first - 1) {
                 start++;
             }
-
             if (first < solidsegs[start].first) {
                 if (last < solidsegs[start].first - 1) {
                     // Post is entirely visible (above start).
                     MySegs.StoreWallRange(first, last);
                     return;
                 }
-
                 // There is a fragment above *start.
                 MySegs.StoreWallRange(first, solidsegs[start].first - 1);
             }
-
             // Bottom contained in start?
             if (last <= solidsegs[start].last) {
                 return;
             }
-
-            // MAES: Java absolutely can't do without a sanity check here.
             // if (startptr>=MAXSEGS-2) return;
             while (last >= solidsegs[start + 1].first - 1) {
                 // There is a fragment between two posts.
-                MySegs.StoreWallRange(solidsegs[start].last + 1,
-                    solidsegs[start + 1].first - 1);
+                MySegs.StoreWallRange(solidsegs[start].last + 1, solidsegs[start + 1].first - 1);
                 start++;
-                // if (startptr>=MAXSEGS-2) return;
-                // start=solidsegs[startptr];
-
                 if (last <= solidsegs[start].last) {
                     return;
                 }
             }
-
             // There is a fragment after *next.
             MySegs.StoreWallRange(solidsegs[start].last + 1, last);
         }
@@ -497,7 +448,8 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             solidsegs[0].last = -1;
             solidsegs[1].first = view.width;
             solidsegs[1].last = 0x7fffffff;
-            newend = 2; // point so solidsegs[2];
+            // point so solidsegs[2];
+            newend = 2;
         }
 
         /**
@@ -518,49 +470,37 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             long angle2;
             long span;
             long tspan;
-
             curline = line;
-
             // OPTIMIZE: quickly reject orthogonal back sides.
             angle1 = view.PointToAngle(line.v1x, line.v1y);
             angle2 = view.PointToAngle(line.v2x, line.v2y);
-
             // Clip to view edges.
             // OPTIMIZE: make constant out of 2*clipangle (FIELDOFVIEW).
             span = addAngles(angle1, -angle2);
-
             // Back side? I.e. backface culling?
             if (span >= ANG180) {
                 return;
             }
-
             // Global angle needed by segcalc.
             MySegs.setGlobalAngle(angle1);
             angle1 -= view.angle;
             angle2 -= view.angle;
-
             angle1 &= BITS32;
             angle2 &= BITS32;
-
             tspan = addAngles(angle1, clipangle);
-
             if (tspan > CLIPANGLE2) {
                 tspan -= CLIPANGLE2;
                 tspan &= BITS32;
-
                 // Totally off the left edge?
                 if (tspan >= span) {
                     return;
                 }
-
                 angle1 = clipangle;
             }
             tspan = addAngles(clipangle, -angle2);
-
             if (tspan > CLIPANGLE2) {
                 tspan -= CLIPANGLE2;
                 tspan &= BITS32;
-
                 // Totally off the left edge?
                 if (tspan >= span) {
                     return;
@@ -568,36 +508,31 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                 angle2 = -clipangle;
                 angle2 &= BITS32;
             }
-
             // The seg is in the view range,
             // but not necessarily visible.
             angle1 = ((angle1 + ANG90) & BITS32) >>> ANGLETOFINESHIFT;
             angle2 = ((angle2 + ANG90) & BITS32) >>> ANGLETOFINESHIFT;
             x1 = viewangletox[(int) angle1];
             x2 = viewangletox[(int) angle2];
-
             // Does not cross a pixel?
             if (x1 == x2) {
                 return;
             }
-
             backsector = line.backsector;
-
             // Single sided line?
             if (backsector == null) {
                 if (DEBUG) {
-                    System.out .println("Entering ClipSolidWallSegment SS with params " + x1 + " " + (x2 - 1));
+                    System.out.println("Entering ClipSolidWallSegment SS with params " + x1 + " " + (x2 - 1));
                 }
-                ClipSolidWallSegment(x1, x2 - 1); // to clipsolid
+                // to clipsolid
+                ClipSolidWallSegment(x1, x2 - 1);
                 if (DEBUG) {
                     System.out.println("Exiting ClipSolidWallSegment");
                 }
                 return;
             }
-
             // Closed door.
-            if (backsector.ceilingheight <= frontsector.floorheight
-                || backsector.floorheight >= frontsector.ceilingheight) {
+            if (backsector.ceilingheight <= frontsector.floorheight || backsector.floorheight >= frontsector.ceilingheight) {
                 if (DEBUG) {
                     System.out.println("Entering ClipSolidWallSegment Closed door with params " + x1 + " " + (x2 - 1));
                 }
@@ -605,59 +540,38 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                 // to clipsolid
                 return;
             }
-
             // Window. This includes same-level floors with different textures
-            if (backsector.ceilingheight != frontsector.ceilingheight
-                || backsector.floorheight != frontsector.floorheight) {
+            if (backsector.ceilingheight != frontsector.ceilingheight || backsector.floorheight != frontsector.floorheight) {
                 if (DEBUG) {
                     System.out.println("Entering ClipSolidWallSegment window with params " + x1 + " " + (x2 - 1));
                 }
-                ClipPassWallSegment(x1, x2 - 1); // to clippass
+                // to clippass
+                ClipPassWallSegment(x1, x2 - 1);
                 return;
             }
-
-            // Reject empty lines used for triggers
-            // and special events.
-            // Identical floor and ceiling on both sides,
-            // identical light levels on both sides,
             // and no middle texture.
-            if (backsector.ceilingpic == frontsector.ceilingpic
-                && backsector.floorpic == frontsector.floorpic
-                && backsector.lightlevel == frontsector.lightlevel
-                && curline.sidedef.midtexture == 0) {
+            if (backsector.ceilingpic == frontsector.ceilingpic && backsector.floorpic == frontsector.floorpic && backsector.lightlevel == frontsector.lightlevel && curline.sidedef.midtexture == 0) {
                 return;
             }
-
             // If nothing of the previous holds, then we are
             // treating the case of same-level, differently
             // textured floors. ACHTUNG, this caused the "bleeding floor"
             // bug, which is now fixed.
             // Fucking GOTOs....
-            ClipPassWallSegment(x1, x2 - 1); // to clippass
+            // to clippass
+            ClipPassWallSegment(x1, x2 - 1);
             if (DEBUG) {
                 System.out.println("Exiting AddLine for " + line);
             }
         }
 
-        //
+        // 
         // R_CheckBBox
         // Checks BSP node/subtree bounding box.
         // Returns true
         // if some part of the bbox might be visible.
-        //
-        private final int[][] checkcoord = {
-            {3, 0, 2, 1},
-            {3, 0, 2, 0},
-            {3, 1, 2, 0},
-            {0},
-            {2, 0, 2, 1},
-            {0, 0, 0, 0},
-            {3, 1, 3, 0},
-            {0},
-            {2, 0, 3, 1},
-            {2, 1, 3, 1},
-            {2, 1, 3, 0}
-        };
+        // 
+        private final int[][] checkcoord = { { 3, 0, 2, 1 }, { 3, 0, 2, 0 }, { 3, 1, 2, 0 }, { 0 }, { 2, 0, 2, 1 }, { 0, 0, 0, 0 }, { 3, 1, 3, 0 }, { 0 }, { 2, 0, 3, 1 }, { 2, 1, 3, 1 }, { 2, 1, 3, 0 } };
 
         /**
          * @param bspcoord
@@ -668,25 +582,19 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             int boxx;
             int boxy;
             int boxpos;
-
             // fixed_t
             int x1;
             int y1;
             int x2;
             int y2;
-
             // angle_t
             long angle1;
             long angle2;
             long span;
             long tspan;
-
             cliprange_t start;
-
             int sx1;
             int sx2;
-
-            // Find the corners of the box
             // that define the edges from current viewpoint.
             if (view.x <= bspcoord[BOXLEFT]) {
                 boxx = 0;
@@ -695,7 +603,6 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             } else {
                 boxx = 2;
             }
-
             if (view.y >= bspcoord[BOXTOP]) {
                 boxy = 0;
             } else if (view.y > bspcoord[BOXBOTTOM]) {
@@ -703,36 +610,27 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             } else {
                 boxy = 2;
             }
-
             boxpos = (boxy << 2) + boxx;
             if (boxpos == 5) {
                 return true;
             }
-
             x1 = bspcoord[checkcoord[boxpos][0]];
             y1 = bspcoord[checkcoord[boxpos][1]];
             x2 = bspcoord[checkcoord[boxpos][2]];
             y2 = bspcoord[checkcoord[boxpos][3]];
-
             // check clip list for an open space
             angle1 = view.PointToAngle(x1, y1) - view.angle;
             angle2 = view.PointToAngle(x2, y2) - view.angle;
-
             angle1 &= BITS32;
             angle2 &= BITS32;
-
             span = angle1 - angle2;
-
             span &= BITS32;
-
             // Sitting on a line?
             if (span >= ANG180) {
                 return true;
             }
-
             tspan = angle1 + clipangle;
             tspan &= BITS32;
-
             if (tspan > CLIPANGLE2) {
                 tspan -= CLIPANGLE2;
                 tspan &= BITS32;
@@ -740,23 +638,19 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                 if (tspan >= span) {
                     return false;
                 }
-
                 angle1 = clipangle;
             }
             tspan = (clipangle - angle2) & BITS32;
             if (tspan > CLIPANGLE2) {
                 tspan -= CLIPANGLE2;
                 tspan &= BITS32;
-
                 // Totally off the left edge?
                 if (tspan >= span) {
                     return false;
                 }
-
                 angle2 = -clipangle;
                 angle2 &= BITS32;
             }
-
             // Find the first clippost
             // that touches the source post
             // (adjacent pixels are touching).
@@ -764,20 +658,17 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             angle2 = ((angle2 + ANG90) & BITS32) >>> ANGLETOFINESHIFT;
             sx1 = viewangletox[(int) angle1];
             sx2 = viewangletox[(int) angle2];
-
             // Does not cross a pixel.
             if (sx1 == sx2) {
                 return false;
             }
             sx2--;
-
             int pstart = 0;
             start = solidsegs[pstart];
             // FIXME: possible solidseg overflow here overflows
             while (start.last < sx2 && pstart < MAXSEGS) {
                 start = solidsegs[pstart++];
             }
-
             return !(sx1 >= start.first && sx2 <= start.last);
         }
 
@@ -794,19 +685,16 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                 System.out.println("\t\tSubSector " + num + " to render");
             }
             int count;
-            int line; // pointer into a list of segs instead of seg_t
+            // pointer into a list of segs instead of seg_t
+            int line;
             subsector_t sub;
-
             if (RANGECHECK) {
                 if (num >= DOOM.levelLoader.numsubsectors) {
-                    DOOM.doomSystem.Error("R_Subsector: ss %d with numss = %d", num,
-                        DOOM.levelLoader.numsubsectors);
+                    DOOM.doomSystem.Error("R_Subsector: ss %d with numss = %d", num, DOOM.levelLoader.numsubsectors);
                 }
             }
-
             sscount++;
             sub = DOOM.levelLoader.subsectors[num];
-
             frontsector = sub.sector;
             if (DEBUG) {
                 System.out.println("Frontsector to render :" + frontsector);
@@ -814,35 +702,28 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             count = sub.numlines;
             // line = LL.segs[sub.firstline];
             line = sub.firstline;
-
             if (DEBUG) {
                 System.out.println("Trying to find an existing FLOOR visplane...");
             }
             if (frontsector.floorheight < view.z) {
-                vp_vars.floorplane
-                    = vp_vars.FindPlane(frontsector.floorheight,
-                        frontsector.floorpic, frontsector.lightlevel);
+                vp_vars.floorplane = vp_vars.FindPlane(frontsector.floorheight, frontsector.floorpic, frontsector.lightlevel);
             } else {
                 // FIXME: unclear what would happen with a null visplane used
                 // It's never checked explicitly for either condition, just
                 // called straight.
-                vp_vars.floorplane = -1; // in lieu of NULL
+                // in lieu of NULL
+                vp_vars.floorplane = -1;
             }
-
             // System.out.println("Trying to find an existing CEILING visplane...");
-            if (frontsector.ceilingheight > view.z
-                || frontsector.ceilingpic == TexMan.getSkyFlatNum()) {
-                vp_vars.ceilingplane
-                    = vp_vars.FindPlane(frontsector.ceilingheight,
-                        frontsector.ceilingpic, frontsector.lightlevel);
+            if (frontsector.ceilingheight > view.z || frontsector.ceilingpic == TexMan.getSkyFlatNum()) {
+                vp_vars.ceilingplane = vp_vars.FindPlane(frontsector.ceilingheight, frontsector.ceilingpic, frontsector.lightlevel);
             } else {
-                vp_vars.ceilingplane = -1; // In lieu of NULL. Will bomb if
-                // actually
-                // used.
+                // In lieu of NULL. Will bomb if
+                vp_vars.ceilingplane = -1;
+            // actually
+            // used.
             }
-
             VIS.AddSprites(frontsector);
-
             if (DEBUG) {
                 System.out.println("Enter Addline for SubSector " + num + " count " + count);
             }
@@ -863,11 +744,8 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             if (DEBUG) {
                 System.out.println("Processing BSP Node " + bspnum);
             }
-
             node_t bsp;
             int side;
-
-            // Found a subsector? Then further decisions are taken, in, well,
             // SubSector.
             if (C2JUtils.flags(bspnum, NF_SUBSECTOR)) {
                 if (DEBUG) {
@@ -880,15 +758,12 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                 }
                 return;
             }
-
             bsp = DOOM.levelLoader.nodes[bspnum];
-
             // Decide which side the view point is on.
             side = bsp.PointOnSide(view.x, view.y);
             if (DEBUG) {
                 System.out.println("\tView side: " + side);
             }
-
             // Recursively divide front space.
             if (DEBUG) {
                 System.out.println("\tEnter Front space of " + bspnum);
@@ -897,7 +772,6 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             if (DEBUG) {
                 System.out.println("\tReturn Front space of " + bspnum);
             }
-
             // Possibly divide back space.
             if (CheckBBox(bsp.bbox[side ^ 1].bbox)) {
                 if (DEBUG) {
@@ -909,18 +783,21 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                 }
             }
         }
-
     }
 
     protected abstract class SegDrawer implements ISegDrawer {
 
         protected static final int HEIGHTBITS = 12;
+
         protected static final int HEIGHTUNIT = (1 << HEIGHTBITS);
+
         protected final Visplanes vp_vars;
+
         protected final SegVars seg_vars;
 
         // Fast blanking buffers.
         protected short[] BLANKFLOORCLIP;
+
         protected short[] BLANKCEILINGCLIP;
 
         @Override
@@ -937,6 +814,7 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
          * fixed_t
          */
         protected int pixhigh, pixlow, pixhighstep, pixlowstep, topfrac, topstep, bottomfrac, bottomstep;
+
         protected int worldtop, worldbottom, worldhigh, worldlow;
 
         /**
@@ -983,35 +861,33 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
          */
         protected long rw_angle1;
 
-        //
+        // 
         // regular wall
-        //
+        // 
         protected int rw_x;
 
         protected int rw_stopx;
 
-        protected long rw_centerangle; // angle_t
+        // angle_t
+        protected long rw_centerangle;
 
         /**
          * fixed_t
          */
-        protected int rw_offset, rw_distance, rw_scale, rw_scalestep,
-            rw_midtexturemid, rw_toptexturemid, rw_bottomtexturemid;
+        protected int rw_offset, rw_distance, rw_scale, rw_scalestep, rw_midtexturemid, rw_toptexturemid, rw_bottomtexturemid;
 
         @Override
         public void resetLimits() {
             drawseg_t[] tmp = new drawseg_t[seg_vars.MAXDRAWSEGS];
             System.arraycopy(seg_vars.drawsegs, 0, tmp, 0, seg_vars.MAXDRAWSEGS);
-
             // Now, that was quite a haircut!.
             seg_vars.drawsegs = tmp;
-
-            // System.out.println("Drawseg buffer cut back to original limit of "+MAXDRAWSEGS);
+        // System.out.println("Drawseg buffer cut back to original limit of "+MAXDRAWSEGS);
         }
 
         @Override
         public void sync() {
-            // Nothing required if serial.
+        // Nothing required if serial.
         }
 
         /**
@@ -1024,41 +900,36 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
          */
         @Override
         public void StoreWallRange(int start, int stop) {
-
             if (DEBUG2) {
                 System.out.println("\t\t\t\tStorewallrange called between " + start + " and " + stop);
             }
-
-            int hyp; // fixed_t
-            int sineval; // fixed_t
+            // fixed_t
+            int hyp;
+            // fixed_t
+            int sineval;
             int distangle;
-            long offsetangle; // angle_t
-            int vtop; // fixed_t
+            // angle_t
+            long offsetangle;
+            // fixed_t
+            int vtop;
             int lightnum;
             drawseg_t seg;
-
             // don't overflow and crash
             if (seg_vars.ds_p == seg_vars.drawsegs.length) {
                 seg_vars.ResizeDrawsegs();
             }
-
             if (RANGECHECK) {
                 if (start >= view.width || start > stop) {
                     DOOM.doomSystem.Error("Bad R_RenderWallRange: %d to %d", start, stop);
                 }
             }
-
             seg = seg_vars.drawsegs[seg_vars.ds_p];
-
             MyBSP.sidedef = MyBSP.curline.sidedef;
             MyBSP.linedef = MyBSP.curline.linedef;
-
             // mark the segment as visible for auto map
             MyBSP.linedef.flags |= ML_MAPPED;
-
             // calculate rw_distance for scale calculation
             rw_normalangle = addAngles(MyBSP.curline.angle, ANG90);
-
             /*
              * MAES: ok, this is a tricky spot. angle_t's are supposed to be
              * always positive 32-bit unsigned integers, so a subtraction should
@@ -1069,17 +940,14 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
              * both as signed ints.
              */
             offsetangle = Math.abs((int) rw_normalangle - (int) rw_angle1);
-
             if (offsetangle > ANG90) {
                 offsetangle = ANG90;
             }
-
             // It should fit even in a signed int, by now.
             distangle = (int) (ANG90 - offsetangle);
             hyp = PointToDist(MyBSP.curline.v1x, MyBSP.curline.v1y);
             sineval = finesine(distangle);
             rw_distance = FixedMul(hyp, sineval);
-
             seg.x1 = rw_x = start;
             seg.x2 = stop;
             seg.curline = MyBSP.curline;
@@ -1088,18 +956,12 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
              * it always starts at stop+1.
              */
             rw_stopx = stop + 1;
-
             // calculate scale at both ends and step
             // this is the ONLY place where rw_scale is set.
-            seg.scale1
-                = rw_scale
-                = ScaleFromGlobalAngle((view.angle + view.xtoviewangle[start]));
-
+            seg.scale1 = rw_scale = ScaleFromGlobalAngle((view.angle + view.xtoviewangle[start]));
             if (stop > start) {
-                seg.scale2
-                    = ScaleFromGlobalAngle(view.angle + view.xtoviewangle[stop]);
-                seg.scalestep
-                    = rw_scalestep = (seg.scale2 - rw_scale) / (stop - start);
+                seg.scale2 = ScaleFromGlobalAngle(view.angle + view.xtoviewangle[stop]);
+                seg.scalestep = rw_scalestep = (seg.scale2 - rw_scale) / (stop - start);
             } else {
                 // UNUSED: try to fix the stretched line bug
                 /*
@@ -1111,27 +973,20 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                  */
                 seg.scale2 = seg.scale1;
             }
-
             // calculate texture boundaries
             // and decide if floor / ceiling marks are needed
             worldtop = MyBSP.frontsector.ceilingheight - view.z;
             worldbottom = MyBSP.frontsector.floorheight - view.z;
-
             midtexture = toptexture = bottomtexture = 0;
             maskedtexture = false;
             seg.setMaskedTextureCol(null, 0);
-            // seg.maskedtexturecol = null;
-
             if (MyBSP.backsector == null) {
                 // single sided line
-                midtexture
-                    = TexMan.getTextureTranslation(MyBSP.sidedef.midtexture);
+                midtexture = TexMan.getTextureTranslation(MyBSP.sidedef.midtexture);
                 // a single sided line is terminal, so it must mark ends
                 markfloor = markceiling = true;
                 if ((MyBSP.linedef.flags & ML_DONTPEGBOTTOM) != 0) {
-                    vtop
-                        = MyBSP.frontsector.floorheight
-                        + TexMan.getTextureheight(MyBSP.sidedef.midtexture);
+                    vtop = MyBSP.frontsector.floorheight + TexMan.getTextureheight(MyBSP.sidedef.midtexture);
                     // bottom of texture at bottom
                     rw_midtexturemid = vtop - view.z;
                 } else {
@@ -1139,7 +994,6 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                     rw_midtexturemid = worldtop;
                 }
                 rw_midtexturemid += MyBSP.sidedef.rowoffset;
-
                 seg.silhouette = SIL_BOTH;
                 seg.setSprTopClip(view.screenheightarray, 0);
                 seg.setSprBottomClip(view.negonearray, 0);
@@ -1150,81 +1004,61 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                 seg.setSprTopClip(null, 0);
                 seg.setSprBottomClip(null, 0);
                 seg.silhouette = 0;
-
                 if (MyBSP.frontsector.floorheight > MyBSP.backsector.floorheight) {
                     seg.silhouette = SIL_BOTTOM;
                     seg.bsilheight = MyBSP.frontsector.floorheight;
                 } else if (MyBSP.backsector.floorheight > view.z) {
                     seg.silhouette = SIL_BOTTOM;
                     seg.bsilheight = Integer.MAX_VALUE;
-                    // seg.sprbottomclip = negonearray;
+                // seg.sprbottomclip = negonearray;
                 }
-
                 if (MyBSP.frontsector.ceilingheight < MyBSP.backsector.ceilingheight) {
                     seg.silhouette |= SIL_TOP;
                     seg.tsilheight = MyBSP.frontsector.ceilingheight;
                 } else if (MyBSP.backsector.ceilingheight < view.z) {
                     seg.silhouette |= SIL_TOP;
                     seg.tsilheight = Integer.MIN_VALUE;
-                    // seg.sprtopclip = screenheightarray;
+                // seg.sprtopclip = screenheightarray;
                 }
-
                 if (MyBSP.backsector.ceilingheight <= MyBSP.frontsector.floorheight) {
                     seg.setSprBottomClip(view.negonearray, 0);
                     seg.bsilheight = Integer.MAX_VALUE;
                     seg.silhouette |= SIL_BOTTOM;
                 }
-
                 if (MyBSP.backsector.floorheight >= MyBSP.frontsector.ceilingheight) {
                     seg.setSprTopClip(view.screenheightarray, 0);
                     seg.tsilheight = Integer.MIN_VALUE;
                     seg.silhouette |= SIL_TOP;
                 }
-
                 worldhigh = MyBSP.backsector.ceilingheight - view.z;
                 worldlow = MyBSP.backsector.floorheight - view.z;
-
                 // hack to allow height changes in outdoor areas
-                if (MyBSP.frontsector.ceilingpic == TexMan.getSkyFlatNum()
-                    && MyBSP.backsector.ceilingpic == TexMan
-                        .getSkyFlatNum()) {
+                if (MyBSP.frontsector.ceilingpic == TexMan.getSkyFlatNum() && MyBSP.backsector.ceilingpic == TexMan.getSkyFlatNum()) {
                     worldtop = worldhigh;
                 }
-
-                markfloor = worldlow != worldbottom
-                    || MyBSP.backsector.floorpic != MyBSP.frontsector.floorpic
-                    || MyBSP.backsector.lightlevel != MyBSP.frontsector.lightlevel; // same plane on both sides
-                markceiling = worldhigh != worldtop
-                    || MyBSP.backsector.ceilingpic != MyBSP.frontsector.ceilingpic
-                    || MyBSP.backsector.lightlevel != MyBSP.frontsector.lightlevel; // same plane on both sides
-
-                if (MyBSP.backsector.ceilingheight <= MyBSP.frontsector.floorheight
-                    || MyBSP.backsector.floorheight >= MyBSP.frontsector.ceilingheight) {
+                markfloor = // same plane on both sides
+                worldlow != worldbottom || MyBSP.backsector.floorpic != MyBSP.frontsector.floorpic || MyBSP.backsector.lightlevel != MyBSP.frontsector.lightlevel;
+                markceiling = // same plane on both sides
+                worldhigh != worldtop || MyBSP.backsector.ceilingpic != MyBSP.frontsector.ceilingpic || MyBSP.backsector.lightlevel != MyBSP.frontsector.lightlevel;
+                if (MyBSP.backsector.ceilingheight <= MyBSP.frontsector.floorheight || MyBSP.backsector.floorheight >= MyBSP.frontsector.ceilingheight) {
                     // closed door
                     markceiling = markfloor = true;
                 }
-
                 if (worldhigh < worldtop) {
                     // top texture
-                    toptexture
-                        = TexMan.getTextureTranslation(MyBSP.sidedef.toptexture);
+                    toptexture = TexMan.getTextureTranslation(MyBSP.sidedef.toptexture);
                     if ((MyBSP.linedef.flags & ML_DONTPEGTOP) != 0) {
                         // top of texture at top
                         rw_toptexturemid = worldtop;
                     } else {
-                        vtop
-                            = MyBSP.backsector.ceilingheight
-                            + TexMan.getTextureheight(MyBSP.sidedef.toptexture);
-
+                        vtop = MyBSP.backsector.ceilingheight + TexMan.getTextureheight(MyBSP.sidedef.toptexture);
                         // bottom of texture
                         rw_toptexturemid = vtop - view.z;
                     }
                 }
                 if (worldlow > worldbottom) {
                     // bottom texture
-                    bottomtexture
-                        = TexMan.getTextureTranslation(MyBSP.sidedef.bottomtexture);
-
+                    bottomtexture = TexMan.getTextureTranslation(MyBSP.sidedef.bottomtexture);
                     if ((MyBSP.linedef.flags & ML_DONTPEGBOTTOM) != 0) {
                         // bottom of texture at bottom
                         // top of texture at top
@@ -1236,159 +1070,108 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                 }
                 rw_toptexturemid += MyBSP.sidedef.rowoffset;
                 rw_bottomtexturemid += MyBSP.sidedef.rowoffset;
-
                 // allocate space for masked texture tables
                 if (MyBSP.sidedef.midtexture != 0) {
                     // masked midtexture
                     maskedtexture = true;
                     seg_vars.maskedtexturecol = vp_vars.openings;
                     seg_vars.pmaskedtexturecol = vp_vars.lastopening - rw_x;
-                    seg.setMaskedTextureCol(seg_vars.maskedtexturecol,
-                        seg_vars.pmaskedtexturecol);
+                    seg.setMaskedTextureCol(seg_vars.maskedtexturecol, seg_vars.pmaskedtexturecol);
                     vp_vars.lastopening += rw_stopx - rw_x;
                 }
             }
-
             // calculate rw_offset (only needed for textured lines)
-            segtextured
-                = (((midtexture | toptexture | bottomtexture) != 0) | maskedtexture);
-
+            segtextured = (((midtexture | toptexture | bottomtexture) != 0) | maskedtexture);
             if (segtextured) {
                 offsetangle = addAngles(rw_normalangle, -rw_angle1);
-
                 // Another "tricky spot": negative of an unsigned number?
                 if (offsetangle > ANG180) {
                     offsetangle = (-(int) offsetangle) & BITS32;
                 }
-
                 if (offsetangle > ANG90) {
                     offsetangle = ANG90;
                 }
-
                 sineval = finesine(offsetangle);
                 rw_offset = FixedMul(hyp, sineval);
-
-                // Another bug: we CAN'T assume that the result won't wrap
-                // around.
-                // If that assumption is made, then texture alignment issues
                 // appear
                 if (((rw_normalangle - rw_angle1) & BITS32) < ANG180) {
                     rw_offset = -rw_offset;
                 }
-
                 rw_offset += MyBSP.sidedef.textureoffset + MyBSP.curline.offset;
                 // This is OK, however: we can add as much shit as we want,
                 // as long as we trim it to the 32 LSB. Proof as to why
                 // this is always true is left as an exercise to the reader.
                 rw_centerangle = (ANG90 + view.angle - rw_normalangle) & BITS32;
-
-                // calculate light table
-                // use different light tables
-                // for horizontal / vertical / diagonal
                 // OPTIMIZE: get rid of LIGHTSEGSHIFT globally
                 if (colormaps.fixedcolormap == null) {
-                    lightnum
-                        = (MyBSP.frontsector.lightlevel >> colormaps.lightSegShift())
-                        + colormaps.extralight;
-
+                    lightnum = (MyBSP.frontsector.lightlevel >> colormaps.lightSegShift()) + colormaps.extralight;
                     if (MyBSP.curline.v1y == MyBSP.curline.v2y) {
                         lightnum--;
                     } else if (MyBSP.curline.v1x == MyBSP.curline.v2x) {
                         lightnum++;
                     }
-
                     if (lightnum < 0) {
                         colormaps.walllights = colormaps.scalelight[0];
                     } else if (lightnum >= colormaps.lightLevels()) {
-                        colormaps.walllights
-                            = colormaps.scalelight[colormaps.lightLevels() - 1];
+                        colormaps.walllights = colormaps.scalelight[colormaps.lightLevels() - 1];
                     } else {
                         colormaps.walllights = colormaps.scalelight[lightnum];
                     }
                 }
             }
-
-            // if a floor / ceiling plane is on the wrong side
-            // of the view plane, it is definitely invisible
             // and doesn't need to be marked.
             if (MyBSP.frontsector.floorheight >= view.z) {
                 // above view plane
                 markfloor = false;
             }
-
-            if (MyBSP.frontsector.ceilingheight <= view.z
-                && MyBSP.frontsector.ceilingpic != TexMan.getSkyFlatNum()) {
+            if (MyBSP.frontsector.ceilingheight <= view.z && MyBSP.frontsector.ceilingpic != TexMan.getSkyFlatNum()) {
                 // below view plane
                 markceiling = false;
             }
-
             // calculate incremental stepping values for texture edges
             worldtop >>= 4;
             worldbottom >>= 4;
-
             topstep = -FixedMul(rw_scalestep, worldtop);
             topfrac = (view.centeryfrac >> 4) - FixedMul(worldtop, rw_scale);
-
             bottomstep = -FixedMul(rw_scalestep, worldbottom);
-            bottomfrac
-                = (view.centeryfrac >> 4) - FixedMul(worldbottom, rw_scale);
-
+            bottomfrac = (view.centeryfrac >> 4) - FixedMul(worldbottom, rw_scale);
             if (MyBSP.backsector != null) {
                 worldhigh >>= 4;
                 worldlow >>= 4;
-
                 if (worldhigh < worldtop) {
-                    pixhigh
-                        = (view.centeryfrac >> 4) - FixedMul(worldhigh, rw_scale);
+                    pixhigh = (view.centeryfrac >> 4) - FixedMul(worldhigh, rw_scale);
                     pixhighstep = -FixedMul(rw_scalestep, worldhigh);
                 }
-
                 if (worldlow > worldbottom) {
-                    pixlow
-                        = (view.centeryfrac >> 4) - FixedMul(worldlow, rw_scale);
+                    pixlow = (view.centeryfrac >> 4) - FixedMul(worldlow, rw_scale);
                     pixlowstep = -FixedMul(rw_scalestep, worldlow);
                 }
             }
-
             // render it
             if (markceiling) {
                 // System.out.println("Markceiling");
-                vp_vars.ceilingplane
-                    = vp_vars.CheckPlane(vp_vars.ceilingplane, rw_x, rw_stopx - 1);
+                vp_vars.ceilingplane = vp_vars.CheckPlane(vp_vars.ceilingplane, rw_x, rw_stopx - 1);
             }
-
             if (markfloor) {
                 // System.out.println("Markfloor");
-                vp_vars.floorplane
-                    = vp_vars.CheckPlane(vp_vars.floorplane, rw_x, rw_stopx - 1);
+                vp_vars.floorplane = vp_vars.CheckPlane(vp_vars.floorplane, rw_x, rw_stopx - 1);
             }
-
             RenderSegLoop();
-
-            // After rendering is actually performed, clipping is set.
             // save sprite clipping info ... no top clipping?
-            if ((C2JUtils.flags(seg.silhouette, SIL_TOP) || maskedtexture)
-                && seg.nullSprTopClip()) {
-
+            if ((C2JUtils.flags(seg.silhouette, SIL_TOP) || maskedtexture) && seg.nullSprTopClip()) {
                 // memcpy (lastopening, ceilingclip+start, 2*(rw_stopx-start));
-                System.arraycopy(ceilingclip, start, vp_vars.openings,
-                    vp_vars.lastopening, rw_stopx - start);
-
+                System.arraycopy(ceilingclip, start, vp_vars.openings, vp_vars.lastopening, rw_stopx - start);
                 seg.setSprTopClip(vp_vars.openings, vp_vars.lastopening - start);
                 // seg.setSprTopClipPointer();
                 vp_vars.lastopening += rw_stopx - start;
             }
             // no floor clipping?
-            if ((C2JUtils.flags(seg.silhouette, SIL_BOTTOM) || maskedtexture)
-                && seg.nullSprBottomClip()) {
+            if ((C2JUtils.flags(seg.silhouette, SIL_BOTTOM) || maskedtexture) && seg.nullSprBottomClip()) {
                 // memcpy (lastopening, floorclip+start, 2*(rw_stopx-start));
-                System.arraycopy(floorclip, start, vp_vars.openings,
-                    vp_vars.lastopening, rw_stopx - start);
-                seg.setSprBottomClip(vp_vars.openings, vp_vars.lastopening
-                    - start);
+                System.arraycopy(floorclip, start, vp_vars.openings, vp_vars.lastopening, rw_stopx - start);
+                seg.setSprBottomClip(vp_vars.openings, vp_vars.lastopening - start);
                 vp_vars.lastopening += rw_stopx - start;
             }
-
             if (maskedtexture && C2JUtils.flags(seg.silhouette, SIL_TOP)) {
                 seg.silhouette |= SIL_TOP;
                 seg.tsilheight = Integer.MIN_VALUE;
@@ -1412,46 +1195,40 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
          * CORE LOOPING ROUTINE.
          */
         protected void RenderSegLoop() {
-            int angle; // angle_t
+            // angle_t
+            int angle;
             int index;
-            int yl; // low
-            int yh; // hight
+            // low
+            int yl;
+            // hight
+            int yh;
             int mid;
-            int texturecolumn = 0; // fixed_t
+            // fixed_t
+            int texturecolumn = 0;
             int top;
             int bottom;
-
             for (; rw_x < rw_stopx; rw_x++) {
                 // mark floor / ceiling areas
                 yl = (topfrac + HEIGHTUNIT - 1) >> HEIGHTBITS;
-
                 // no space above wall?
                 if (yl < ceilingclip[rw_x] + 1) {
                     yl = ceilingclip[rw_x] + 1;
                 }
-
                 if (markceiling) {
                     top = ceilingclip[rw_x] + 1;
                     bottom = yl - 1;
-
                     if (bottom >= floorclip[rw_x]) {
                         bottom = floorclip[rw_x] - 1;
                     }
-
                     if (top <= bottom) {
-                        vp_vars.visplanes[vp_vars.ceilingplane].setTop(rw_x,
-                            (char) top);
-                        vp_vars.visplanes[vp_vars.ceilingplane].setBottom(rw_x,
-                            (char) bottom);
+                        vp_vars.visplanes[vp_vars.ceilingplane].setTop(rw_x, (char) top);
+                        vp_vars.visplanes[vp_vars.ceilingplane].setBottom(rw_x, (char) bottom);
                     }
                 }
-
                 yh = bottomfrac >> HEIGHTBITS;
-
                 if (yh >= floorclip[rw_x]) {
                     yh = floorclip[rw_x] - 1;
                 }
-
                 // A particular seg has been identified as a floor marker.
                 if (markfloor) {
                     top = yh + 1;
@@ -1460,17 +1237,13 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                         top = ceilingclip[rw_x] + 1;
                     }
                     if (top <= bottom) {
-                        vp_vars.visplanes[vp_vars.floorplane].setTop(rw_x,
-                            (char) top);
-                        vp_vars.visplanes[vp_vars.floorplane].setBottom(rw_x,
-                            (char) bottom);
+                        vp_vars.visplanes[vp_vars.floorplane].setTop(rw_x, (char) top);
+                        vp_vars.visplanes[vp_vars.floorplane].setBottom(rw_x, (char) bottom);
                     }
                 }
-
                 // texturecolumn and lighting are independent of wall tiers
                 if (segtextured) {
                     // calculate texture offset
-
                     // CAREFUL: a VERY anomalous point in the code. Their sum is
                     // supposed
                     // to give an angle not exceeding 45 degrees (or an index of
@@ -1478,10 +1251,7 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                     // shifting). If added with pure unsigned rules, this
                     // doesn't hold anymore,
                     // not even if accounting for overflow.
-                    angle
-                        = Tables.toBAMIndex(rw_centerangle
-                            + (int) view.xtoviewangle[rw_x]);
-
+                    angle = Tables.toBAMIndex(rw_centerangle + (int) view.xtoviewangle[rw_x]);
                     // FIXME: We are accessing finetangent here, the code seems
                     // pretty confident in that angle won't exceed 4K no matter
                     // what.
@@ -1493,32 +1263,27 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                     // it by anding
                     // with 0x1FFF if you're so inclined.
                     // FIXED by allowing overflow. See Tables for details.
-                    texturecolumn
-                        = rw_offset - FixedMul(finetangent[angle], rw_distance);
+                    texturecolumn = rw_offset - FixedMul(finetangent[angle], rw_distance);
                     texturecolumn >>= FRACBITS;
                     // calculate lighting
                     index = rw_scale >> colormaps.lightScaleShift();
-
                     if (index >= colormaps.maxLightScale()) {
                         index = colormaps.maxLightScale() - 1;
                     }
-
                     dcvars.dc_colormap = colormaps.walllights[index];
                     dcvars.dc_x = rw_x;
                     dcvars.dc_iscale = (int) (0xffffffffL / rw_scale);
                 }
-
                 // draw the wall tiers
                 if (midtexture != 0) {
                     // single sided line
                     dcvars.dc_yl = yl;
                     dcvars.dc_yh = yh;
-                    dcvars.dc_texheight
-                        = TexMan.getTextureheight(midtexture) >> FRACBITS; // killough
+                    // killough
+                    dcvars.dc_texheight = TexMan.getTextureheight(midtexture) >> FRACBITS;
                     dcvars.dc_texturemid = rw_midtexturemid;
                     dcvars.dc_source_ofs = 0;
-                    dcvars.dc_source
-                        = TexMan.GetCachedColumn(midtexture, texturecolumn);
+                    dcvars.dc_source = TexMan.GetCachedColumn(midtexture, texturecolumn);
                     CompleteColumn();
                     ceilingclip[rw_x] = (short) view.height;
                     floorclip[rw_x] = -1;
@@ -1528,11 +1293,9 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                         // top wall
                         mid = pixhigh >> HEIGHTBITS;
                         pixhigh += pixhighstep;
-
                         if (mid >= floorclip[rw_x]) {
                             mid = floorclip[rw_x] - 1;
                         }
-
                         if (mid >= yl) {
                             dcvars.dc_yl = yl;
                             dcvars.dc_yh = mid;
@@ -1554,17 +1317,14 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                             ceilingclip[rw_x] = (short) (yl - 1);
                         }
                     }
-
                     if (bottomtexture != 0) {
                         // bottom wall
                         mid = (pixlow + HEIGHTUNIT - 1) >> HEIGHTBITS;
                         pixlow += pixlowstep;
-
                         // no space above wall?
                         if (mid <= ceilingclip[rw_x]) {
                             mid = ceilingclip[rw_x] + 1;
                         }
-
                         if (mid <= yh) {
                             dcvars.dc_yl = mid;
                             dcvars.dc_yh = yh;
@@ -1573,7 +1333,6 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                             dcvars.dc_source = TexMan.GetCachedColumn(bottomtexture, texturecolumn);
                             dcvars.dc_source_ofs = 0;
                             CompleteColumn();
-
                             floorclip[rw_x] = (short) mid;
                         } else {
                             floorclip[rw_x] = (short) (yh + 1);
@@ -1584,14 +1343,12 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                             floorclip[rw_x] = (short) (yh + 1);
                         }
                     }
-
                     if (maskedtexture) {
                         // save texturecol
                         // for backdrawing of masked mid texture
                         seg_vars.maskedtexturecol[seg_vars.pmaskedtexturecol + rw_x] = (short) texturecolumn;
                     }
                 }
-
                 rw_scale += rw_scalestep;
                 topfrac += topstep;
                 bottomfrac += bottomstep;
@@ -1622,7 +1379,7 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
 
         @Override
         public void CompleteRendering() {
-            // Nothing to do for serial. 
+        // Nothing to do for serial.
         }
 
         protected column_t col;
@@ -1644,14 +1401,15 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
          * be calculated first.
          */
         protected int ScaleFromGlobalAngle(long visangle) {
-            int scale; // fixed_t
+            // fixed_t
+            int scale;
             long anglea;
             long angleb;
             int sinea;
             int sineb;
-            int num; // fixed_t
+            // fixed_t
+            int num;
             int den;
-
             // UNUSED
             /*
              * { fixed_t dist; fixed_t z; fixed_t sinv; fixed_t cosv; sinv =
@@ -1663,16 +1421,13 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
              */
             anglea = (ANG90 + visangle - view.angle) & BITS32;
             angleb = (ANG90 + visangle - rw_normalangle) & BITS32;
-
             // both sines are allways positive
             sinea = finesine(anglea);
             sineb = finesine(angleb);
             num = FixedMul(view.projection, sineb) << view.detailshift;
             den = FixedMul(rw_distance, sinea);
-
             if (den > num >> 16) {
                 scale = FixedDiv(num, den);
-
                 if (scale > 64 * FRACUNIT) {
                     scale = 64 * FRACUNIT;
                 } else if (scale < 256) {
@@ -1681,7 +1436,6 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             } else {
                 scale = 64 * FRACUNIT;
             }
-
             return scale;
         }
 
@@ -1692,9 +1446,13 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
     }
 
     protected interface IPlaneDrawer {
+
         void InitPlanes();
+
         void MapPlane(int y, int x1, int x2);
+
         void DrawPlanes();
+
         int[] getDistScale();
 
         /**
@@ -1704,13 +1462,21 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
     }
 
     protected interface ISegDrawer extends ILimitResettable {
+
         void ClearClips();
+
         short[] getBLANKCEILINGCLIP();
+
         short[] getBLANKFLOORCLIP();
+
         short[] getFloorClip();
+
         short[] getCeilingClip();
+
         void ExecuteSetViewSize(int viewwidth);
+
         void setGlobalAngle(long angle1);
+
         void StoreWallRange(int first, int last);
 
         /**
@@ -1743,22 +1509,20 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             if (DEBUG) {
                 System.out.println(" >>>>>>>>>>>>>>>>>>>>>   DrawPlanes: " + vp_vars.lastvisplane);
             }
-            visplane_t pln; // visplane_t
+            // visplane_t
+            visplane_t pln;
             int light;
             int x;
             int stop;
             int angle;
-
             if (RANGECHECK) {
                 rangeCheckErrors();
             }
-
             for (int pl = 0; pl < vp_vars.lastvisplane; pl++) {
                 pln = vp_vars.visplanes[pl];
                 if (DEBUG2) {
                     System.out.println(pln);
                 }
-
                 if (pln.minx > pln.maxx) {
                     continue;
                 }
@@ -1768,11 +1532,8 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                     // while
                     // being drawn, after all, are they?
                     int skytexture = TexMan.getSkyTexture();
-                    skydcvars.dc_texheight
-                        = TexMan.getTextureheight(skytexture) >> FRACBITS;
-                    skydcvars.dc_iscale
-                        = vpvars.getSkyScale() >> view.detailshift;
-
+                    skydcvars.dc_texheight = TexMan.getTextureheight(skytexture) >> FRACBITS;
+                    skydcvars.dc_iscale = vpvars.getSkyScale() >> view.detailshift;
                     /**
                      * Sky is allways drawn full bright, i.e. colormaps[0] is
                      * used. Because of this hack, sky is not affected by INVUL
@@ -1786,57 +1547,44 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                     }
                     skydcvars.dc_texturemid = TexMan.getSkyTextureMid();
                     for (x = pln.minx; x <= pln.maxx; x++) {
-
                         skydcvars.dc_yl = pln.getTop(x);
                         skydcvars.dc_yh = pln.getBottom(x);
-
                         if (skydcvars.dc_yl <= skydcvars.dc_yh) {
-                            angle
-                                = (int) (addAngles(view.angle, view.xtoviewangle[x]) >>> ANGLETOSKYSHIFT);
+                            angle = (int) (addAngles(view.angle, view.xtoviewangle[x]) >>> ANGLETOSKYSHIFT);
                             skydcvars.dc_x = x;
                             // Optimized: texheight is going to be the same
                             // during normal skies drawing...right?
-                            skydcvars.dc_source
-                                = TexMan.GetCachedColumn(skytexture, angle);
+                            skydcvars.dc_source = TexMan.GetCachedColumn(skytexture, angle);
                             colfunc.sky.invoke();
                         }
                     }
                     continue;
                 }
-
                 // regular flat
                 dsvars.ds_source = TexMan.getSafeFlat(pln.picnum);
-
                 planeheight = Math.abs(pln.height - view.z);
                 light = (pln.lightlevel >> colormap.lightSegShift()) + colormap.extralight;
-
                 if (light >= colormap.lightLevels()) {
                     light = colormap.lightLevels() - 1;
                 }
-
                 if (light < 0) {
                     light = 0;
                 }
-
                 planezlight = colormap.zlight[light];
-
                 // We set those values at the border of a plane's top to a
                 // "sentinel" value...ok.
                 pln.setTop(pln.maxx + 1, visplane_t.SENTINEL);
                 pln.setTop(pln.minx - 1, visplane_t.SENTINEL);
-
                 stop = pln.maxx + 1;
-
                 for (x = pln.minx; x <= stop; x++) {
                     MakeSpans(x, pln.getTop(x - 1), pln.getBottom(x - 1), pln.getTop(x), pln.getBottom(x));
                 }
-
-                // Z_ChangeTag (ds_source, PU_CACHE);
+            // Z_ChangeTag (ds_source, PU_CACHE);
             }
         }
+    }
 
-    } // End Plane class
-
+    // End Plane class
     // /////////////////////// LIGHTS, POINTERS, COLORMAPS ETC. ////////////////
     // /// FROM R_DATA, R_MAIN , R_DRAW //////////
     /**
@@ -1882,7 +1630,6 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
     /**
      * e6y: wide-res Borrowed from PrBoom+;
      */
-
     /*
      * protected int wide_centerx, wide_ratio, wide_offsetx, wide_offset2x,
      * wide_offsety, wide_offset2y; protected final base_ratio_t[]
@@ -1896,13 +1643,16 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
      * just for profiling purposes
      */
     protected int framecount;
+
     protected int sscount;
+
     protected int linecount;
+
     protected int loopcount;
 
-    //
+    // 
     // precalculated math tables
-    //
+    // 
     protected long clipangle;
 
     // Set to 2*clipangle later.
@@ -1920,7 +1670,7 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
      *
      * @see view.xtoviewangle
      */
-    //protected long[] view.xtoviewangle;// MAES: to resize
+    // protected long[] view.xtoviewangle;// MAES: to resize
     // UNUSED.
     // The finetangentgent[angle+FINEANGLES/4] table
     // holds the fixed_t tangent values for view angles,
@@ -1931,7 +1681,6 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
     // Also wtf @ this hack....this points to approx 1/4th of the finesine
     // table, but what happens if I read past it?
     // int[] finecosine = finesine[FINEANGLES/4];
-
     /*
      * MAES: what's going on with light tables here. OK...so these should be
      * "unsigned bytes", since, after all, they'll be used as pointers inside an
@@ -1947,13 +1696,12 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
         // Careful with assignments...
         view.x = x1;
         view.y = y1;
-
         return view.PointToAngle(x2, y2);
     }
 
-    //
+    // 
     // R_InitPointToAngle
-    //
+    // 
     /*
      * protected final void InitPointToAngle () { // UNUSED - now getting from
      * tables.c if (false){ int i; long t; float f; // // slope (tangent) to
@@ -1972,16 +1720,12 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
         // from our current position.
         x -= viewx;
         y -= viewy;
-
         if ((x == 0) && (y == 0)) {
             return 0;
         }
-
         if (x >= 0) {
             // x >=0
             if (y >= 0) {
-                // y>= 0
-
                 if (x > y) {
                     // octant 0
                     return tantoangle[SlopeDiv(y, x)];
@@ -1992,7 +1736,6 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             } else {
                 // y<0
                 y = -y;
-
                 if (x > y) {
                     // octant 8
                     return (-tantoangle[SlopeDiv(y, x)]);
@@ -2004,7 +1747,6 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
         } else {
             // x<0
             x = -x;
-
             if (y >= 0) {
                 // y>= 0
                 if (x > y) {
@@ -2017,7 +1759,6 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             } else {
                 // y<0
                 y = -y;
-
                 if (x > y) {
                     // octant 4
                     return (ANG180 + tantoangle[SlopeDiv(y, x)]);
@@ -2027,23 +1768,22 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                 }
             }
         }
-        // This is actually unreachable.
-        // return 0;
+    // This is actually unreachable.
+    // return 0;
     }
 
-    //
+    // 
     // R_InitTables
-    //
+    // 
     protected void InitTables() {
-        // UNUSED: now getting from tables.c
-        /*
+    // UNUSED: now getting from tables.c
+    /*
          * int i; float a; float fv; int t; // viewangle tangent table for (i=0
          * ; i<FINEANGLES/2 ; i++) { a = (i-FINEANGLES/4+0.5)*PI*2/FINEANGLES;
          * fv = FRACUNIT*tan (a); t = fv; finetangent[i] = t; } // finesine
          * table for (i=0 ; i<5*FINEANGLES/4 ; i++) { // OPTIMIZE: mirro.. a =
          * (i+0.5)*PI*2/FINEANGLES; t = FRACUNIT*sin (a); finesine[i] = t; }
          */
-
     }
 
     /**
@@ -2061,28 +1801,18 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
         int dy;
         int temp;
         int dist;
-
         dx = Math.abs(x - view.x);
         dy = Math.abs(y - view.y);
-
-        // If something is farther north/south than west/east, it gets swapped.
-        // Probably as a crude way to avoid divisions by zero. This divides
-        // the field into octants, rather than quadrants, where the biggest
-        // angle to
         // consider is 45...right? So dy/dx can never exceed 1.0, in theory.
         if (dy > dx) {
             temp = dx;
             dx = dy;
             dy = temp;
         }
-
-        // If one or both of the distances are *exactly* zero at this point,
-        // then this means that the wall is in your face anyway, plus we want to
         // avoid a division by zero. So you get zero.
         if (dx == 0) {
             return 0;
         }
-
         /*
          * If dx is zero, this is going to bomb. Fixeddiv will return MAXINT aka
          * 7FFFFFFF, >> DBITS will make it 3FFFFFF, which is more than enough to
@@ -2096,15 +1826,12 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
         // This effectively limits the angle to
         // angle = Math.max(FixedDiv(dy, dx), 2048) >> DBITS;
         angle = (FixedDiv(dy, dx) & 0x1FFFF) >> DBITS;
-
         // Since the division will be 0xFFFF at most, DBITS will restrict
         // the maximum angle index to 7FF, about 45, so adding ANG90 with
         // no other safeguards is OK.
         angle = (int) ((tantoangle[angle] + ANG90) >> ANGLETOFINESHIFT);
-
         // use as cosine
         dist = FixedDiv(dx, finesine[angle]);
-
         return dist;
     }
 
@@ -2155,16 +1882,27 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
     // These column functions are "fixed" for a given renderer, and are
     // not used directly, but only after passing them to colfuncs
     protected DoomColumnFunction<T, V> DrawTranslatedColumn;
+
     protected DoomColumnFunction<T, V> DrawTranslatedColumnLow;
+
     protected DoomColumnFunction<T, V> DrawColumnPlayer;
+
     protected DoomColumnFunction<T, V> DrawColumnSkies;
+
     protected DoomColumnFunction<T, V> DrawColumnSkiesLow;
+
     protected DoomColumnFunction<T, V> DrawFuzzColumn;
+
     protected DoomColumnFunction<T, V> DrawFuzzColumnLow;
+
     protected DoomColumnFunction<T, V> DrawColumn;
+
     protected DoomColumnFunction<T, V> DrawColumnLow;
+
     protected DoomColumnFunction<T, V> DrawColumnMasked;
+
     protected DoomColumnFunction<T, V> DrawColumnMaskedLow;
+
     protected DoomColumnFunction<T, V> DrawTLColumn;
 
     /**
@@ -2183,7 +1921,6 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
         if (view.scaledwidth == DOOM.vs.getScreenWidth()) {
             return;
         }
-
         final int top = ((DOOM.vs.getScreenHeight() - DOOM.statusBar.getHeight()) - view.height) / 2;
         final int side = (DOOM.vs.getScreenWidth() - view.scaledwidth) / 2;
         final Rectangle rect;
@@ -2207,9 +1944,7 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
         int dy;
         int level;
         int startmap;
-
         setsizeneeded = false;
-
         // 11 Blocks means "full screen"
         if (setblocks == 11) {
             view.scaledwidth = DOOM.vs.getScreenWidth();
@@ -2221,65 +1956,51 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
              */
             view.scaledwidth = (setblocks * 32) * DOOM.vs.getScalingX();
             view.height = ((setblocks * 168 / 10) & ~7) * DOOM.vs.getScalingY();
-        } else { // Mocha Doom formula looks better for non-scaled tiles
+        } else {
+            // Mocha Doom formula looks better for non-scaled tiles
             view.scaledwidth = setblocks * (DOOM.vs.getScreenWidth() / 10);
             // Height can only be a multiple of 8.
             view.height = (short) ((setblocks * (DOOM.vs.getScreenHeight() - DOOM.statusBar.getHeight()) / 10) & ~7);
         }
-
-        skydcvars.viewheight
-            = maskedcvars.viewheight = dcvars.viewheight = view.height;
-
+        skydcvars.viewheight = maskedcvars.viewheight = dcvars.viewheight = view.height;
         view.detailshift = setdetail;
         view.width = view.scaledwidth >> view.detailshift;
-
         view.centery = view.height / 2;
         view.centerx = view.width / 2;
         view.centerxfrac = (view.centerx << FRACBITS);
         view.centeryfrac = (view.centery << FRACBITS);
         view.projection = view.centerxfrac;
-
         skydcvars.centery = maskedcvars.centery = dcvars.centery = view.centery;
-
         // High detail
         if (view.detailshift == 0) {
-
             colfunc = colfunchi;
             dsvars.spanfunc = DrawSpan;
         } else {
             // Low detail
             colfunc = colfunclow;
             dsvars.spanfunc = DrawSpanLow;
-
         }
-
         InitBuffer(view.scaledwidth, view.height);
-
         InitTextureMapping();
-
         // psprite scales
         // pspritescale = FRACUNIT*viewwidth/vs.getScreenWidth();
         // pspriteiscale = FRACUNIT*vs.getScreenWidth()/viewwidth;
         MyThings.setPspriteScale((int) (FRACUNIT * (DOOM.vs.getScreenMul() * view.width) / DOOM.vs.getScreenWidth()));
         MyThings.setPspriteIscale((int) (FRACUNIT * (DOOM.vs.getScreenWidth() / (view.width * DOOM.vs.getScreenMul()))));
         vp_vars.setSkyScale((int) (FRACUNIT * (DOOM.vs.getScreenWidth() / (view.width * DOOM.vs.getScreenMul()))));
-
         view.BOBADJUST = this.DOOM.vs.getSafeScaling() << 15;
         view.WEAPONADJUST = (int) ((DOOM.vs.getScreenWidth() / (2 * DOOM.vs.getScreenMul())) * FRACUNIT);
-
         // thing clipping
         for (int i = 0; i < view.width; i++) {
             view.screenheightarray[i] = (short) view.height;
         }
-
         // planes
         for (int i = 0; i < view.height; i++) {
             dy = ((i - view.height / 2) << FRACBITS) + FRACUNIT / 2;
             dy = Math.abs(dy);
             vp_vars.yslope[i] = FixedDiv((view.width << view.detailshift) / 2 * FRACUNIT, dy);
-            // MyPlanes.yslopef[i] = ((viewwidth<<detailshift)/2)/ dy;
+        // MyPlanes.yslopef[i] = ((viewwidth<<detailshift)/2)/ dy;
         }
-
         // double cosadjf;
         for (int i = 0; i < view.width; i++) {
             // MAES: In this spot we must interpet it as SIGNED, else it's
@@ -2290,16 +2011,13 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             // cosadjf =
             // Math.abs(Math.cos((double)xtoviewangle[i]/(double)0xFFFFFFFFL));
             MyPlanes.getDistScale()[i] = FixedDiv(FRACUNIT, cosadj);
-            // MyPlanes.distscalef[i] = (float) (1.0/cosadjf);
+        // MyPlanes.distscalef[i] = (float) (1.0/cosadjf);
         }
-
-        // Calculate the light levels to use
         // for each level / scale combination.
         for (int i = 0; i < colormaps.lightLevels(); i++) {
             startmap = ((colormaps.lightLevels() - colormaps.lightBright() - i) * 2) * colormaps.numColorMaps() / colormaps.lightLevels();
             for (int j = 0; j < colormaps.maxLightScale(); j++) {
-                level
-                    = startmap - j / DISTMAP;
+                level = startmap - j / DISTMAP;
                 if (level < 0) {
                     level = 0;
                 }
@@ -2309,11 +2027,11 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                 colormaps.scalelight[i][j] = colormaps.colormaps[level];
             }
         }
-
         MySegs.ExecuteSetViewSize(view.width);
     }
-    
+
     private final Rectangle backScreenRect = new Rectangle();
+
     private final Rectangle tilePatchRect = new Rectangle();
 
     /**
@@ -2331,39 +2049,32 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
         int x;
         int y;
         patch_t patch;
-
         // DOOM border patch.
         String name1 = "FLOOR7_2";
-
         // DOOM II border patch.
         String name2 = "GRNROCK";
-
         String name;
-
         if (view.scaledwidth == DOOM.vs.getScreenWidth()) {
             return;
         }
-
         if (DOOM.isCommercial()) {
             name = name2;
         } else {
             name = name1;
         }
-
         /* This is a flat we're reading here */
         src = DOOM.wadLoader.CacheLumpName(name, PU_CACHE, flat_t.class);
         dest = BG;
-        
         /**
          * TODO: cache it?
          * This part actually draws the border itself, without bevels
-         * 
+         *
          * MAES:
          * improved drawing routine for extended bit-depth compatibility.
          *
          * Now supports configurable vanilla-like scaling of tiles
          * - Good Sign 2017/04/09
-         * 
+         *
          * @SourceCode.Compatible
          */
         Tiling: {
@@ -2377,43 +2088,34 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             }
             DOOM.graphicSystem.TileScreenArea(dest, backScreenRect, block, tilePatchRect);
         }
-        
         final int scaleFlags = V_NOSCALESTART | (scaleSetting ? 0 : V_NOSCALEOFFSET | V_NOSCALEPATCH);
         final int stepX = scaleSetting ? DOOM.graphicSystem.getScalingX() << 3 : 8;
         final int stepY = scaleSetting ? DOOM.graphicSystem.getScalingY() << 3 : 8;
-
         patch = DOOM.wadLoader.CachePatchName("BRDR_T", PU_CACHE);
         for (x = 0; x < view.scaledwidth; x += stepX) {
             DOOM.graphicSystem.DrawPatchScaled(BG, patch, DOOM.vs, view.windowx + x, view.windowy - stepY, scaleFlags);
         }
-
         patch = DOOM.wadLoader.CachePatchName("BRDR_B", PU_CACHE);
         for (x = 0; x < view.scaledwidth; x += stepX) {
             DOOM.graphicSystem.DrawPatchScaled(BG, patch, DOOM.vs, view.windowx + x, view.windowy + view.height, scaleFlags);
         }
-
         patch = DOOM.wadLoader.CachePatchName("BRDR_L", PU_CACHE);
         for (y = 0; y < view.height; y += stepY) {
             DOOM.graphicSystem.DrawPatchScaled(BG, patch, DOOM.vs, view.windowx - stepX, view.windowy + y, scaleFlags);
         }
-
         patch = DOOM.wadLoader.CachePatchName("BRDR_R", PU_CACHE);
         for (y = 0; y < view.height; y += stepY) {
             DOOM.graphicSystem.DrawPatchScaled(BG, patch, DOOM.vs, view.windowx + view.scaledwidth, view.windowy + y, scaleFlags);
         }
-
         // Draw beveled edge. Top-left
         patch = DOOM.wadLoader.CachePatchName("BRDR_TL", PU_CACHE);
         DOOM.graphicSystem.DrawPatchScaled(BG, patch, DOOM.vs, view.windowx - stepX, view.windowy - stepY, scaleFlags);
-
         // Top-right.
         patch = DOOM.wadLoader.CachePatchName("BRDR_TR", PU_CACHE);
         DOOM.graphicSystem.DrawPatchScaled(BG, patch, DOOM.vs, view.windowx + view.scaledwidth, view.windowy - stepY, scaleFlags);
-
         // Bottom-left
         patch = DOOM.wadLoader.CachePatchName("BRDR_BL", PU_CACHE);
         DOOM.graphicSystem.DrawPatchScaled(BG, patch, DOOM.vs, view.windowx - stepX, view.windowy + view.height, scaleFlags);
-        
         // Bottom-right.
         patch = DOOM.wadLoader.CachePatchName("BRDR_BR", PU_CACHE);
         DOOM.graphicSystem.DrawPatchScaled(BG, patch, DOOM.vs, view.windowx + view.width, view.windowy + view.height, scaleFlags);
@@ -2427,38 +2129,27 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
         // Any good reason for this to be here?
         // drawsegs=new drawseg_t[MAXDRAWSEGS];
         // C2JUtils.initArrayOfObjects(drawsegs);
-
         // DON'T FORGET ABOUT MEEEEEE!!!11!!!
         this.screen = this.DOOM.graphicSystem.getScreen(FG);
-
         System.out.print("\nR_InitData");
         InitData();
         // InitPointToAngle ();
         System.out.print("\nR_InitPointToAngle");
-
         // ds.DM.viewwidth / ds.viewheight / detailLevel are set by the defaults
         System.out.print("\nR_InitTables");
         InitTables();
-
         SetViewSize(DOOM.menu.getScreenBlocks(), DOOM.menu.getDetailLevel());
-
         System.out.print("\nR_InitPlanes");
         MyPlanes.InitPlanes();
-
         System.out.print("\nR_InitLightTables");
         InitLightTables();
-
         System.out.print("\nR_InitSkyMap: " + TexMan.InitSkyMap());
-
         System.out.print("\nR_InitTranslationsTables");
         InitTranslationTables();
-
         System.out.print("\nR_InitTranMap: ");
         R_InitTranMap(0);
-
         System.out.print("\nR_InitDrawingFunctions: ");
         R_InitDrawingFunctions();
-
         framecount = 0;
     }
 
@@ -2470,27 +2161,24 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
      */
     protected void InitBuffer(int width, int height) {
         int i;
-
         // Handle resize,
         // e.g. smaller view windows
         // with border and/or status bar.
         view.windowx = (DOOM.vs.getScreenWidth() - width) >> 1;
-
         // Column offset. For windows.
         for (i = 0; i < width; i++) {
             columnofs[i] = view.windowx + i;
         }
-
         // SamE with base row offset.
         if (width == DOOM.vs.getScreenWidth()) {
             view.windowy = 0;
         } else {
             view.windowy = (DOOM.vs.getScreenHeight() - DOOM.statusBar.getHeight() - height) >> 1;
         }
-
         // Preclaculate all row offsets.
         for (i = 0; i < height; i++) {
-            ylookup[i] = /* screens[0] + */ (i + view.windowy) * DOOM.vs.getScreenWidth();
+            ylookup[i] = /* screens[0] + */
+            (i + view.windowy) * DOOM.vs.getScreenWidth();
         }
     }
 
@@ -2501,9 +2189,9 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
      */
     protected void InitTextureMapping() {
         int i, x, t;
-        int focallength; // fixed_t
+        // fixed_t
+        int focallength;
         int fov = FIELDOFVIEW;
-
         // For widescreen displays, increase the FOV so that the middle part of
         // the
         // screen that would be visible on a 4:3 display has the requested FOV.
@@ -2517,13 +2205,10 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
         // Use tangent table to generate viewangletox:
         // viewangletox will give the next greatest x
         // after the view angle.
-        //
+        // 
         // Calc focallength
         // so FIELDOFVIEW angles covers vs.getScreenWidth().
-        focallength
-            = FixedDiv(view.centerxfrac, finetangent[QUARTERMARK + FIELDOFVIEW
-                / 2]);
-
+        focallength = FixedDiv(view.centerxfrac, finetangent[QUARTERMARK + FIELDOFVIEW / 2]);
         for (i = 0; i < FINEANGLES / 2; i++) {
             if (finetangent[i] > FRACUNIT * 2) {
                 t = -1;
@@ -2532,7 +2217,6 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             } else {
                 t = FixedMul(finetangent[i], focallength);
                 t = (view.centerxfrac - t + FRACUNIT - 1) >> FRACBITS;
-
                 if (t < -1) {
                     t = -1;
                 } else if (t > view.width + 1) {
@@ -2541,9 +2225,6 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             }
             viewangletox[i] = t;
         }
-
-        // Scan viewangletox[] to generate xtoviewangle[]:
-        // xtoviewangle will give the smallest view angle
         // that maps to x.
         for (x = 0; x <= view.width; x++) {
             i = 0;
@@ -2552,29 +2233,26 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             }
             view.xtoviewangle[x] = addAngles((i << ANGLETOFINESHIFT), -ANG90);
         }
-
         // Take out the fencepost cases from viewangletox.
         for (i = 0; i < FINEANGLES / 2; i++) {
             t = FixedMul(finetangent[i], focallength);
             t = view.centerx - t;
-
             if (viewangletox[i] == -1) {
                 viewangletox[i] = 0;
             } else if (viewangletox[i] == view.width + 1) {
                 viewangletox[i] = view.width;
             }
         }
-
         clipangle = view.xtoviewangle[0];
         // OPTIMIZE: assign constant for optimization.
         CLIPANGLE2 = (2 * clipangle) & BITS32;
     }
 
-    //
+    // 
     // R_InitLightTables
     // Only inits the zlight table,
     // because the scalelight table changes with view size.
-    //
+    // 
     protected final static int DISTMAP = 2;
 
     protected void InitLightTables() {
@@ -2582,26 +2260,20 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
         int j;
         int startmap;
         int scale;
-
-        // Calculate the light levels to use
         // for each level / distance combination.
         for (i = 0; i < colormaps.lightLevels(); i++) {
             startmap = ((colormaps.lightLevels() - colormaps.lightBright() - i) * 2) * colormaps.numColorMaps() / colormaps.lightLevels();
             for (j = 0; j < colormaps.maxLightZ(); j++) {
                 // CPhipps - use 320 here instead of vs.getScreenWidth(), otherwise hires is
-                //           brighter than normal res
-
+                // brighter than normal res
                 scale = FixedDiv((320 / 2 * FRACUNIT), (j + 1) << colormaps.lightZShift());
                 int t, level = startmap - (scale >>= colormaps.lightScaleShift()) / DISTMAP;
-
                 if (level < 0) {
                     level = 0;
                 }
-
                 if (level >= colormaps.numColorMaps()) {
                     level = colormaps.numColorMaps() - 1;
                 }
-
                 // zlight[i][j] = colormaps + level*256;
                 colormaps.zlight[i][j] = colormaps.colormaps[level];
             }
@@ -2609,7 +2281,7 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
     }
 
     protected static final int TSC = 12;
-    
+
     /**
      * number of fixed point digits in
      * filter percent
@@ -2624,15 +2296,14 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
      */
     protected void R_InitTranMap(int progress) {
         int lump = DOOM.wadLoader.CheckNumForName("TRANMAP");
-
         long ta = System.nanoTime();
-
         // PRIORITY: a map file has been specified from commandline. Try to read
         // it. If OK, this trumps even those specified in lumps.
         DOOM.cVarManager.with(CommandVariable.TRANMAP, 0, (String tranmap) -> {
             if (C2JUtils.testReadAccess(tranmap)) {
                 System.out.printf("Translucency map file %s specified in -tranmap arg. Attempting to use...\n", tranmap);
-                main_tranmap = new byte[256 * 256]; // killough 4/11/98
+                // killough 4/11/98
+                main_tranmap = new byte[256 * 256];
                 int result = MenuMisc.ReadFile(tranmap, main_tranmap);
                 if (result > 0) {
                     return;
@@ -2640,56 +2311,54 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
                 System.out.print("...failure.\n");
             }
         });
-
         // Next, if a tranlucency filter map lump is present, use it
-        if (lump != -1) { // Set a pointer to the translucency filter maps.
+        if (lump != -1) {
+            // Set a pointer to the translucency filter maps.
             System.out.print("Translucency map found in lump. Attempting to use...");
             // main_tranmap=new byte[256*256]; // killough 4/11/98
-            main_tranmap = DOOM.wadLoader.CacheLumpNumAsRawBytes(lump, Defines.PU_STATIC); // killough
-            // 4/11/98
+            // killough
+            main_tranmap = DOOM.wadLoader.CacheLumpNumAsRawBytes(lump, Defines.PU_STATIC);
             // Tolerate 64K or more.
             if (main_tranmap.length >= 0x10000) {
                 return;
             }
-            System.out.print("...failure.\n"); // Not good, try something else.
+            // Not good, try something else.
+            System.out.print("...failure.\n");
         }
-
         // A default map file already exists. Try to read it.
         if (C2JUtils.testReadAccess("tranmap.dat")) {
             System.out.print("Translucency map found in default tranmap.dat file. Attempting to use...");
-            main_tranmap = new byte[256 * 256]; // killough 4/11/98
+            // killough 4/11/98
+            main_tranmap = new byte[256 * 256];
             int result = MenuMisc.ReadFile("tranmap.dat", main_tranmap);
             if (result > 0) {
-                return; // Something went wrong, so fuck that.
+                // Something went wrong, so fuck that.
+                return;
             }
         }
-
         // Nothing to do, so we must synthesize it from scratch. And, boy, is it
         // slooow.
-        { // Compose a default transparent filter map based on PLAYPAL.
+        {
+            // Compose a default transparent filter map based on PLAYPAL.
             System.out.print("Computing translucency map from scratch...that's gonna be SLOW...");
             byte[] playpal = DOOM.wadLoader.CacheLumpNameAsRawBytes("PLAYPAL", Defines.PU_STATIC);
-            main_tranmap = new byte[256 * 256]; // killough 4/11/98
+            // killough 4/11/98
+            main_tranmap = new byte[256 * 256];
             int[] basepal = new int[3 * 256];
             int[] mixedpal = new int[3 * 256 * 256];
-
             main_tranmap = new byte[256 * 256];
-
             // Init array of base colors.
             for (int i = 0; i < 256; i++) {
                 basepal[3 * i] = 0Xff & playpal[i * 3];
                 basepal[1 + 3 * i] = 0Xff & playpal[1 + i * 3];
                 basepal[2 + 3 * i] = 0Xff & playpal[2 + i * 3];
             }
-
-            // Init array of mixed colors. These are true RGB.
             // The diagonal of this array will be the original colors.
             for (int i = 0; i < 256 * 3; i += 3) {
                 for (int j = 0; j < 256 * 3; j += 3) {
                     mixColors(basepal, basepal, mixedpal, i, j, j * 256 + i);
                 }
             }
-
             // Init distance map. Every original palette colour has a
             // certain distance from all the others. The diagonal is zero.
             // The interpretation is that e.g. the mixture of color 2 and 8 will
@@ -2697,26 +2366,21 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             // e.g. original color 9. Therefore we should put "9" in the (2,8)
             // and (8,2) cells of the tranmap.
             final float[] tmpdist = new float[256];
-
             for (int a = 0; a < 256; a++) {
                 for (int b = a; b < 256; b++) {
-                    // We evaluate the mixture of a and b
                     // Construct distance table vs all of the ORIGINAL colors.
                     for (int k = 0; k < 256; k++) {
                         tmpdist[k] = colorDistance(mixedpal, basepal, 3 * (a + b * 256), k * 3);
                     }
-
                     main_tranmap[(a << 8) | b] = (byte) findMin(tmpdist);
                     main_tranmap[(b << 8) | a] = main_tranmap[(a << 8) | b];
                 }
             }
             System.out.print("...done\n");
-            if (MenuMisc.WriteFile("tranmap.dat", main_tranmap,
-                main_tranmap.length)) {
+            if (MenuMisc.WriteFile("tranmap.dat", main_tranmap, main_tranmap.length)) {
                 System.out.print("TRANMAP.DAT saved to disk for your convenience! Next time will be faster.\n");
             }
         }
-
         long b = System.nanoTime();
         System.out.printf("Tranmap %d\n", (b - ta) / 1000000);
     }
@@ -2724,21 +2388,17 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
     /**
      * Mixes two RGB colors. Nuff said
      */
-    protected void mixColors(int[] a, int[] b, int[] c, int pa, int pb,
-        int pc) {
+    protected void mixColors(int[] a, int[] b, int[] c, int pa, int pb, int pc) {
         c[pc] = (a[pa] + b[pb]) / 2;
         c[pc + 1] = (a[pa + 1] + b[pb + 1]) / 2;
         c[pc + 2] = (a[pa + 2] + b[pb + 2]) / 2;
-
     }
 
     /**
      * Returns the euclidean distance of two RGB colors. Nuff said
      */
     protected float colorDistance(int[] a, int[] b, int pa, int pb) {
-        return (float) Math.sqrt((a[pa] - b[pb]) * (a[pa] - b[pb])
-            + (a[pa + 1] - b[pb + 1]) * (a[pa + 1] - b[pb + 1])
-            + (a[pa + 2] - b[pb + 2]) * (a[pa + 2] - b[pb + 2]));
+        return (float) Math.sqrt((a[pa] - b[pb]) * (a[pa] - b[pb]) + (a[pa + 1] - b[pb + 1]) * (a[pa + 1] - b[pb + 1]) + (a[pa + 2] - b[pb + 2]) * (a[pa + 2] - b[pb + 2]));
     }
 
     /**
@@ -2752,16 +2412,13 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
     protected int findMin(float[] a) {
         int minindex = 0;
         float min = Float.POSITIVE_INFINITY;
-
         for (int i = 0; i < a.length; i++) {
             if (a[i] < min) {
                 min = a[i];
                 minindex = i;
             }
         }
-
         return minindex;
-
     }
 
     /**
@@ -2769,7 +2426,6 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
      * cached columns get used as "masked" middle textures. Will be treated as a
      * single-run post of capped length.
      */
-
     /*
      * protected final void DrawCompositeColumnPost(byte[] column) { int
      * topscreen; int bottomscreen; int basetexturemid; // fixed_t int
@@ -2815,11 +2471,9 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
             VIS.cacheSpriteManager(DOOM.spriteManager);
             System.out.print("\nInitColormaps\t\t");
             InitColormaps();
-
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     protected int spritememory;
@@ -2835,29 +2489,23 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
      */
     @Override
     public void PreCacheThinkers() {
-
         boolean[] spritepresent;
         thinker_t th;
         spriteframe_t sf;
         int lump;
-
         final spritedef_t[] sprites = DOOM.spriteManager.getSprites();
         final int numsprites = DOOM.spriteManager.getNumSprites();
-
         spritepresent = new boolean[numsprites];
-
         for (th = DOOM.actions.getThinkerCap().next; th != DOOM.actions.getThinkerCap(); th = th.next) {
             if (th.thinkerFunction == P_MobjThinker) {
                 spritepresent[((mobj_t) th).mobj_sprite.ordinal()] = true;
             }
         }
-
         spritememory = 0;
         for (int i = 0; i < numsprites; i++) {
             if (!spritepresent[i]) {
                 continue;
             }
-
             for (int j = 0; j < sprites[i].numframes; j++) {
                 sf = sprites[i].spriteframes[j];
                 for (int k = 0; k < 8; k++) {
@@ -2876,55 +2524,77 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
      */
     protected void InitTranslationTables() {
         int i;
-
         final int TR_COLORS = 28;
-
         // translationtables = Z_Malloc (256*3+255, PU_STATIC, 0);
         // translationtables = (byte *)(( (int)translationtables + 255 )& ~255);
-        byte[][] translationtables
-            = colormaps.translationtables = new byte[TR_COLORS][256];
-
+        byte[][] translationtables = colormaps.translationtables = new byte[TR_COLORS][256];
         // translate just the 16 green colors
         for (i = 0; i < 256; i++) {
             translationtables[0][i] = (byte) i;
-
             if (i >= 0x70 && i <= 0x7f) {
                 // Remap green range to other ranges.
-                translationtables[1][i] = (byte) (0x60 + (i & 0xf)); // gray
-                translationtables[2][i] = (byte) (0x40 + (i & 0xf)); // brown
-                translationtables[3][i] = (byte) (0x20 + (i & 0xf)); // red
-                translationtables[4][i] = (byte) (0x10 + (i & 0xf)); // pink
-                translationtables[5][i] = (byte) (0x30 + (i & 0xf)); // skin
-                translationtables[6][i] = (byte) (0x50 + (i & 0xf)); // metal
-                translationtables[7][i] = (byte) (0x80 + (i & 0xf)); // copper
-                translationtables[8][i] = (byte) (0xB0 + (i & 0xf)); // b.red
-                translationtables[9][i] = (byte) (0xC0 + (i & 0xf)); // electric
+                // gray
+                translationtables[1][i] = (byte) (0x60 + (i & 0xf));
+                // brown
+                translationtables[2][i] = (byte) (0x40 + (i & 0xf));
+                // red
+                translationtables[3][i] = (byte) (0x20 + (i & 0xf));
+                // pink
+                translationtables[4][i] = (byte) (0x10 + (i & 0xf));
+                // skin
+                translationtables[5][i] = (byte) (0x30 + (i & 0xf));
+                // metal
+                translationtables[6][i] = (byte) (0x50 + (i & 0xf));
+                // copper
+                translationtables[7][i] = (byte) (0x80 + (i & 0xf));
+                // b.red
+                translationtables[8][i] = (byte) (0xB0 + (i & 0xf));
+                // electric
+                translationtables[9][i] = (byte) (0xC0 + (i & 0xf));
                 // blue
-                translationtables[10][i] = (byte) (0xD0 + (i & 0xf)); // guantanamo
+                // guantanamo
+                translationtables[10][i] = (byte) (0xD0 + (i & 0xf));
                 // "Halfhue" colors for which there are only 8 distinct hues
-                translationtables[11][i] = (byte) (0x90 + (i & 0xf) / 2); // brown2
-                translationtables[12][i] = (byte) (0x98 + (i & 0xf) / 2); // gray2
-                translationtables[13][i] = (byte) (0xA0 + (i & 0xf) / 2); // piss
-                translationtables[14][i] = (byte) (0xA8 + (i & 0xf) / 2); // gay
-                translationtables[15][i] = (byte) (0xE0 + (i & 0xf) / 2); // yellow
-                translationtables[16][i] = (byte) (0xE8 + (i & 0xf) / 2); // turd
-                translationtables[17][i] = (byte) (0xF0 + (i & 0xf) / 2); // compblue
-                translationtables[18][i] = (byte) (0xF8 + (i & 0xf) / 2); // whore
-                translationtables[19][i] = (byte) (0x05 + (i & 0xf) / 2); // nigga
-                // "Pimped up" colors, using mixed hues.
-                translationtables[20][i] = (byte) (0x90 + (i & 0xf)); // soldier
-                translationtables[21][i] = (byte) (0xA0 + (i & 0xf)); // drag
-                // queen
-                translationtables[22][i] = (byte) (0xE0 + (i & 0xf)); // shit &
+                // brown2
+                translationtables[11][i] = (byte) (0x90 + (i & 0xf) / 2);
+                // gray2
+                translationtables[12][i] = (byte) (0x98 + (i & 0xf) / 2);
                 // piss
-                translationtables[23][i] = (byte) (0xF0 + (i & 0xf)); // raver
-                translationtables[24][i] = (byte) (0x70 + (0xf - i & 0xf)); // inv.marine
-                translationtables[25][i] = (byte) (0xF0 + (0xf - i & 0xf)); // inv.raver
-                translationtables[26][i] = (byte) (0xE0 + (0xf - i & 0xf)); // piss
+                translationtables[13][i] = (byte) (0xA0 + (i & 0xf) / 2);
+                // gay
+                translationtables[14][i] = (byte) (0xA8 + (i & 0xf) / 2);
+                // yellow
+                translationtables[15][i] = (byte) (0xE0 + (i & 0xf) / 2);
+                // turd
+                translationtables[16][i] = (byte) (0xE8 + (i & 0xf) / 2);
+                // compblue
+                translationtables[17][i] = (byte) (0xF0 + (i & 0xf) / 2);
+                // whore
+                translationtables[18][i] = (byte) (0xF8 + (i & 0xf) / 2);
+                // nigga
+                translationtables[19][i] = (byte) (0x05 + (i & 0xf) / 2);
+                // "Pimped up" colors, using mixed hues.
+                // soldier
+                translationtables[20][i] = (byte) (0x90 + (i & 0xf));
+                // drag
+                translationtables[21][i] = (byte) (0xA0 + (i & 0xf));
+                // queen
+                // shit &
+                translationtables[22][i] = (byte) (0xE0 + (i & 0xf));
+                // piss
+                // raver
+                translationtables[23][i] = (byte) (0xF0 + (i & 0xf));
+                // inv.marine
+                translationtables[24][i] = (byte) (0x70 + (0xf - i & 0xf));
+                // inv.raver
+                translationtables[25][i] = (byte) (0xF0 + (0xf - i & 0xf));
+                // piss
+                translationtables[26][i] = (byte) (0xE0 + (0xf - i & 0xf));
                 // &
                 // shit
-                translationtables[27][i] = (byte) (0xA0 + (i & 0xf)); // shitty
-                // gay
+                // shitty
+                translationtables[27][i] = (byte) (0xA0 + (i & 0xf));
+            // gay
             } else {
                 for (int j = 1; j < TR_COLORS; j++) {
                     // Keep all other colors as is.
@@ -3050,39 +2720,29 @@ public abstract class RendererState<T, V> implements SceneRenderer<T, V>, ILimit
      */
     @Override
     public void RenderPlayerView(player_t player) {
-
         // Viewing variables are set according to the player's mobj. Interesting
         // hacks like
         // free cameras or monster views can be done.
         SetupFrame(player);
-
         // Clear buffers.
         MyBSP.ClearClipSegs();
         seg_vars.ClearDrawSegs();
         vp_vars.ClearPlanes();
         MySegs.ClearClips();
         VIS.ClearSprites();
-
         // Check for new console commands.
         DOOM.gameNetworking.NetUpdate();
-
         // The head node is the last node output.
         MyBSP.RenderBSPNode(DOOM.levelLoader.numnodes - 1);
-
         // Check for new console commands.
         DOOM.gameNetworking.NetUpdate();
-
         // FIXME: "Warped floor" fixed, now to fix same-height visplane
         // bleeding.
         MyPlanes.DrawPlanes();
-
         // Check for new console commands.
         DOOM.gameNetworking.NetUpdate();
-
         MyThings.DrawMasked();
-
         colfunc.main = colfunc.base;
-
         // Check for new console commands.
         DOOM.gameNetworking.NetUpdate();
     }
